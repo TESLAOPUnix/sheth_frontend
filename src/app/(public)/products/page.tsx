@@ -40,7 +40,10 @@ function BrandCard({ brand, onClick }: BrandCardProps) {
               alt={`${brand} Icon`}
               width={24}
               height={24}
-              className="h-full w-full object-contain brightness-0 invert"
+              objectFit="contain"
+              className={`h-full w-full object-contain ${
+                brand != "3M" ? "brightness-0 invert" : ""
+              }`}
             />
           </div>
           <div>
@@ -99,7 +102,7 @@ export default function BrandCards() {
           </div>
         </div>
       </section>
-      <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row my-[3rem]">
+      <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row my-[3rem] px-[1rem]">
         <BrandCard brand="3M" onClick={() => handleRedirect("3M")} />
         <BrandCard brand="Dowells" onClick={() => handleRedirect("Dowells")} />
       </div>

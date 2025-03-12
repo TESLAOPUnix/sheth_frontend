@@ -14,7 +14,7 @@ const certificates = [
   {
     id: 2,
     title: "3M Authorization Certificate",
-    image: "/clogo/3M_cert.jpg",
+    image: "/clogo/3M_cert.png",
   },
 ]
 

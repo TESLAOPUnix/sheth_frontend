@@ -1,7 +1,85 @@
 // MetricsSection.jsx
-import React from "react";
+"use client"
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const MetricsSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  
+  // States for each counter
+  const [clientsCount, setClientsCount] = useState(0);
+  const [projectsCount, setProjectsCount] = useState(0);
+  const [portfolioCount, setPortfolioCount] = useState(0);
+  const [growthCount, setGrowthCount] = useState(0);
+  
+  // Target values
+  const targetClients = 3500;
+  const targetProjects = 30;
+  const targetPortfolio = 2000;
+  const targetGrowth = 35;
+  
+  // Animation duration in milliseconds
+  const animationDuration = 3000;
+  
+  useEffect(() => {
+    if (isInView) {
+      // Animate clients count
+      const clientsInterval = setInterval(() => {
+        setClientsCount(prev => {
+          const nextValue = prev + Math.ceil(targetClients / (animationDuration / 50));
+          return nextValue >= targetClients ? targetClients : nextValue;
+        });
+      }, 50);
+      
+      // Animate projects count
+      const projectsInterval = setInterval(() => {
+        setProjectsCount(prev => {
+          const nextValue = prev + Math.ceil(targetProjects / (animationDuration / 100));
+          return nextValue >= targetProjects ? targetProjects : nextValue;
+        });
+      }, 100);
+      
+      // Animate portfolio count
+      const portfolioInterval = setInterval(() => {
+        setPortfolioCount(prev => {
+          const nextValue = prev + Math.ceil(targetPortfolio / (animationDuration / 50));
+          return nextValue >= targetPortfolio ? targetPortfolio : nextValue;
+        });
+      }, 50);
+      
+      // Animate growth count
+      const growthInterval = setInterval(() => {
+        setGrowthCount(prev => {
+          const nextValue = prev + Math.ceil(targetGrowth / (animationDuration / 100));
+          return nextValue >= targetGrowth ? targetGrowth : nextValue;
+        });
+      }, 100);
+      
+      // Clear intervals when animation completes
+      setTimeout(() => {
+        clearInterval(clientsInterval);
+        clearInterval(projectsInterval);
+        clearInterval(portfolioInterval);
+        clearInterval(growthInterval);
+        
+        // Ensure final values are set correctly
+        setClientsCount(targetClients);
+        setProjectsCount(targetProjects);
+        setPortfolioCount(targetPortfolio);
+        setGrowthCount(targetGrowth);
+      }, animationDuration);
+      
+      // Clean up intervals if component unmounts
+      return () => {
+        clearInterval(clientsInterval);
+        clearInterval(projectsInterval);
+        clearInterval(portfolioInterval);
+        clearInterval(growthInterval);
+      };
+    }
+  }, [isInView]);
+
   return (
     <div className="w-full">
       {/* Header Section (without background image) */}
@@ -27,7 +105,7 @@ const MetricsSection = () => {
       </div>
 
       {/* Metrics Section (with background image) */}
-      <div className="relative">
+      <div className="relative" ref={ref}>
         {/* Background Image with Overlay */}
         <div className="absolute bg-black inset-0 z-0">
           <div
@@ -60,7 +138,9 @@ const MetricsSection = () => {
                   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
                 </svg>
               </div>
-              <h3 className="text-4xl font-bold mb-2">3500+</h3>
+              <motion.h3 className="text-4xl font-bold mb-2">
+                {clientsCount}+
+              </motion.h3>
               <p className="text-xl">Satisfied Clients</p>
             </div>
 
@@ -81,7 +161,9 @@ const MetricsSection = () => {
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                 </svg>
               </div>
-              <h3 className="text-4xl font-bold mb-2">30+</h3>
+              <motion.h3 className="text-4xl font-bold mb-2">
+                {projectsCount}+
+              </motion.h3>
               <p className="text-xl">Active Project</p>
             </div>
 
@@ -101,7 +183,9 @@ const MetricsSection = () => {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
               </div>
-              <h3 className="text-4xl font-bold mb-2">2000+</h3>
+              <motion.h3 className="text-4xl font-bold mb-2">
+                {portfolioCount}+
+              </motion.h3>
               <p className="text-xl">Product Portfolio</p>
             </div>
 
@@ -122,7 +206,9 @@ const MetricsSection = () => {
                   <polyline points="16 7 22 7 22 13" />
                 </svg>
               </div>
-              <h3 className="text-4xl font-bold mb-2">35%</h3>
+              <motion.h3 className="text-4xl font-bold mb-2">
+                {growthCount}%
+              </motion.h3>
               <p className="text-xl">Company YOY Growth</p>
             </div>
           </div>

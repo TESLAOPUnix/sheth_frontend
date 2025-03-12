@@ -197,8 +197,8 @@ export default function Cart() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="relative">
-          <ShoppingCart className="h-4 w-4 text-black " />
+        <Button variant="outline" size="icon" className="relative flex items-center text-black min-w-[4rem] pr-[0.25rem]">
+          <ShoppingCart className="h-4 w-4 text-black " /> Cart
           <Badge
             variant="destructive"
             className="absolute -top-2 -right-3 px-[0.35rem] py-[0.1rem] text-[0.8rem]"

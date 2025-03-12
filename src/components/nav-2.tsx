@@ -7,7 +7,7 @@ import Cart from "./cart";
 import Image from "next/image";
 
 const navItems = [
-  { name: "HOME", href: "/", active: true },
+  { name: "HOME", href: "/" },
   { name: "ABOUT US", href: "/about-us" },
   { name: "PRODUCTS", href: "/products" },
   { name: "PRICELIST & BROCHURE", href: "/price-list" },
@@ -78,7 +78,7 @@ export default function Navigation({ alwaysVisible = false }) {
                       <a
                         href={item.href}
                         className={`block py-2 text-sm font-semibold transition-colors hover:text-amber-500
-                        ${item.active ? "text-amber-900" : "text-black"}`}
+                        text-black`}
                       >
                         {item.name}
                       </a>

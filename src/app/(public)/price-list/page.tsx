@@ -45,12 +45,14 @@ export default function Page() {
               </span>
             </nav>
           </div>
-          <Button
-            variant="default"
-            className="bg-[#5C1E1E] hover:bg-[#4A1818] text-[1.1rem] mt-8 font-medium p-[1rem]"
-          >
-            <span>Our Products</span>
-          </Button>
+          <a href="/products">
+            <Button
+              variant="default"
+              className="bg-[#5C1E1E] hover:bg-[#4A1818] text-[1.1rem] mt-8 font-medium p-[1rem]"
+            >
+              <span>Our Products</span>
+            </Button>
+          </a>
         </div>
       </section>
 
