@@ -125,7 +125,7 @@ export default function ReplyModal({
     // Here you would typically send the formState to your API
     try {
       const res = await axios.post(
-        "http://localhost:8282/api/v1/quotation",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/quotation`,
         formState
       );
       toast({

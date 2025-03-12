@@ -69,7 +69,7 @@ export default function EnhancedEnquiryPage() {
 
   const fetchEnquiries = async () => {
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/getEnquiries`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/getEnquiries`);
 
       console.log("Enquiries fetched:", res);
       setEnquiries(res.data.response); // Adjusted to handle the new structure

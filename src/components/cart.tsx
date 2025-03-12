@@ -45,7 +45,7 @@ export default function Cart() {
         const fetchedItems = await Promise.all(
           ids.map(async (id) => {
             const response = await axios.get(
-              `http://localhost:8282/api/v1/getCart/${id}`
+              `${process.env.NEXT_PUBLIC_BACKEND_URL}/getCart/${id}`
             );
             const item = response.data.item[0];
             return {
@@ -157,7 +157,7 @@ export default function Cart() {
     if (newQuantity < 0) return;
 
     try {
-      await axios.put("http://localhost:8282/api/v1/cartUpdate", {
+      await axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/cartUpdate`, {
         quantity: newQuantity.toString(),
         orderId: id,
       });
@@ -175,7 +175,7 @@ export default function Cart() {
 
   const deleteItem = async (id: string) => {
     try {
-      await axios.delete("http://localhost:8282/api/v1/itemDelete", {
+      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/itemDelete`, {
         data: { orderId: id },
       });
 

@@ -67,7 +67,7 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:8282/api/v1/userForm", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/userForm`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

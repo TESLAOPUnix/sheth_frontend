@@ -52,7 +52,7 @@ export default function EnquiriesPage() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/getcontact`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/getcontact`
         );
 
         if (response.data.success) {
