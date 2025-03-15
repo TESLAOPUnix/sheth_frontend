@@ -5,7 +5,7 @@ import AnimatedTitle from "./animated-title";
 
 export default function AboutCompany() {
   return (
-    <section className="py-16 md:py-24 max-w-[76rem] mx-auto">
+    <section className="py-16 md:py-24 w-full mx-auto">
       <div className="container mx-auto px-4">
         {/* Header with decorative lines */}
         <div className="mb-16 flex items-center justify-center space-x-4">

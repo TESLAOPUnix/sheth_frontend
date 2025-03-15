@@ -1,4 +1,8 @@
+"use client"
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const features = [
   {
@@ -7,19 +11,22 @@ const features = [
   },
   {
     title: "Comprehensive Range",
-    width: "90%",
+    width: "92%",
   },
   {
     title: "Customer-Centric Service",
-    width: "85%",
+    width: "98%",
   },
   {
     title: "Nationwide Reach",
-    width: "80%",
+    width: "99%",
   },
 ];
 
 export default function WhyChooseUs() {
+  const progressRef = useRef(null);
+  const isInView = useInView(progressRef, { once: true, amount: 0.3 });
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto max-w-[76rem] px-4">
@@ -55,7 +62,7 @@ export default function WhyChooseUs() {
               />
             </div>
             {/* Experience Circle */}
-            <div className="absolute mx-auto left-1/2 transform -translate-x-1/2 sm:left-auto sm:translate-x-0  sm:-right-12 bottom-12 flex h-48 w-48 items-center justify-center rounded-full bg-[#993300] text-center border-[8px] border-white text-white">
+            <div className="absolute mx-auto left-1/2 transform -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:-right-12 bottom-12 flex h-48 w-48 items-center justify-center rounded-full bg-[#993300] text-center border-[8px] border-white text-white">
               <div>
                 <div className="text-5xl font-bold">50+</div>
                 <div className="text-[0.75rem] font-medium tracking-wider">
@@ -66,16 +73,22 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Features List */}
-          <div className="space-y-6 pt-8 md:pt-0">
+          <div className="space-y-6 pt-8 md:pt-0" ref={progressRef}>
             {features.map((feature, index) => (
               <div key={index} className="relative">
                 <div className="mb-2 text-xl font-semibold text-gray-900">
                   {feature.title}
                 </div>
                 <div className="h-3 w-full overflow-hidden rounded-full bg-[#FFF1F1]">
-                  <div
-                    className="h-full rounded-full bg-[#993300]/20 transition-all duration-1000"
-                    style={{ width: feature.width }}
+                  <motion.div
+                    className="h-full rounded-full bg-[#993300]"
+                    initial={{ width: "0%" }}
+                    animate={isInView ? { width: feature.width } : { width: "0%" }}
+                    transition={{
+                      duration: 2,
+                      delay: index * 0.25,
+                      ease: "easeInOut"
+                    }}
                   />
                 </div>
               </div>

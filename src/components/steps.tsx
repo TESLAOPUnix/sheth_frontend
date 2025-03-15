@@ -1,12 +1,12 @@
-import { Search, ShoppingCart, Mail, Calculator } from "lucide-react";
+import { Search, ShoppingCart, Mail, Calculator, Compass } from "lucide-react";
 
 const steps = [
   {
     number: "1",
-    title: "Search or Browse by Brand",
+    title: "Browse by Brand",
     description:
-      "Use the search bar or navigate through the product categories or Choose 3M or Dowells from products tab and explore product categories.",
-    icon: Search,
+      "Navigate through the product categories in product tab, Choose 3M or Dowells and explore product categories.",
+    icon: Compass,
   },
   {
     number: "2",
