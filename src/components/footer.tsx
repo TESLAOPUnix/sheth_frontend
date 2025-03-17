@@ -175,7 +175,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-[#993300]" />
-                <p>Monday - Friday: 11:00 A.M to 6:00 P.M</p>
+                <p>Monday - Friday: 11:00 AM to 6:00 PM</p>
               </div>
             </div>
           </div>
@@ -188,12 +188,11 @@ export default function Footer() {
             <ul className="space-y-3">
               {industriesWeServe.map((industry) => (
                 <li key={industry}>
-                  <Link
-                    href="#"
-                    className="inline-block hover:text-white hover:underline"
+                  <p
+                    className="inline-block "
                   >
                     {industry}
-                  </Link>
+                  </p>
                 </li>
               ))}
             </ul>

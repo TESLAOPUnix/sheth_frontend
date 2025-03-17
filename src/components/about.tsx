@@ -5,42 +5,39 @@ import AnimatedTitle from "./animated-title";
 
 export default function AboutCompany() {
   return (
-    <section className="py-16 md:py-24 w-full mx-auto">
+    <section className="py-16 md:py-24 max-w-[76rem] mx-auto">
       <div className="container mx-auto px-4">
         {/* Header with decorative lines */}
         <div className="mb-16 flex items-center justify-center space-x-4">
           <div className="h-[2px] w-12 bg-[#5C1E1E]" />
-          <h2 className="sub-title-2">
-            ABOUT COMPANY
-          </h2>
+          <h2 className="sub-title-2">ABOUT COMPANY</h2>
           <div className="h-[2px] w-12 bg-[#5C1E1E]" />
         </div>
 
         {/* Main content grid */}
-        <div className=" gap-8 max-w-[56rem] mx-auto">
-          {/* Images column 
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+          {/* Images column */}
           <div className="space-y-6">
             <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
               <Image
-                src=""
+                src="/a1.jpeg"
                 alt="Primary Company Image"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
             <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
               <Image
-                src=""
+                src="/a2.jpeg"
                 alt="Secondary Company Image"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           </div>
-          */}
 
           {/* Content column */}
-          <div className="space-y-12 shadow-lg p-[1.5rem] rounded-lg bg-white">
+          <div className="space-y-8 shadow-lg p-[1.5rem] rounded-lg bg-white">
             {/* Main description */}
             <p className="text-gray-600 leading-relaxed">
               At Sheth Trading Corporation, we are committed to delivering
@@ -53,15 +50,15 @@ export default function AboutCompany() {
             </p>
 
             {/* Our Team section */}
-            <div className="flex flex-col items-center justify-center space-x-4">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-[#5C1E1E]">
-                <Users className="h-4 w-4 text-[#5C1E1E]" />
+            <div className="flex items-start justify-start space-x-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#5C1E1E]">
+                <Users className="h-6 w-6 text-[#5C1E1E]" />
               </div>
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900 text-start">
                   Our Team
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-start">
                   Our team of techno-commercial professionals is dedicated to
                   understanding your needs and offering tailored solutions. We
                   focus on providing value-enhancing products and exceptional
@@ -71,15 +68,15 @@ export default function AboutCompany() {
             </div>
 
             {/* Our Vision section */}
-            <div className="flex flex-col items-center justify-center space-x-4">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-[#5C1E1E]">
-                <Lightbulb className="h-4 w-4 text-[#5C1E1E]" />
+            <div className="flex items-start justify-start  space-x-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#5C1E1E]">
+                <Lightbulb className="h-6 w-6 text-[#5C1E1E]" />
               </div>
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900 text-start">
                   Our Vision
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-start">
                   To be the leading distributor of high-quality electrical
                   solutions in India, recognized for our commitment to
                   innovation, reliability, and customer satisfaction.
@@ -87,7 +84,7 @@ export default function AboutCompany() {
               </div>
             </div>
 
-            <div className="flex flex-wrap sm:px-[1.5rem] items-center justify-between gap-2">
+            <div className="flex flex-wrap sm:px-[1.5rem] items-center justify-center gap-2">
               <Button
                 variant="default"
                 className="bg-[#5C1E1E] hover:bg-[#513818e4] text-[1.1rem]"
