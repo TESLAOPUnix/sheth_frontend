@@ -33,7 +33,7 @@ export default function Component() {
     "/3m/SCOTCHCAST_450/img1.png"
   ];
 
-  const packOptions = ["N Pack", "P Pack", "Q Pack"];
+  const packOptions = ["N Pack (2.407 Kg)", "P Pack (1.21 Kg)", "Q Pack (609 g)"];
 
   const handleInputChange = (field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -48,15 +48,15 @@ export default function Component() {
     setLoading(true);
 
     try {
-      const skuMap: Record<"N Pack" | "P Pack" | "Q Pack", string> = {
-        "N Pack": "3M_SC40_N",
-        "P Pack": "3M_SC40_P",
-        "Q Pack": "3M_SC40_Q",
+      const skuMap: Record<"N Pack (2.407 Kg)" | "P Pack (1.21 Kg)" | "Q Pack (609 g)", string> = {
+        "N Pack (2.407 Kg)": "3M_SC40_N",
+        "P Pack (1.21 Kg)": "3M_SC40_P",
+        "Q Pack (609 g)": "3M_SC40_Q",
       };
 
-      const sku = skuMap[formData.pack as "N Pack" | "P Pack" | "Q Pack"];
+      const sku = skuMap[formData.pack as "N Pack (2.407 Kg)" | "P Pack (1.21 Kg)" | "Q Pack (609 g)"];
       const quantity = formData.quantity;
-      const name = `Scotch cast 450 ${formData.pack}`;
+      const name = `Scotch cast 450 (Resin + Hardener) ${formData.pack}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

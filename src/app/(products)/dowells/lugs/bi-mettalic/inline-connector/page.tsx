@@ -120,7 +120,7 @@ export default function Component() {
                   {/* Add download button - positioned absolutely */}
                   <div className="absolute -bottom-6 right-4 z-10">
                     <a
-                      href="/dowells/lugs/bi-metallic/inline/pdf.pdf"
+                      href="/dowells/lugs/bi-metallic/inline/lugs_bi_inline.pdf"
                       download
                       className="flex items-center justify-center gap-1 p-2 bg-white/90 border rounded-md hover:bg-gray-100 transition-colors shadow-sm"
                     >

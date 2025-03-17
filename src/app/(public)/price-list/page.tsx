@@ -77,7 +77,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Pricelist PDF
               </h3>
-              <a download href="/3m_price/pdf.pdf">
+              <a download href="/3m_price/3m_pricelist.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Pricelist
                 </button>
@@ -98,7 +98,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Brochure PDF
               </h3>
-              <a download href="/3m_Brouch/pdf.pdf">
+              <a download href="/3m_Brouch/3m_Brouchure.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Brochure
                 </button>
@@ -130,7 +130,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Dowells Pricelist PDF
               </h3>
-              <a download href="/dow_price/pdf.pdf">
+              <a download href="/dow_price/Dowells_pricelist.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Pricelist
                 </button>
@@ -151,7 +151,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Glands Catalogue PDF
               </h3>
-              <a download href="/gland_cat/pdf.pdf">
+              <a download href="/gland_cat/Glands_catalogue.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Brochure
                 </button>
@@ -172,7 +172,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Sockets Catalogue
               </h3>
-              <a download href="/sock_cat/pdf.pdf">
+              <a download href="/sock_cat/Sockets_catalogue.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Brochure
                 </button>
