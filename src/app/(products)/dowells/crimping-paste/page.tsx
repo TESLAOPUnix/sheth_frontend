@@ -137,7 +137,7 @@ export default function Component() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="pack">One Size / CAT. No.</Label>
+                    <Label htmlFor="pack">One Size (mm sq.) / CAT. No.</Label>
                     <Select
                       onValueChange={(value) =>
                         handleInputChange("pack", value)
