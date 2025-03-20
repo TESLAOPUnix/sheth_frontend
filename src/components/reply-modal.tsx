@@ -90,6 +90,16 @@ export default function ReplyModal({
     }));
   }, [enquiry]);
 
+  const [editableRows, setEditableRows] = useState<boolean[]>(
+    enquiry.orders.map(() => false)
+  );
+
+  const toggleEditable = (index: number) => {
+    setEditableRows((prev) =>
+      prev.map((editable, i) => (i === index ? !editable : editable))
+    );
+  };
+
   const handleInputChange = (
     field: string,
     value: string | number,
@@ -178,7 +188,28 @@ export default function ReplyModal({
                 <TableBody>
                   {enquiry.orders.map((item: Order, index: number) => (
                     <TableRow key={index}>
-                      <TableCell>{item.sku || item.cat_no}</TableCell>
+                      <TableCell>
+                        <Button
+                          variant="outline"
+                          onClick={() => toggleEditable(index)}
+                        >
+                          {editableRows[index] ? "Save" : "Edit"}
+                        </Button>
+                      </TableCell>
+                      <TableCell>
+                        <Input
+                          type="text"
+                          value={item.sku ?? item.cat_no ?? ""}
+                          onChange={(e) => {
+                            const field = item.sku ? "sku" : "cat_no";
+                            handleInputChange(field, e.target.value, index); // ✅ Edit the correct field
+                          }}
+                          disabled={!editableRows[index]}
+                          placeholder="Item name"
+                          className="w-32"
+                        />
+                      </TableCell>
+
                       <TableCell>{item.quantity}</TableCell>
                       <TableCell>
                         <Input
@@ -238,14 +269,13 @@ export default function ReplyModal({
             <div className="mt-2 text-right font-medium">
               Total: ₹
               {formState.items
-                .reduce(
-                  (sum, item) =>
-                    sum +
-                    (item.rate - item.discount) *
-                      enquiry.orders.find((o) => o.order_id === item.order_id)!
-                        .quantity,
-                  0
-                )
+                .reduce((sum, item) => {
+                  const order = enquiry.orders.find(
+                    (o) => o.order_id === item.order_id
+                  );
+                  const quantity = order?.quantity ?? 0; // ✅ Fallback to 0 if undefined
+                  return sum + (item.rate - item.discount) * quantity;
+                }, 0)
                 .toFixed(2)}
             </div>
           </div>
