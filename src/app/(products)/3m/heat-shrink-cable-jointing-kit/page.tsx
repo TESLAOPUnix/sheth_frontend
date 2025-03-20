@@ -51,9 +51,9 @@ export default function Component() {
 
   const productImages = [
     "/3m/HEAT_SHRINK_JOINTING_KIT/img1.png",
-  "/3m/HEAT_SHRINK_JOINTING_KIT/img2.png",
-  "/3m/HEAT_SHRINK_JOINTING_KIT/img3.png",
-  "/3m/HEAT_SHRINK_JOINTING_KIT/img4.jpg",
+    "/3m/HEAT_SHRINK_JOINTING_KIT/img2.png",
+    "/3m/HEAT_SHRINK_JOINTING_KIT/img3.png",
+    "/3m/HEAT_SHRINK_JOINTING_KIT/img4.jpg",
   ];
 
   const allVoltageOptions = [
@@ -86,62 +86,62 @@ export default function Component() {
     "800mm",
     "1000mm",
   ];
-  const cableTypeOptions = ["XLPE/PVC", "EPR", "Aerial Bunched Cable (ABC)"];
+  const cableTypeOptions = ["XLPE", "PVC", "EPR", "Aerial Bunched Cable (ABC)"];
 
-  useEffect(() => {
-    updateAvailableOptions();
-  }, [formData.cableType, formData.voltage]);
+  // useEffect(() => {
+  //   updateAvailableOptions();
+  // }, [formData.cableType, formData.voltage]);
 
-  const updateAvailableOptions = () => {
-    let voltages: string[] = [];
-    let cores: string[] = [];
-    let terminations: string[] = [];
+  // const updateAvailableOptions = () => {
+  //   let voltages: string[] = [];
+  //   let cores: string[] = [];
+  //   let terminations: string[] = [];
 
-    if (formData.cableType === "XLPE/PVC") {
-      voltages = allVoltageOptions.filter(
-        (v) => v === "1.1KV(E)" || !v.includes("UE")
-      );
-      terminations = ["indoor", "outdoor", "straight-through"];
-      if (formData.voltage === "1.1KV(E)") {
-        cores = allCoreOptions;
-      } else {
-        cores = ["1 core", "3 core"];
-      }
-    } else if (formData.cableType === "Aerial Bunched Cable (ABC)") {
-      voltages = [
-        "6.6KV(UE)/11KV(E)",
-        "11KV(UE)/22KV(E)",
-        "22KV(E)",
-        "33KV(E)",
-        "33KV(UE)",
-      ];
-      cores = ["1 core"];
-      terminations = ["outdoor", "straight-through"];
-    } else if (formData.cableType === "EPR") {
-      voltages = allVoltageOptions;
-      cores = allCoreOptions;
-      terminations = ["indoor", "outdoor", "straight-through"];
-    } else {
-      voltages = allVoltageOptions;
-      cores = allCoreOptions;
-      terminations = ["indoor", "outdoor", "straight-through"];
-    }
+  //   if (formData.cableType === "XLPE/PVC") {
+  //     voltages = allVoltageOptions.filter(
+  //       (v) => v === "1.1KV(E)" || !v.includes("UE")
+  //     );
+  //     terminations = ["indoor", "outdoor", "straight-through"];
+  //     if (formData.voltage === "1.1KV(E)") {
+  //       cores = allCoreOptions;
+  //     } else {
+  //       cores = ["1 core", "3 core"];
+  //     }
+  //   } else if (formData.cableType === "Aerial Bunched Cable (ABC)") {
+  //     voltages = [
+  //       "6.6KV(UE)/11KV(E)",
+  //       "11KV(UE)/22KV(E)",
+  //       "22KV(E)",
+  //       "33KV(E)",
+  //       "33KV(UE)",
+  //     ];
+  //     cores = ["1 core"];
+  //     terminations = ["outdoor", "straight-through"];
+  //   } else if (formData.cableType === "EPR") {
+  //     voltages = allVoltageOptions;
+  //     cores = allCoreOptions;
+  //     terminations = ["indoor", "outdoor", "straight-through"];
+  //   } else {
+  //     voltages = allVoltageOptions;
+  //     cores = allCoreOptions;
+  //     terminations = ["indoor", "outdoor", "straight-through"];
+  //   }
 
-    setAvailableVoltages(voltages);
-    setAvailableCores(cores);
-    setAvailableTerminations(terminations);
+  //   setAvailableVoltages(voltages);
+  //   setAvailableCores(cores);
+  //   setAvailableTerminations(terminations);
 
-    // Reset voltage, core, and termination if they're not in the new available options
-    if (!voltages.includes(formData.voltage)) {
-      setFormData((prev) => ({ ...prev, voltage: "" }));
-    }
-    if (!cores.includes(formData.core)) {
-      setFormData((prev) => ({ ...prev, core: "" }));
-    }
-    if (!terminations.includes(formData.termination)) {
-      setFormData((prev) => ({ ...prev, termination: "" }));
-    }
-  };
+  //   // Reset voltage, core, and termination if they're not in the new available options
+  //   if (!voltages.includes(formData.voltage)) {
+  //     setFormData((prev) => ({ ...prev, voltage: "" }));
+  //   }
+  //   if (!cores.includes(formData.core)) {
+  //     setFormData((prev) => ({ ...prev, core: "" }));
+  //   }
+  //   if (!terminations.includes(formData.termination)) {
+  //     setFormData((prev) => ({ ...prev, termination: "" }));
+  //   }
+  // };
 
   const handleInputChange = (field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -177,7 +177,13 @@ export default function Component() {
     updatingCart(sku, formData.quantity, name, terminationType, formData);
   };
 
-  const updatingCart = async (sku: string, quantity: any, name: string, terminationType: string, formData: any) => {
+  const updatingCart = async (
+    sku: string,
+    quantity: any,
+    name: string,
+    terminationType: string,
+    formData: any
+  ) => {
     try {
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,
@@ -185,21 +191,21 @@ export default function Component() {
           technology: "HeatShrink",
           type: terminationType,
           voltage: formData.voltage,
-          core: formData.core,  // Removed .toUpperCase()
-          size: formData.size,  // Removed .replace()
+          core: formData.core, // Removed .toUpperCase()
+          size: formData.size, // Removed .replace()
           cabletype: formData.cableType,
-          conductor: formData.material,  // Removed .toUpperCase() here as well
+          conductor: formData.material, // Removed .toUpperCase() here as well
           sku: sku,
           quantity: quantity,
-          name: name
+          name: name,
         }
       );
-  
+
       if (res?.data?.id) {
         const key = "3mItems";
         updateLocalStorageArray(key, res.data.id);
       }
-  
+
       toast({
         description: "Added to Cart Successfully",
       });
@@ -209,7 +215,6 @@ export default function Component() {
       setLoading(false);
     }
   };
-  
 
   return (
     <div className="container mx-auto px-4 py-4">
@@ -222,7 +227,7 @@ export default function Component() {
             <div className="w-full lg:w-1/2 p-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="sticky top-0 bg-background pt-4">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mb-4">
-                <Image
+                  <Image
                     src={productImages[selectedImage]}
                     alt={`Product Image ${selectedImage + 1}`}
                     layout="fill"
@@ -298,17 +303,18 @@ export default function Component() {
                     onValueChange={(value) =>
                       handleInputChange("termination", value)
                     }
-                    disabled={!formData.cableType}
                   >
                     <SelectTrigger id="termination">
                       <SelectValue placeholder="Select termination" />
                     </SelectTrigger>
                     <SelectContent>
-                      {availableTerminations.map((option) => (
-                        <SelectItem key={option} value={option}>
-                          {option}
-                        </SelectItem>
-                      ))}
+                      {["indoor", "outdoor", "straight-through"].map(
+                        (option) => (
+                          <SelectItem key={option} value={option}>
+                            {option}
+                          </SelectItem>
+                        )
+                      )}
                     </SelectContent>
                   </Select>
                 </div>
@@ -319,13 +325,12 @@ export default function Component() {
                     onValueChange={(value) =>
                       handleInputChange("voltage", value)
                     }
-                    disabled={!formData.cableType}
                   >
                     <SelectTrigger id="voltage">
                       <SelectValue placeholder="Select voltage" />
                     </SelectTrigger>
                     <SelectContent>
-                      {availableVoltages.map((option) => (
+                      {allVoltageOptions.map((option) => (
                         <SelectItem key={option} value={option}>
                           {option}
                         </SelectItem>
@@ -338,13 +343,12 @@ export default function Component() {
                   <Label htmlFor="core">Core</Label>
                   <Select
                     onValueChange={(value) => handleInputChange("core", value)}
-                    disabled={!formData.cableType || !formData.voltage}
                   >
                     <SelectTrigger id="core">
                       <SelectValue placeholder="Select core" />
                     </SelectTrigger>
                     <SelectContent>
-                      {availableCores.map((option) => (
+                      {allCoreOptions.map((option) => (
                         <SelectItem key={option} value={option}>
                           {option}
                         </SelectItem>
