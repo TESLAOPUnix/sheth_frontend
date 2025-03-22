@@ -77,6 +77,7 @@ export default function ReplyModal({
       delivery: "",
     })),
   });
+  const [changedItem, setChangedItem ] = useState("");
 
   useEffect(() => {
     setFormState((prevState) => ({
@@ -129,6 +130,15 @@ export default function ReplyModal({
       }));
     }
   };
+
+  const handleItemChange = (field: string,
+    value: string | number,
+    index?: number) => {
+
+      console.log(field, value, index);
+      console.log(formState)
+
+  }
 
   const handleSendReply = async () => {
     console.log("API body:", formState);
@@ -197,17 +207,18 @@ export default function ReplyModal({
                         </Button>
                       </TableCell>
                       <TableCell>
-                        <Input
+                      {item.sku ?? item.cat_no ?? ""}
+                        {editableRows[index] && <Input
                           type="text"
                           value={item.sku ?? item.cat_no ?? ""}
                           onChange={(e) => {
-                            const field = item.sku ? "sku" : "cat_no";
-                            handleInputChange(field, e.target.value, index); // ✅ Edit the correct field
+                            //const field = item.sku ? "sku" : "cat_no";
+                            handleItemChange(field, e.target.value, index); 
                           }}
                           disabled={!editableRows[index]}
                           placeholder="Item name"
                           className="w-32"
-                        />
+                        />}
                       </TableCell>
 
                       <TableCell>{item.quantity}</TableCell>

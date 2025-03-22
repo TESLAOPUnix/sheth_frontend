@@ -32,11 +32,18 @@ export default function Cart() {
     name: "",
     email: "",
     number: "",
+    company: "",
   });
   const [savedFormData, setSavedFormData] = useState({
     name: "",
     email: "",
     number: "",
+    company: "",
+  });
+
+  const [loading, setLoading] = useState({
+    type: "",
+    status: false,
   });
 
   useEffect(() => {
@@ -60,7 +67,7 @@ export default function Cart() {
       } catch (error) {
         console.error("Error fetching cart details:", error);
         toast({
-          description: "Failed to fetch cart details. Please try again.",
+          description: "⚠️❌ Failed to fetch cart details. Please try again.",
         });
       }
     };
@@ -81,18 +88,23 @@ export default function Cart() {
   }, []);
 
   const handleGetQuote = async () => {
-    const { email } = formData;
+    setLoading({ type: "quote", status: true });
+    const { email, company, number } = formData;
     const orderIds = JSON.parse(localStorage.getItem("3mItems") || "[]");
 
-    if (!email) {
-      toast({ description: "User ID is required to proceed." });
+    // ✅ Validation check
+    if (!email || !company || !number) {
+      toast({
+        description:
+          " ⚠️ Please fill in all the details (email, company, and number).",
+      });
       return;
     }
 
     if (!orderIds || orderIds.length === 0) {
       toast({
         description:
-          "Please add at least one item to your cart before getting a quote.",
+          " ⚠️ Please add at least one item to your cart before getting a quote.",
       });
       return;
     }
@@ -108,11 +120,14 @@ export default function Cart() {
         { email: email, cart_id: res.data.cart_id }
       );
       localStorage.removeItem("3mItems");
-      toast({ description: "Quote request sent successfully!" });
-      
+      toast({ description: "✅ Quote request sent successfully!" });
+      setIsOpen(false);
     } catch (error) {
       console.error("Error occurred:", error);
-      toast({ description: "Failed to get a quote. Please try again." });
+      toast({ description: "⚠️❌ Failed to get a quote. Please try again." });
+    } finally {
+      setLoading({ type: "", status: false });
+      
     }
   };
 
@@ -122,7 +137,19 @@ export default function Cart() {
   };
 
   const handleSave = async () => {
+    const { name, email, number, company } = formData;
+
+    // ✅ Validation check
+    if (!email || !company || !number) {
+      toast({
+        description:
+          "⚠️ Please fill in all the details (email, company, and number).",
+      });
+      return;
+    }
+
     try {
+      setLoading({ type: "account", status: true });
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/user`,
         {
@@ -140,11 +167,13 @@ export default function Cart() {
       setFormData(updatedFormData);
       setSavedFormData(updatedFormData);
       localStorage.setItem("contactInfo", JSON.stringify(updatedFormData));
-      toast({ description: "User created successfully" });
+      toast({ description: "✅ User saved successfully" });
       setIsFormOpen(false);
     } catch (error) {
       console.error(error);
-      toast({ description: "Failed to save user data" });
+      toast({ description: "⚠️❌ Failed to save user data" });
+    } finally {
+      setLoading({ type: "", status: false });
     }
   };
 
@@ -167,9 +196,10 @@ export default function Cart() {
           item.id === id ? { ...item, quantity: newQuantity } : item
         )
       );
+      toast({ description: "✅ Item updated successfully." });
     } catch (error) {
       console.error("Error updating quantity:", error);
-      toast({ description: "Failed to update quantity. Please try again." });
+      toast({ description: " ⚠️❌ Failed to update quantity. Please try again." });
     }
   };
 
@@ -187,17 +217,21 @@ export default function Cart() {
       );
       localStorage.setItem("3mItems", JSON.stringify(updatedItems));
       setCartItems([]);
-      toast({ description: "Item removed from cart successfully." });
+      toast({ description: "✅ Item removed from cart successfully." });
     } catch (error) {
       console.error("Error deleting item:", error);
-      toast({ description: "Failed to remove item. Please try again." });
+      toast({ description: "⚠️❌ Failed to remove item. Please try again." });
     }
   };
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="relative flex items-center text-black min-w-[4rem] pr-[0.25rem]">
+        <Button
+          variant="outline"
+          size="icon"
+          className="relative flex items-center text-black min-w-[4rem] pr-[0.25rem]"
+        >
           <ShoppingCart className="h-4 w-4 text-black " /> Cart
           <Badge
             variant="destructive"
@@ -254,7 +288,7 @@ export default function Cart() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Enter your email"
+                      placeholder="Enter your work email"
                     />
                   </div>
                   <div>
@@ -268,11 +302,26 @@ export default function Cart() {
                       placeholder="Enter your phone number"
                     />
                   </div>
+                  <div>
+                    <Label htmlFor="company">Email</Label>
+                    <Input
+                      id="company"
+                      name="company"
+                      type="text"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Enter your Company Name"
+                    />
+                  </div>
                   <div className="flex justify-end space-x-2 pb-[0.5rem]">
                     <Button variant="outline" onClick={handleCancel}>
                       Cancel
                     </Button>
-                    <Button onClick={handleSave}>Save</Button>
+                    <Button onClick={handleSave}>
+                      {loading.type === "account" && loading.status
+                        ? "Loading..."
+                        : "Save"}
+                    </Button>
                   </div>
                 </div>
               )}
@@ -328,8 +377,14 @@ export default function Cart() {
             )}
           </div>
           {cartItems.length > 0 && (
-            <Button onClick={handleGetQuote} className="mt-4 w-full">
-              Get a Quote
+            <Button
+              onClick={handleGetQuote}
+              className="mt-4 w-full"
+              disabled={loading.status}
+            >
+              {loading.type === "quote" && loading.status
+                ? "Loading..."
+                : "Get a Quote"}
             </Button>
           )}
         </div>
