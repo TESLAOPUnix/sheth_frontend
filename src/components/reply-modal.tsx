@@ -77,7 +77,7 @@ export default function ReplyModal({
       delivery: "",
     })),
   });
-  const [changedItem, setChangedItem ] = useState("");
+  const [changedItem, setChangedItem] = useState("");
 
   useEffect(() => {
     setFormState((prevState) => ({
@@ -96,6 +96,7 @@ export default function ReplyModal({
   );
 
   const toggleEditable = (index: number) => {
+    console.log("1", index);
     setEditableRows((prev) =>
       prev.map((editable, i) => (i === index ? !editable : editable))
     );
@@ -131,14 +132,53 @@ export default function ReplyModal({
     }
   };
 
-  const handleItemChange = (field: string,
-    value: string | number,
-    index?: number) => {
+  const handleItemChange = async () => {
+    if (changedItem == "") return;
 
-      console.log(field, value, index);
-      console.log(formState)
+    const editableIndex = editableRows.findIndex((val) => val === true)
 
-  }
+    const result =  formState.items[editableIndex];
+
+    console.log(editableIndex, "here", result);
+
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/discard`,
+        {
+          order_id: result.order_id,
+          cart_id: result.cart_id,
+          edit: changedItem,
+        }
+      );
+
+      if (res.status === 200) {
+        toast({
+          title: "Item updated successfully",
+          description: `Field: ${field}, Value: ${value}`,
+        });
+
+        // Update local state to reflect the changes
+        setFormState((prevState) => ({
+          ...prevState,
+          items: prevState.items.map((item, i) =>
+            i === index ? updatedItem : item
+          ),
+        }));
+        
+        // Reload the page after a short delay for better UX
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      }
+    } catch (error) {
+      console.error("Error updating item:", error);
+      toast({
+        title: "Failed to update item",
+        description: "An error occurred. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
 
   const handleSendReply = async () => {
     console.log("API body:", formState);
@@ -201,24 +241,33 @@ export default function ReplyModal({
                       <TableCell>
                         <Button
                           variant="outline"
-                          onClick={() => toggleEditable(index)}
+                          onClick={() => {
+                            if (editableRows[index]) {
+                              handleItemChange();
+                            } else {
+                              toggleEditable(index);
+                              setChangedItem(item.sku ?? item.cat_no ?? "");
+                            }
+                          }}
                         >
                           {editableRows[index] ? "Save" : "Edit"}
                         </Button>
                       </TableCell>
                       <TableCell>
-                      {item.sku ?? item.cat_no ?? ""}
-                        {editableRows[index] && <Input
-                          type="text"
-                          value={item.sku ?? item.cat_no ?? ""}
-                          onChange={(e) => {
-                            //const field = item.sku ? "sku" : "cat_no";
-                            handleItemChange(field, e.target.value, index); 
-                          }}
-                          disabled={!editableRows[index]}
-                          placeholder="Item name"
-                          className="w-32"
-                        />}
+                        {item.sku ?? item.cat_no ?? ""}
+                        {editableRows[index] && (
+                          <div>
+                            <Input
+                              type="text"
+                              value={changedItem}
+                              onChange={(e) => {
+                                setChangedItem(e.target.value);
+                              }}
+                              placeholder="Item name"
+                              className="w-32"
+                            />
+                          </div>
+                        )}
                       </TableCell>
 
                       <TableCell>{item.quantity}</TableCell>
