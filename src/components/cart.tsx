@@ -156,6 +156,7 @@ export default function Cart() {
           name: formData.name,
           email: formData.email,
           phone: formData.number,
+          company: formData.company
         }
       );
 
