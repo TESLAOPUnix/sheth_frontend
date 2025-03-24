@@ -156,7 +156,7 @@ export default function Cart() {
           name: formData.name,
           email: formData.email,
           phone: formData.number,
-          company: formData.company
+          company_name: formData.company
         }
       );
 
@@ -304,7 +304,7 @@ export default function Cart() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="company">Email</Label>
+                    <Label htmlFor="company">Company Name</Label>
                     <Input
                       id="company"
                       name="company"
