@@ -349,15 +349,15 @@ export default function ReplyModal({
                 <SelectValue placeholder="Select payment terms" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="immediate">Immediate</SelectItem>
-                <SelectItem value="after_performa">
+                <SelectItem value="Immediate">Immediate</SelectItem>
+                <SelectItem value="100% after Performa Invoice">
                   100% after Performa Invoice
                 </SelectItem>
-                <SelectItem value="within_7_days">Within 7 days</SelectItem>
-                <SelectItem value="25_against_performa">
+                <SelectItem value="Within 7 days">Within 7 days</SelectItem>
+                <SelectItem value="25% against Performa">
                   25% against Performa
                 </SelectItem>
-                <SelectItem value="within_30_days">
+                <SelectItem value="100% within 30 days">
                   100% within 30 days
                 </SelectItem>
               </SelectContent>
@@ -373,10 +373,10 @@ export default function ReplyModal({
                 <SelectValue placeholder="Select validity" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="7_days">7 Days</SelectItem>
-                <SelectItem value="10_days">10 Days</SelectItem>
-                <SelectItem value="14_days">14 Days</SelectItem>
-                <SelectItem value="15_days">15 Days</SelectItem>
+                <SelectItem value="7 Days">7 Days</SelectItem>
+                <SelectItem value="10 Days">10 Days</SelectItem>
+                <SelectItem value="14 Days">14 Days</SelectItem>
+                <SelectItem value="15 Days">15 Days</SelectItem>
               </SelectContent>
             </Select>
           </div>
