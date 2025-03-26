@@ -18,10 +18,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ChevronLeft, ChevronRight, Search, SortAsc, SortDesc } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Search,
+  SortAsc,
+  SortDesc,
+} from "lucide-react";
 import ReplyModal from "@/components/reply-modal";
 import axios from "axios";
 import { toast } from "@/hooks/use-toast";
+import InvoiceDropdown from "@/components/invoice";
+import LoadingSpinner from "@/components/loader";
 
 type EnquiryStatus = "new" | "opened" | "fulfilled" | "cancelled";
 
@@ -68,7 +76,7 @@ export default function EnhancedEnquiryPage() {
   const [limit] = useState(10); // Adjust limit as needed
   const [dateSort, setDateSort] = useState<string>("false");
   const [statusSort, setStatusSort] = useState<string>("");
-  
+  const [loading, setLoading] = useState(false);
 
   const handleReply = (enquiry: any) => {
     setSelectedEnquiry({ id: enquiry.cart_id, isOpen: true });
@@ -77,6 +85,7 @@ export default function EnhancedEnquiryPage() {
 
   const fetchEnquiries = async () => {
     try {
+      setLoading(true);
       const res = await axios.get(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/getEnquiries?page=${page}&limit=${limit}&datesort=${dateSort}&statussort=${statusSort}`
       );
@@ -85,11 +94,13 @@ export default function EnhancedEnquiryPage() {
       setEnquiries(res.data.response); // Adjusted to handle the new structure
     } catch (error) {
       console.error("Failed to fetch enquiries:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    console.log("run it ")
+    console.log("run it ");
     fetchEnquiries();
   }, [page, dateSort, statusSort]);
 
@@ -144,6 +155,7 @@ export default function EnhancedEnquiryPage() {
 
   return (
     <div className="container mx-auto p-4">
+      {loading && <LoadingSpinner />}
       <h1 className="text-2xl font-bold mb-4">Enquiries</h1>
       <div className="mb-4 flex items-center space-x-2">
         {/* Search Bar */}
@@ -155,7 +167,10 @@ export default function EnhancedEnquiryPage() {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-10 bg-background"
           />
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          <Search
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            size={20}
+          />
         </div>
 
         {/* Sort by Date */}
@@ -192,6 +207,7 @@ export default function EnhancedEnquiryPage() {
               <TableHead>Items</TableHead>
               <TableHead>Phone</TableHead>
               <TableHead>Status</TableHead>
+              <TableHead>Invoice</TableHead>
               <TableHead>Action</TableHead>
             </TableRow>
           </TableHeader>
@@ -249,6 +265,9 @@ export default function EnhancedEnquiryPage() {
                     </SelectContent>
                   </Select>
                 </TableCell>
+                <TableCell className="flex items-center justify-center">
+                  <InvoiceDropdown cartData={enquiry} />
+                </TableCell>
                 <TableCell>
                   <Button
                     variant="outline"
@@ -277,11 +296,18 @@ export default function EnhancedEnquiryPage() {
 
       {/* Pagination Controls */}
       <div className="flex justify-between items-center mt-4 ml-auto">
-        <Button className="disabled:opacity-25 bg-zinc-800" onClick={() => setPage((prev) => Math.max(prev - 1, 1))} disabled={page === 1}>
+        <Button
+          className="disabled:opacity-25 bg-zinc-800"
+          onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+          disabled={page === 1}
+        >
           <ChevronLeft /> Previous
         </Button>
         <span className="text-xs">Page {page}</span>
-        <Button className="bg-zinc-800" onClick={() => setPage((prev) => prev + 1)}>
+        <Button
+          className="bg-zinc-800"
+          onClick={() => setPage((prev) => prev + 1)}
+        >
           Next <ChevronRight />
         </Button>
       </div>

@@ -139,7 +139,7 @@ export default function ReplyModal({
 
     const result =  formState.items[editableIndex];
 
-    console.log(editableIndex, "here", result);
+    //console.log(editableIndex, "here", result);
 
     try {
       const res = await axios.post(
@@ -151,24 +151,23 @@ export default function ReplyModal({
         }
       );
 
-      if (res.status === 200) {
+      console.log("res", res.status);
+
+      if (res.status == 200) {
+        console.log("1");
         toast({
           title: "Item updated successfully",
-          description: `Field: ${field}, Value: ${value}`,
         });
 
         // Update local state to reflect the changes
-        setFormState((prevState) => ({
-          ...prevState,
-          items: prevState.items.map((item, i) =>
-            i === index ? updatedItem : item
-          ),
-        }));
+        // setFormState((prevState) => ({
+        //   ...prevState,
+        //   items: prevState.items.map((item, i) =>
+        //     i === index ? updatedItem : item
+        //   ),
+        // }));
         
-        // Reload the page after a short delay for better UX
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000);
+        window.location.reload();
       }
     } catch (error) {
       console.error("Error updating item:", error);
@@ -227,6 +226,7 @@ export default function ReplyModal({
               <Table>
                 <TableHeader>
                   <TableRow>
+                    <TableHead></TableHead>
                     <TableHead>Item</TableHead>
                     <TableHead>Quantity</TableHead>
                     <TableHead>Rate</TableHead>
@@ -271,6 +271,7 @@ export default function ReplyModal({
                       </TableCell>
 
                       <TableCell>{item.quantity}</TableCell>
+                      
                       <TableCell>
                         <Input
                           type="number"
