@@ -9,6 +9,7 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact";
 import StepsGuide from "@/components/steps";
+import Carousel from "@/components/carousel";
 
 export default function Page() {
   return (
@@ -17,16 +18,10 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section className="relative h-[500px] overflow-hidden">
         <Navigation />
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/hero.jpg')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        {/* Carousel with fade transition */}
+        <Carousel />
 
         <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
           <div className="max-w-3xl">
@@ -51,8 +46,6 @@ export default function Page() {
       <ContactSection />
 
       <StepsGuide />
-
-      <Footer />
     </main>
   );
 }

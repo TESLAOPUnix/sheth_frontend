@@ -108,7 +108,7 @@ export default function BrandCards() {
       </div>
 
       <StepsGuide />
-      <Footer />
+    
     </div>
   );
 }

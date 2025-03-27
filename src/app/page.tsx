@@ -88,7 +88,7 @@ export default function Home() {
       >
         <CertificatesSection />
       </AnimatedContainer>
-      <Footer />
+     
     </main>
   );
 }

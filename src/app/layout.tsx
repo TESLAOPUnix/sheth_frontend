@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Providers } from "./provider";
 import ScrollToTopButton from "@/components/go-up";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,6 +38,7 @@ export default function RootLayout({
         </main>
 
         <Toaster />
+        <Footer />
       </body>
     </html>
   );
