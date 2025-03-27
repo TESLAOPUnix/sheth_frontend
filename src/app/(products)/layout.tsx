@@ -11,6 +11,7 @@ export default function RootLayout({
     <div className="pt-[5rem] sm:pt-[4rem]">
       <Navigation alwaysVisible={true} />
       <div className="max-w-[76rem] mx-auto">{children}</div>
+      
     </div>
   );
 }

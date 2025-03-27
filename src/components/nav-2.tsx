@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Cart from "./cart";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "HOME", href: "/" },
@@ -17,6 +18,12 @@ const navItems = [
 export default function Navigation({ alwaysVisible = false }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(alwaysVisible);
+  const pathName = usePathname();
+  const [path, setPath] = useState(pathName);
+  useEffect(() => {
+    setPath(pathName);
+    console.log(pathName);
+  }, [pathName]);
 
   useEffect(() => {
     if (!alwaysVisible) {
@@ -77,8 +84,10 @@ export default function Navigation({ alwaysVisible = false }) {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className={`block py-2 text-sm font-semibold transition-colors hover:text-amber-500
-                        text-black`}
+                        className={`block py-2 text-sm font-semibold transition-colors hover:text-amber-600
+                         ${
+                           path === item.href ? "text-amber-500" : "text-black"
+                         }`}
                       >
                         {item.name}
                       </a>
@@ -90,7 +99,7 @@ export default function Navigation({ alwaysVisible = false }) {
                     <Cart />
                   </li>
                 ) : (
-                  <a href="/" className="font-semibold">
+                  <a href="/" className="font-semibold hidden lg:block">
                     <Image
                       src="/sheth_logo.png"
                       alt="Sheth Trading Corporation Logo"
@@ -99,6 +108,7 @@ export default function Navigation({ alwaysVisible = false }) {
                       className="h-auto w-28"
                     />
                   </a>
+                  
                 )}
               </ul>
             </div>

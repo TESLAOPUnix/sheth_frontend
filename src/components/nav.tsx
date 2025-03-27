@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Cart from "./cart";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "HOME", href: "/" },
@@ -15,6 +16,12 @@ const navItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathName = usePathname();
+  const [path, setPath] = useState(pathName);
+  useEffect(() => {
+    setPath(pathName);
+    console.log(pathName);
+  }, [pathName]);
 
   return (
     <nav
@@ -46,7 +53,7 @@ export default function Navigation() {
                   <a
                     href={item.href}
                     className={`block py-2 text-sm font-semibold transition-colors hover:text-amber-500 
-                     `}
+                      ${path === item.href ? "text-amber-500" : ""}`}
                   >
                     {item.name}
                   </a>
