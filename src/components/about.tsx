@@ -5,8 +5,9 @@ import AnimatedTitle from "./animated-title";
 
 export default function AboutCompany() {
   return (
-    <section className="py-16 md:py-24 max-w-[76rem] mx-auto">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 max-w-full mx-auto relative">
+      <div className="absolute inset-x-0 bg-white h-full -z-50 -top-4"></div>
+      <div className="container max-w-[76rem] mx-auto px-4">
         {/* Header with decorative lines */}
         <div className="mb-16 flex items-center justify-center space-x-4">
           <div className="h-[2px] w-12 bg-[#5C1E1E]" />
@@ -37,7 +38,7 @@ export default function AboutCompany() {
           </div>
 
           {/* Content column */}
-          <div className="space-y-8 shadow-lg p-[1.5rem] rounded-lg bg-white">
+          <div className="space-y-8 p-[1.5rem] text-[1rem]  sm:text-[1.2rem]">
             {/* Main description */}
             <p className="text-gray-600 leading-relaxed">
               At Sheth Trading Corporation, we are committed to delivering
