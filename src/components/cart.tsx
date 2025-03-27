@@ -127,7 +127,6 @@ export default function Cart() {
       toast({ description: "⚠️❌ Failed to get a quote. Please try again." });
     } finally {
       setLoading({ type: "", status: false });
-      
     }
   };
 
@@ -156,7 +155,7 @@ export default function Cart() {
           name: formData.name,
           email: formData.email,
           phone: formData.number,
-          company_name: formData.company
+          company_name: formData.company,
         }
       );
 
@@ -200,7 +199,9 @@ export default function Cart() {
       toast({ description: "✅ Item updated successfully." });
     } catch (error) {
       console.error("Error updating quantity:", error);
-      toast({ description: " ⚠️❌ Failed to update quantity. Please try again." });
+      toast({
+        description: " ⚠️❌ Failed to update quantity. Please try again.",
+      });
     }
   };
 
@@ -282,6 +283,17 @@ export default function Cart() {
                     />
                   </div>
                   <div>
+                    <Label htmlFor="company">Company Name</Label>
+                    <Input
+                      id="company"
+                      name="company"
+                      type="text"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Enter your Company Name"
+                    />
+                  </div>
+                  <div>
                     <Label htmlFor="email">Email</Label>
                     <Input
                       id="email"
@@ -293,27 +305,17 @@ export default function Cart() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="number">Number</Label>
+                    <Label htmlFor="number">Contact Number</Label>
                     <Input
                       id="number"
                       name="number"
                       type="tel"
                       value={formData.number}
                       onChange={handleInputChange}
-                      placeholder="Enter your phone number"
+                      placeholder="Enter your Contact Number"
                     />
                   </div>
-                  <div>
-                    <Label htmlFor="company">Company Name</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      type="text"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder="Enter your Company Name"
-                    />
-                  </div>
+
                   <div className="flex justify-end space-x-2 pb-[0.5rem]">
                     <Button variant="outline" onClick={handleCancel}>
                       Cancel
