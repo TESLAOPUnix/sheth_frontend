@@ -13,6 +13,7 @@ import AnimatedContainer from "@/components/animated-title";
 import Navigation from "@/components/nav-2";
 
 export default function Home() {
+  
   return (
     <main className="relative">
 
