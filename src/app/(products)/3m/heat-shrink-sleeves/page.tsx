@@ -33,22 +33,7 @@ export default function Component() {
   return (
     <div className="flex justify-center min-h-screen bg-background p-4">
       <div className="w-full max-w-6xl">
-        <div className="flex items-center justify-between mb-8">
-          <Button
-            variant="ghost"
-            className="flex items-center"
-            onClick={handleBack}
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            <span className="hidden sm:block">Back</span>
-          </Button>
-          <h1 className="text-3xl font-bold text-center flex-grow">
-            Heat Shrink Sleeves
-          </h1>
-          <div className="pr-[1rem]">
-            <Cart />
-          </div>
-        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <Card
