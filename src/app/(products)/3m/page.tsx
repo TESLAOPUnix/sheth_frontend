@@ -76,6 +76,8 @@ export default function Component() {
               </Link>
               <span className="mx-2 text-gray-400">›</span>
               <span className="text-gray-300 font-medium">PRODUCTS</span>
+              <span className="mx-2 text-gray-400">›</span>
+              <span className="text-gray-300 font-medium">3M</span>
             </nav>
           </div>
         </div>
