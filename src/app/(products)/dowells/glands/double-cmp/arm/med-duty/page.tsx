@@ -92,9 +92,9 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
-      {!loading && <Navigation />}
+
       <Card className="overflow-hidden">
         <CardContent className="p-0">
           <div className="flex flex-col lg:flex-row">

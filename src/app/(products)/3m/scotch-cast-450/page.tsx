@@ -29,11 +29,13 @@ export default function Component() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const productImages = [
-    "/3m/SCOTCHCAST_450/img1.png"
-  ];
+  const productImages = ["/3m/SCOTCHCAST_450/img1.png"];
 
-  const packOptions = ["N Pack (2.407 Kg)", "P Pack (1.21 Kg)", "Q Pack (609 g)"];
+  const packOptions = [
+    "N Pack (2.407 Kg)",
+    "P Pack (1.21 Kg)",
+    "Q Pack (609 g)",
+  ];
 
   const handleInputChange = (field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -48,13 +50,22 @@ export default function Component() {
     setLoading(true);
 
     try {
-      const skuMap: Record<"N Pack (2.407 Kg)" | "P Pack (1.21 Kg)" | "Q Pack (609 g)", string> = {
+      const skuMap: Record<
+        "N Pack (2.407 Kg)" | "P Pack (1.21 Kg)" | "Q Pack (609 g)",
+        string
+      > = {
         "N Pack (2.407 Kg)": "3M_SC40_N",
         "P Pack (1.21 Kg)": "3M_SC40_P",
         "Q Pack (609 g)": "3M_SC40_Q",
       };
 
-      const sku = skuMap[formData.pack as "N Pack (2.407 Kg)" | "P Pack (1.21 Kg)" | "Q Pack (609 g)"];
+      const sku =
+        skuMap[
+          formData.pack as
+            | "N Pack (2.407 Kg)"
+            | "P Pack (1.21 Kg)"
+            | "Q Pack (609 g)"
+        ];
       const quantity = formData.quantity;
       const name = `Scotch cast 450 (Resin + Hardener) ${formData.pack}`;
 
@@ -78,9 +89,9 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
-      {!loading && <Navigation />}
+
       <Card className="overflow-hidden">
         <CardContent className="p-0">
           <div className="flex flex-col lg:flex-row">
@@ -88,7 +99,7 @@ export default function Component() {
             <div className="w-full lg:w-1/2 p-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="sticky top-0 bg-background pt-4">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mb-4">
-                <Image
+                  <Image
                     src={productImages[selectedImage]}
                     alt={`Product Image ${selectedImage + 1}`}
                     layout="fill"

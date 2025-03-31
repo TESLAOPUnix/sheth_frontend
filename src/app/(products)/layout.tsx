@@ -38,7 +38,7 @@ export default function RootLayout({
           <Cart />
         </div>
       </div>
-      <div className=" mx-auto mt-[3rem]">{children}</div>
+      <div className=" mx-auto mt-[0rem]">{children}</div>
     </div>
   );
 }

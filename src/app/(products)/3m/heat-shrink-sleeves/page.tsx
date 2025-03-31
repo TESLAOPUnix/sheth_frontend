@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useRouter } from "next/navigation";
-import { ArrowLeft, Home  } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { ArrowLeft, Home } from "lucide-react";
 import Cart from "@/components/cart";
 import Link from "next/link";
 
@@ -27,15 +27,28 @@ export default function Component() {
     router.push(`/3m/heat-shrink-sleeves/${slug}`);
   };
 
-  const handleBack = () => {
-    router.back();
-  };
+  const pathName = usePathname();
+
+  // Create dynamic breadcrumbs
+  const pathSegments = pathName
+    .split("/")
+    .filter(Boolean)
+    .map((segment, index, array) => {
+      const path = "/" + array.slice(0, index + 1).join("/");
+      return { name: segment, path };
+    });
+
+  // Add "Products" as the first breadcrumb
+  const breadcrumbs = [
+    { name: "Products", path: "/products" },
+    ...pathSegments,
+  ];
 
   return (
-    <div className="flex justify-center min-h-screen bg-background p-4">
+    <div className="flex flex-col justify-center w-full mx-auto min-h-screen bg-background relative">
+      {/* Hero Section */}
 
-<section className="relative h-[400px] overflow-hidden mb-[2rem]">
-        
+      <section className="relative h-[400px] overflow-hidden mb-[2rem]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -51,26 +64,23 @@ export default function Component() {
               Products
             </h1>
             <nav className="flex items-center text-white text-sm mt-[1rem]">
-              <Link
-                href="/"
-                className="flex items-center justify-center hover:text-gray-300 transition-colors"
-              >
-                <Home size={24} className="mr-1 font-bold" fontWeight={300} />
-                <span className="font-semibold text-[1.1rem]">HOME</span>
-              </Link>
-              <span className="mx-2 text-gray-400">›</span>
-              <span className="text-gray-300 font-medium">PRODUCTS</span>
-              <span className="mx-2 text-gray-400">›</span>
-              <span className="text-gray-300 font-medium">3M</span>
-              <span className="mx-2 text-gray-400">›</span>
-              <span className="text-gray-300 font-medium">HEAT SHRINK SLEEVES</span>
+              {breadcrumbs.map((crumb, index) => (
+                <div key={crumb.path} className="flex items-center">
+                  {index > 0 && <span className="mx-2 text-gray-400">›</span>}
+                  <Link
+                    href={crumb.path}
+                    className="text-gray-300 font-medium hover:text-gray-100 transition-colors"
+                  >
+                    {crumb.name.toUpperCase()}
+                  </Link>
+                </div>
+              ))}
             </nav>
           </div>
         </div>
       </section>
 
-      <div className="w-full max-w-6xl">
-        
+      <div className="w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <Card

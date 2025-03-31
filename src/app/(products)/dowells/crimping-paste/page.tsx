@@ -29,10 +29,7 @@ export default function Component() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const productImages = [
-    "/dowells/cp/img1.png",
-    "/dowells/cp/img2.png",
-  ];
+  const productImages = ["/dowells/cp/img1.png", "/dowells/cp/img2.png"];
 
   const packOptions = [{ label: "GTZ-8785", value: "GTZ-8785" }];
 
@@ -75,9 +72,9 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
-      {!loading && <Navigation />}
+
       <Card className="overflow-hidden">
         <CardContent className="p-0">
           <div className="flex flex-col lg:flex-row">
@@ -85,7 +82,7 @@ export default function Component() {
             <div className="w-full lg:w-1/2 p-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="sticky top-0 bg-background pt-4">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mb-4">
-                <Image
+                  <Image
                     src={productImages[selectedImage]}
                     alt={`Product Image ${selectedImage + 1}`}
                     layout="fill"
