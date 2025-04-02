@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import LoadingSpinner from "@/components/loader";
 import Navigation from "@/components/navigation";
 import { Download } from "lucide-react";
+import { useVisibility } from "@/app/provider";
 
 export default function Component() {
   const [formData, setFormData] = useState({
@@ -25,6 +26,7 @@ export default function Component() {
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
+  const {setIsVisible} = useVisibility();
 
   const productImages = ["/3m/HEAT_SHRINK_SLEEVES/wrap_around/img1.png"];
 

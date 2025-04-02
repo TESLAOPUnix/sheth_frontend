@@ -2,8 +2,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { usePathname, useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Home } from "lucide-react";
 import Link from "next/link";
 
 const products = [

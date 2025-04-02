@@ -17,8 +17,7 @@ import { Input } from "@/components/ui/input";
 import { updateLocalStorageArray } from "@/utils/localstorage";
 import { toast } from "@/hooks/use-toast";
 import LoadingSpinner from "@/components/loader";
-import Navigation from "@/components/navigation";
-import { Download } from "lucide-react";
+import { useVisibility } from "@/app/provider";
 
 export default function Component() {
   const [formData, setFormData] = useState({
@@ -28,6 +27,7 @@ export default function Component() {
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
+  const {setIsVisible} = useVisibility();
 
   const productImages = [
     "/3m/TAPES/img1.png",
@@ -51,6 +51,7 @@ export default function Component() {
     setLoading(true);
 
     try {
+      setIsVisible(false);
       const sku = "3M_WPT_MT";
       const quantity = formData.quantity;
       const name = `Monoplast `;
@@ -71,6 +72,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
+      setIsVisible(true);
     }
   };
 

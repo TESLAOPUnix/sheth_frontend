@@ -17,8 +17,8 @@ import { Input } from "@/components/ui/input";
 import { updateLocalStorageArray } from "@/utils/localstorage";
 import { toast } from "@/hooks/use-toast";
 import LoadingSpinner from "@/components/loader";
-import Navigation from "@/components/navigation";
 import { Download } from "lucide-react";
+import { useVisibility } from "@/app/provider";
 
 export default function Component() {
   const [formData, setFormData] = useState({
@@ -28,6 +28,7 @@ export default function Component() {
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
+  const {setIsVisible} = useVisibility();
 
   const productImages = [
     "/3m/TAPES/img1.png",
@@ -51,6 +52,7 @@ export default function Component() {
     setLoading(true);
 
     try {
+      setIsVisible(false);
       const skuMap: Record<"19mm" | "25mm" | "38mm" | "50mm", string> = {
         "19mm": "3M_HT_S23_19",
         "25mm": "3M_HT_S23_25",
@@ -79,6 +81,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
+      setIsVisible(false);
     }
   };
 

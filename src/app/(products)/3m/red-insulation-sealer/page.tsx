@@ -19,6 +19,7 @@ import Navigation from "@/components/navigation";
 import { updateLocalStorageArray } from "@/utils/localstorage";
 import axios from "axios";
 import { toast } from "@/hooks/use-toast";
+import { useVisibility } from "@/app/provider";
 
 export default function Component() {
   const [formData, setFormData] = useState({
@@ -27,6 +28,7 @@ export default function Component() {
   });
 
   const [loading, setLoading] = useState(false);
+  const {setIsVisible} = useVisibility();
   const [selectedImage, setSelectedImage] = useState(0);
 
   const productImages = ["/3m/RED_INSULATION_SEALER/img1.png"];
@@ -46,6 +48,7 @@ export default function Component() {
     setLoading(true);
 
     try {
+      setIsVisible(true);
       const sku = "3M_AS_1602-R";
       const quantity = formData.quantity;
       const name = `Red Insulation Sealer AEROSOL 1602-R`;
@@ -66,6 +69,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
+      setIsVisible(false);
     }
   };
 
