@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import { Providers } from "./provider";
+import { VisibilityProvider } from "./provider";
 import ScrollToTopButton from "@/components/go-up";
 import Footer from "@/components/footer";
 
@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <main className="relative bg-amber-50 bg-opacity-30">
-          {children}
+          <VisibilityProvider>{children}</VisibilityProvider>
           <ScrollToTopButton />
         </main>
 

@@ -1,12 +1,29 @@
 // app/providers.tsx
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { createContext, useContext, useState, ReactNode } from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+interface VisibilityContextType {
+  isVisible: boolean;
+  setIsVisible: (visible: boolean) => void;
+}
+
+const VisibilityContext = createContext<VisibilityContextType | undefined>(undefined);
+
+export function VisibilityProvider({ children }: { children: ReactNode }) {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <VisibilityContext.Provider value={{ isVisible, setIsVisible }}>
       {children}
-    </ThemeProvider>
+    </VisibilityContext.Provider>
   );
+}
+
+export function useVisibility() {
+  const context = useContext(VisibilityContext);
+  if (!context) {
+    throw new Error("useVisibility must be used within a VisibilityProvider");
+  }
+  return context;
 }

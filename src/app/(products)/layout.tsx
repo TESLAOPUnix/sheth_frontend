@@ -1,18 +1,19 @@
 "use client";
-import { Toaster } from "@/components/ui/toaster";
-import ScrollToTopButton from "@/components/go-up";
 
 import Navigation from "@/components/nav-2";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import Cart from "@/components/cart";
+import { useState } from "react";
+import { useVisibility } from "../provider";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { isVisible } = useVisibility();
   const router = useRouter();
 
   const handleBack = () => {
@@ -31,12 +32,8 @@ export default function RootLayout({
           <ArrowLeft className="mr-2 h-4 w-4" />
           <span className="hidden sm:block ">Back</span>
         </Button>
-        <h1 className="text-3xl font-bold text-center flex-grow">
-         
-        </h1>
-        <div className="pr-[1rem]">
-          <Cart />
-        </div>
+        <h1 className="text-3xl font-bold text-center flex-grow"></h1>
+        <div className="pr-[1rem]">{isVisible && <Cart />}</div>
       </div>
       <div className=" mx-auto mt-[0rem]">{children}</div>
     </div>

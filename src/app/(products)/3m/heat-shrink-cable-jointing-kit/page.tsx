@@ -28,6 +28,7 @@ import { updateLocalStorageArray } from "@/utils/localstorage";
 import LoadingSpinner from "@/components/loader";
 import { useToast } from "@/hooks/use-toast";
 import { Download } from "lucide-react";
+import { useVisibility } from "@/app/provider";
 
 export default function Component() {
   const { toast } = useToast();
@@ -48,6 +49,7 @@ export default function Component() {
     []
   );
   const [loading, setLoading] = useState(false);
+  const {setIsVisible} = useVisibility();
 
   const productImages = [
     "/3m/HEAT_SHRINK_JOINTING_KIT/img1.png",
@@ -185,6 +187,7 @@ export default function Component() {
     formData: any
   ) => {
     try {
+      setIsVisible(false);
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,
         {
@@ -213,6 +216,7 @@ export default function Component() {
       console.log(error);
     } finally {
       setLoading(false);
+      setIsVisible(true);
     }
   };
 
