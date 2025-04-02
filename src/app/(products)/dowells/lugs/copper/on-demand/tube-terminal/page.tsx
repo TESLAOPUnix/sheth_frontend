@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input";
 import { updateLocalStorageArray } from "@/utils/localstorage";
 import { toast } from "@/hooks/use-toast";
 import LoadingSpinner from "@/components/loader";
-import Navigation from "@/components/navigation";
+import { useVisibility } from "@/app/provider";
 
 export default function Component() {
   const [formData, setFormData] = useState({
@@ -27,6 +27,7 @@ export default function Component() {
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
+  const {setIsVisible} = useVisibility();
 
   const productImages = [
     "/placeholder.svg?height=600&width=600&text=Image+1",
@@ -85,6 +86,7 @@ export default function Component() {
     setLoading(true);
 
     try {
+      setIsVisible(false);
       const cat_no = formData.pack as string; // Use the selected cat_no as the cat_no
       const quantity = formData.quantity;
       const name = `Tube Terminal Long Barrel ${formData.pack}`;
@@ -107,6 +109,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
+      setIsVisible(true);
     }
   };
 
