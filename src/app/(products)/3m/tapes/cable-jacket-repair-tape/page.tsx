@@ -73,7 +73,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
-      setIsVisible(false);
+      setIsVisible(true);
     }
   };
 

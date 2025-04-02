@@ -48,7 +48,7 @@ export default function Component() {
     setLoading(true);
 
     try {
-      setIsVisible(true);
+      setIsVisible(false);
       const sku = "3M_AS_1602-R";
       const quantity = formData.quantity;
       const name = `Red Insulation Sealer AEROSOL 1602-R`;
@@ -69,7 +69,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
-      setIsVisible(false);
+      setIsVisible(true);
     }
   };
 

@@ -220,6 +220,7 @@ export default function Cart() {
       localStorage.setItem("3mItems", JSON.stringify(updatedItems));
       setCartItems([]);
       toast({ description: "✅ Item removed from cart successfully." });
+      window.location.reload();
     } catch (error) {
       console.error("Error deleting item:", error);
       toast({ description: "⚠️❌ Failed to remove item. Please try again." });

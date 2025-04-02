@@ -60,7 +60,7 @@ export default function Component() {
     setLoading(true);
 
     try {
-      setIsVisible(true);
+      setIsVisible(false);
       const sku = `3M_HS_BB_${formData.voltage.split(" ")[0]}_${
         formData.size.split(" ")[0]
       }`;
@@ -83,7 +83,7 @@ export default function Component() {
       toast({ description: "Failed to add to cart, please try again." });
     } finally {
       setLoading(false);
-      setIsVisible(false);
+      setIsVisible(true);
     }
   };
 
