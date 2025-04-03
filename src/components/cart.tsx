@@ -339,9 +339,6 @@ export default function Cart() {
                   >
                     <div className="w-[50%]">
                       <p className="text-sm">{item.name || "Unnamed Item"}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {item.sku}
-                      </p>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Button
