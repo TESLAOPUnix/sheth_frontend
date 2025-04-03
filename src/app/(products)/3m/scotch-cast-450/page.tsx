@@ -146,9 +146,6 @@ export default function Component() {
               <div className="space-y-6">
                 <div>
                   <h1 className="text-3xl font-bold mb-2">Scotch cast 450</h1>
-                  <p className="text-gray-600">
-                    High-quality cable for various applications
-                  </p>
                 </div>
 
                 <div className="space-y-4">

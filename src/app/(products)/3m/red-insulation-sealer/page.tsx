@@ -131,9 +131,6 @@ export default function Component() {
                   <h1 className="text-3xl font-bold mb-2">
                     Red Insulation Sealer
                   </h1>
-                  <p className="text-gray-600">
-                    High-quality cable for various applications
-                  </p>
                 </div>
 
                 <div className="space-y-4">

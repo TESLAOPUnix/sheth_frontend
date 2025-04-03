@@ -31,10 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/img1.png",
-    "/3m/TAPES/img2.png",
-    "/3m/TAPES/img3.png",
-    "/3m/TAPES/img4.png",
+    "/3m/TAPES/img4.png"
   ];
 
   const sizeOption = ["One size"];

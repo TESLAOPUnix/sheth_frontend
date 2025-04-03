@@ -133,7 +133,6 @@ export default function Component() {
                   <h1 className="text-3xl font-bold mb-2">
                     Corrosion Inhibiting Compound
                   </h1>
-                  <p className="text-gray-600">Crimping Paste</p>
                 </div>
 
                 <div className="space-y-4">

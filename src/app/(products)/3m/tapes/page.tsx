@@ -19,7 +19,7 @@ const products = [
     slug: "duct-tape",
   },
   {
-    name: "H1 Tape",
+    name: "HT Tape",
     image: "/placeholder.svg?height=200&width=200",
     slug: "h1-tape",
   },
