@@ -16,24 +16,24 @@ export default function AboutCompany() {
         </div>
 
         {/* Main content grid */}
-        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
           {/* Images column */}
-          <div className="space-y-6">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
-              <Image
-                src="/a1.jpeg"
-                alt="Primary Company Image"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
-              <Image
-                src="/a2.jpeg"
-                alt="Secondary Company Image"
-                fill
-                className="object-contain"
-              />
+          <div className="space-y-8">
+    <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
+      <Image
+        src="/a1.jpeg"
+        alt="Primary Company Image"
+        fill
+        className="object-contain"
+      />
+    </div>
+    <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
+      <Image
+        src="/a2.jpeg"
+        alt="Secondary Company Image"
+        fill
+        className="object-contain"
+      />
             </div>
           </div>
 

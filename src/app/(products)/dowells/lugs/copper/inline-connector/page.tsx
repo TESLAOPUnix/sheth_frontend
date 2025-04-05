@@ -31,11 +31,8 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
-    "/dowells/lugs/copper/inline/img1.png",
-    "/dowells/lugs/copper/inline/img2.png",
-    "/dowells/lugs/copper/inline/img3.png",
-    "/dowells/lugs/copper/inline/img4.png",
-    "/dowells/lugs/copper/inline/img5.png",
+    "/d_ic_1.png",
+    "/d_ic_2.png",
   ];
 
   const packOptions = [
@@ -180,14 +177,14 @@ export default function Component() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="pack">Size (mm sq.) / CAT. No.</Label>
+                    <Label htmlFor="pack">Size(mm sq. -E) / CAT. No.</Label>
                     <Select
                       onValueChange={(value) =>
                         handleInputChange("pack", value)
                       }
                     >
                       <SelectTrigger id="pack">
-                        <SelectValue placeholder="Select pack" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {packOptions.map((option) => (

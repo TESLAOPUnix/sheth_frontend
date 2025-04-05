@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/copper/tube/medium/img1.png"];
+  const productImages = ["/d_t_m_1.png","/d_t_m_2.png"];
 
   const packOptions = [
     { label: "2.5-5 / CUS-05", value: "CUS-05" },
@@ -170,14 +170,14 @@ export default function Component() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="pack">Size (mm sq.) / CAT. No.</Label>
+                    <Label htmlFor="pack">Size(mm sq. -E) / CAT. No.</Label>
                     <Select
                       onValueChange={(value) =>
                         handleInputChange("pack", value)
                       }
                     >
                       <SelectTrigger id="pack">
-                        <SelectValue placeholder="Select pack" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {packOptions.map((option) => (

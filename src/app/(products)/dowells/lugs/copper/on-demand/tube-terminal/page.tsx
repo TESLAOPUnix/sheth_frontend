@@ -30,10 +30,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/placeholder.svg?height=600&width=600&text=Image+1",
-    "/placeholder.svg?height=600&width=600&text=Image+2",
-    "/placeholder.svg?height=600&width=600&text=Image+3",
-    "/placeholder.svg?height=600&width=600&text=Image+4",
+    "/od_t.png","/od_t_2.png"
   ];
 
   const packOptions = [
@@ -165,14 +162,14 @@ export default function Component() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="pack">Size (mm sq.) / CAT. No.</Label>
+                    <Label htmlFor="pack">Size(mm sq. -E) / CAT. No.</Label>
                     <Select
                       onValueChange={(value) =>
                         handleInputChange("pack", value)
                       }
                     >
                       <SelectTrigger id="pack">
-                        <SelectValue placeholder="Select pack" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {packOptions.map((option) => (

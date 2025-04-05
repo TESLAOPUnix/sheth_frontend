@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/copper/fork/img1.png"];
+  const productImages = ["/f_i.png"];
 
   const packOptions = [
     { label: "1-3 / RSI-7926SPL", value: "RSI-7926SPL" },
@@ -142,14 +142,14 @@ export default function Component() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="pack">Size (mm sq.) / CAT. No.</Label>
+                    <Label htmlFor="pack">Size(mm sq. -E) / CAT. No.</Label>
                     <Select
                       onValueChange={(value) =>
                         handleInputChange("pack", value)
                       }
                     >
                       <SelectTrigger id="pack">
-                        <SelectValue placeholder="Select pack" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {packOptions.map((option) => (

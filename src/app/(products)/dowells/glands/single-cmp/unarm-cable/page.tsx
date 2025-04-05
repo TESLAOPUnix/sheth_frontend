@@ -151,20 +151,20 @@ export default function Component() {
             <div className="w-full lg:w-1/2 p-6 flex flex-col">
               <div className="space-y-6">
                 <div>
-                  <h1 className="text-3xl font-bold mb-2">Unarmoured Cable</h1>
+                  <h1 className="text-3xl font-bold mb-2">Dowell's Single Compression Unarmoured Cable</h1>
                   <p className="text-gray-600"></p>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="pack">Size (mm sq.) / CAT. No.</Label>
+                    <Label htmlFor="pack">Suitable Overall Diameter (mm sq.) / CAT. No.</Label>
                     <Select
                       onValueChange={(value) =>
                         handleInputChange("pack", value)
                       }
                     >
                       <SelectTrigger id="pack">
-                        <SelectValue placeholder="Select pack" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {packOptions.map((option) => (
