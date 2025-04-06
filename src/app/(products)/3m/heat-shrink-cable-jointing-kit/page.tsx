@@ -67,7 +67,7 @@ export default function Component() {
     "33KV(UE)",
     "66KV(E)",
   ];
-  const allCoreOptions = ["1 core", "2 core", "3 core", "4 core"];
+  const allCoreOptions = ["1 Core", "2 Core", "3 Core", "4 Core"];
   const sizeOptions = [
     "6mm",
     "10mm",
@@ -286,7 +286,7 @@ export default function Component() {
                     }
                   >
                     <SelectTrigger id="cableType">
-                      <SelectValue placeholder="Select cable type" />
+                      <SelectValue placeholder="Select Cable Type" />
                     </SelectTrigger>
                     <SelectContent>
                       {cableTypeOptions.map((option) => (
@@ -299,17 +299,17 @@ export default function Component() {
                 </div>
 
                 <div>
-                  <Label htmlFor="termination">Termination</Label>
+                  <Label htmlFor="termination">Technology</Label>
                   <Select
                     onValueChange={(value) =>
                       handleInputChange("termination", value)
                     }
                   >
                     <SelectTrigger id="termination">
-                      <SelectValue placeholder="Select termination" />
+                      <SelectValue placeholder="Select Technology" />
                     </SelectTrigger>
                     <SelectContent>
-                      {["indoor", "outdoor", "straight-through"].map(
+                      {["Indoor", "Outdoor", "Straight-Through"].map(
                         (option) => (
                           <SelectItem key={option} value={option}>
                             {option}
@@ -328,7 +328,7 @@ export default function Component() {
                     }
                   >
                     <SelectTrigger id="voltage">
-                      <SelectValue placeholder="Select voltage" />
+                      <SelectValue placeholder="Select Voltage" />
                     </SelectTrigger>
                     <SelectContent>
                       {allVoltageOptions.map((option) => (
@@ -346,7 +346,7 @@ export default function Component() {
                     onValueChange={(value) => handleInputChange("core", value)}
                   >
                     <SelectTrigger id="core">
-                      <SelectValue placeholder="Select core" />
+                      <SelectValue placeholder="Select Core" />
                     </SelectTrigger>
                     <SelectContent>
                       {allCoreOptions.map((option) => (
@@ -364,7 +364,7 @@ export default function Component() {
                     onValueChange={(value) => handleInputChange("size", value)}
                   >
                     <SelectTrigger id="size">
-                      <SelectValue placeholder="Select size" />
+                      <SelectValue placeholder="Select Size" />
                     </SelectTrigger>
                     <SelectContent>
                       {sizeOptions.map((option) => (
@@ -384,7 +384,7 @@ export default function Component() {
                     }
                   >
                     <SelectTrigger id="material">
-                      <SelectValue placeholder="Select material" />
+                      <SelectValue placeholder="Select Material" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="ALUMINIUM">Aluminium</SelectItem>

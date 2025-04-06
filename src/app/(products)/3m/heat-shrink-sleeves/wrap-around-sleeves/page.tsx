@@ -28,7 +28,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/3m/HEAT_SHRINK_SLEEVES/wrap_around/img1.png"];
+  const productImages = ["/3m/HEAT_SHRINK_SLEEVES/wrap_around/img1.png","/3m/HEAT_SHRINK_SLEEVES/wrap_around/wps_1.jpg"];
 
   const sizeOptions = ["2mm", "4mm", "8mm", "10mm"];
 

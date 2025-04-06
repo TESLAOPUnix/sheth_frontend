@@ -31,7 +31,9 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/scotch_33.jpg"
+    "/3m/TAPES/scotch_33.jpg",
+    "/3m/TAPES/VINYL_TAPE/SUPER_33/v_s_33_1.jpg",
+    "/3m/TAPES/VINYL_TAPE/SUPER_33/v_s_33_2.jpg",
   ];
 
   const sizeOption = ["33mm"];

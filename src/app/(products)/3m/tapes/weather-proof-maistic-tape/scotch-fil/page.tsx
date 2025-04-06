@@ -32,10 +32,6 @@ export default function Component() {
 
   const productImages = [
     "/3m/TAPES/WEATHER_PROOF_MASTIC_TAPE/SCOTCHFILL/img5.png",
-    "/3m/TAPES/img1.png",
-    "/3m/TAPES/img2.png",
-    "/3m/TAPES/img3.png",
-    "/3m/TAPES/img4.png",
   ];
 
   const sizeOption = ["3.17mm"];

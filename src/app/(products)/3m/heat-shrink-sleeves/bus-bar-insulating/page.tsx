@@ -35,6 +35,9 @@ export default function Component() {
   const productImages = [
     "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/img1.png",
     "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/img2.png",
+    "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/bb_1.jpg",
+    "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/bb_2.jpg",
+    "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/bb_3.jpg",
   ];
 
   const sizeOptions = [
@@ -156,7 +159,7 @@ export default function Component() {
                       }
                     >
                       <SelectTrigger id="size">
-                        <SelectValue placeholder="Select size" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {sizeOptions.map((option) => (
@@ -176,7 +179,7 @@ export default function Component() {
                       }
                     >
                       <SelectTrigger id="voltage">
-                        <SelectValue placeholder="Select voltage" />
+                        <SelectValue placeholder="Select Voltage" />
                       </SelectTrigger>
                       <SelectContent>
                         {voltageOptions.map((option) => (

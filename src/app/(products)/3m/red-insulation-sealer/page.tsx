@@ -142,7 +142,7 @@ export default function Component() {
                       }
                     >
                       <SelectTrigger id="size">
-                        <SelectValue placeholder="Select size" />
+                        <SelectValue placeholder="Select Size" />
                       </SelectTrigger>
                       <SelectContent>
                         {sizeOptions.map((option) => (

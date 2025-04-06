@@ -29,7 +29,7 @@ export default function Component() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const productImages = ["/3m/SCOTCHCAST_450/img1.png"];
+  const productImages = ["/3m/SCOTCHCAST_450/img1.png","/3m/SCOTCHCAST_450/sc_1.jpg","/3m/SCOTCHCAST_450/sc_2.jpg"];
 
   const packOptions = [
     "N Pack (2.407 Kg)",
@@ -157,7 +157,7 @@ export default function Component() {
                       }
                     >
                       <SelectTrigger id="pack">
-                        <SelectValue placeholder="Select Size" />
+                        <SelectValue placeholder="Select Pack" />
                       </SelectTrigger>
                       <SelectContent>
                         {packOptions.map((option) => (
