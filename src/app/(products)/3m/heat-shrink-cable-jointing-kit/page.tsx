@@ -67,7 +67,7 @@ export default function Component() {
     "33KV(UE)",
     "66KV(E)",
   ];
-  const allCoreOptions = ["1 Core", "2 Core", "3 Core", "4 Core"];
+  const allCoreOptions = ["1 Core", "2 Core", "3 Core", "3.5 Core", "4 Core"];
   const sizeOptions = [
     "6mm",
     "10mm",

@@ -106,8 +106,7 @@ export default function Page() {
       <section className="w-full bg-[#9e3b11] py-12 px-4 flex-grow">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-white text-3xl font-bold text-center mb-12">
-            <span className="font-extrabold">Dowell's</span> Authorized
-            Distributor Certificates
+            <span className="font-extrabold">Dowell's</span> Pricelist and Brochure
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
