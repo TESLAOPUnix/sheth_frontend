@@ -68,6 +68,7 @@ export default function ReplyModal({
       Payment: "",
       Validity: "",
       Reply: "",
+      Delivery_Charges: 0,
     },
     items: enquiry.orders.map((order) => ({
       cart_id: enquiry.cart_id,
@@ -77,6 +78,7 @@ export default function ReplyModal({
       delivery: "",
     })),
   });
+  const [loading, setLoading] = useState(false);
   const [changedItem, setChangedItem] = useState("");
 
   useEffect(() => {
@@ -135,9 +137,9 @@ export default function ReplyModal({
   const handleItemChange = async () => {
     if (changedItem == "") return;
 
-    const editableIndex = editableRows.findIndex((val) => val === true)
+    const editableIndex = editableRows.findIndex((val) => val === true);
 
-    const result =  formState.items[editableIndex];
+    const result = formState.items[editableIndex];
 
     //console.log(editableIndex, "here", result);
 
@@ -166,7 +168,7 @@ export default function ReplyModal({
         //     i === index ? updatedItem : item
         //   ),
         // }));
-        
+
         window.location.reload();
       }
     } catch (error) {
@@ -183,6 +185,7 @@ export default function ReplyModal({
     console.log("API body:", formState);
     // Here you would typically send the formState to your API
     try {
+      setLoading(true);
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/quotation`,
         formState
@@ -193,6 +196,8 @@ export default function ReplyModal({
       onClose();
     } catch (error) {
       console.error("Error sending reply:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -271,7 +276,7 @@ export default function ReplyModal({
                       </TableCell>
 
                       <TableCell>{item.quantity}</TableCell>
-                      
+
                       <TableCell>
                         <Input
                           type="number"
@@ -327,21 +332,41 @@ export default function ReplyModal({
                 </TableBody>
               </Table>
             </ScrollArea>
+            <div className="w-[40rem] ml-auto my-4 flex items-center justify-end gap-4">
+              <Label
+                htmlFor="delivery_charge"
+                className="font-medium text-sm text-zinc-500 pl-1"
+              >
+                Delivery Charges
+              </Label>
+              <Input
+                type="number"
+                id="delivery_charge"
+                className="max-w-[10rem]"
+                placeholder="Enter Amount"
+                value={formState.details.Delivery_Charges}
+                onChange={(e) =>
+                  handleInputChange("Delivery_Charges", e.target.value)
+                }
+              />
+            </div>
             <div className="mt-2 text-right font-medium">
               Total: ₹
-              {formState.items
-                .reduce((sum, item) => {
+              {(
+                formState.items.reduce((sum, item) => {
                   const order = enquiry.orders.find(
                     (o) => o.order_id === item.order_id
                   );
                   const quantity = order?.quantity ?? 0; // ✅ Fallback to 0 if undefined
                   return sum + (item.rate - item.discount) * quantity;
-                }, 0)
-                .toFixed(2)}
+                }, 0) + Number(formState.details.Delivery_Charges || 0)
+              ).toFixed(2)}
             </div>
           </div>
           <div>
-            <Label className="font-medium">Payment</Label>
+            <Label className=" font-medium text-sm text-zinc-500 pl-1">
+              Payment
+            </Label>
             <Select
               value={formState.details.Payment}
               onValueChange={(value) => handleInputChange("Payment", value)}
@@ -365,7 +390,9 @@ export default function ReplyModal({
             </Select>
           </div>
           <div>
-            <Label className="font-medium">Validity</Label>
+            <Label className="font-medium text-sm text-zinc-500 pl-1">
+              Validity
+            </Label>
             <Select
               value={formState.details.Validity}
               onValueChange={(value) => handleInputChange("Validity", value)}
@@ -382,7 +409,10 @@ export default function ReplyModal({
             </Select>
           </div>
           <div>
-            <Label htmlFor="reply" className="font-medium">
+            <Label
+              htmlFor="reply"
+              className="font-medium text-sm text-zinc-500 pl-1"
+            >
               Reply
             </Label>
             <Textarea
@@ -395,8 +425,8 @@ export default function ReplyModal({
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={handleSendReply}>
-            Send Reply
+          <Button type="submit" onClick={handleSendReply} disabled={loading}>
+            {loading ? "Loading..." : "Send Reply"}
           </Button>
         </DialogFooter>
       </DialogContent>

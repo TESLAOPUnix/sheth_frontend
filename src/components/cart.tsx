@@ -122,6 +122,7 @@ export default function Cart() {
       localStorage.removeItem("3mItems");
       toast({ description: "✅ Quote request sent successfully!" });
       setIsOpen(false);
+      window.location.reload();
     } catch (error) {
       console.error("Error occurred:", error);
       toast({ description: "⚠️❌ Failed to get a quote. Please try again." });

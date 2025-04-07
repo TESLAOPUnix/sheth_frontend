@@ -17,6 +17,9 @@ import LoadingSpinner from "@/components/loader";
 import Navigation from "@/components/navigation";
 import { Download } from "lucide-react";
 import { useVisibility } from "@/app/provider";
+import { toast } from "@/hooks/use-toast";
+import { updateLocalStorageArray } from "@/utils/localstorage";
+import axios from "axios";
 
 export default function Component() {
   const [formData, setFormData] = useState({
@@ -26,18 +29,59 @@ export default function Component() {
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const {setIsVisible} = useVisibility();
+  const { setIsVisible } = useVisibility();
 
-  const productImages = ["/3m/HEAT_SHRINK_SLEEVES/wrap_around/img1.png","/3m/HEAT_SHRINK_SLEEVES/wrap_around/wps_1.jpg"];
+  const productImages = [
+    "/3m/HEAT_SHRINK_SLEEVES/wrap_around/img1.png",
+    "/3m/HEAT_SHRINK_SLEEVES/wrap_around/wps_1.jpg",
+  ];
 
-  const sizeOptions = ["2mm", "4mm", "8mm", "10mm"];
+  const sizeOptions = [
+    "52/10 mm",
+    "76/22 mm",
+    "120/34 mm",
+    "122/38 mm",
+    "140/42 mm",
+    "160/50 mm",
+    "200/60 mm",
+  ];
 
   const handleInputChange = (field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleAddToCart = () => {
-    console.log("Added to cart:", formData);
+  const handleAddToCart = async () => {
+    if (!formData.size) {
+      toast({ description: "Please select a size type." });
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      setIsVisible(false);
+      const sku = `3M_WAS_${formData.size}_${formData.size.split(" ")[0]}`;
+      const quantity = formData.quantity;
+      const name = `Wrap Around Seleeves`;
+
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,
+        { sku, quantity, name }
+      );
+
+      if (res?.data?.id) {
+        const key = "3mItems";
+        updateLocalStorageArray(key, res.data.id);
+      }
+
+      toast({ description: "Added to Cart Successfully" });
+    } catch (error) {
+      console.error(error);
+      toast({ description: "Failed to add to cart, please try again." });
+    } finally {
+      setLoading(false);
+      setIsVisible(true);
+    }
   };
 
   return (
