@@ -96,9 +96,9 @@ const MetricsSection = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
-              This Is Why Industry Our
+            Here is Why Our Team
               <br />
-              Team Is So Famous!
+              Is Industry-Famous!
             </h1>
           </div>
         </div>
