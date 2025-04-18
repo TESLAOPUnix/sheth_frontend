@@ -51,7 +51,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_WPT_MT";
       const quantity = formData.quantity;
-      const name = `Monoplast `;
+      const name = `3M Weather-Proof-Maistic-Tape Monoplast `;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

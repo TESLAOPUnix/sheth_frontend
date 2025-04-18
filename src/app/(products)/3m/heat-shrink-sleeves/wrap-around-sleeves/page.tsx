@@ -62,7 +62,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = `3M_WAS_${formData.size}_${formData.size.split(" ")[0]}`;
       const quantity = formData.quantity;
-      const name = `Wrap Around Seleeves`;
+      const name = `3M Wrap Around Seleeves ${formData.size}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

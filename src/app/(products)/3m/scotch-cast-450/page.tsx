@@ -68,7 +68,7 @@ export default function Component() {
             | "Q Pack (609 g)"
         ];
       const quantity = formData.quantity;
-      const name = `Scotch cast 450 (Resin + Hardener) ${formData.pack}`;
+      const name = `3M Scotch cast 450 (Resin + Hardener) ${formData.pack}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

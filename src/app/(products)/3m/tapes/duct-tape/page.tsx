@@ -53,7 +53,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_DT_8";
       const quantity = formData.quantity;
-      const name = `Duct Tape ${formData.color}`;
+      const name = `3M Duct Tape ${formData.color}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

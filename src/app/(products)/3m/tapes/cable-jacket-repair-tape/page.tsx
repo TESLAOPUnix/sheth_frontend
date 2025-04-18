@@ -52,7 +52,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_CRT_S31";
       const quantity = formData.quantity;
-      const name = `Cable Jacket Repair Tape Scotch 31 ${formData.size}`;
+      const name = `3M Cable Jacket Repair Tape Scotch 31 ${formData.size}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

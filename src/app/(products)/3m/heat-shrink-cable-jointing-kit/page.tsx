@@ -153,8 +153,8 @@ export default function Component() {
     setLoading(true);
     // Convert the form data to match the expected types
     const terminationType =
-      formData.termination.toLowerCase() === "straight-through"
-        ? "Straight through"
+      formData.termination.toLowerCase() === "Straight-Through Joint"
+        ? "Straight-Through Joint"
         : ((formData.termination.charAt(0).toUpperCase() +
             formData.termination.slice(1)) as TerminationType);
 
@@ -174,7 +174,7 @@ export default function Component() {
 
     console.log("Generated SKU:", sku);
     console.log("Form Data:", formData);
-    const name = `${formData.cableType} ${formData.termination} ${formData.voltage} ${formData.core} ${formData.size} ${formData.material}`;
+    const name = `3M HEAT SHRINK ${formData.cableType} ${formData.termination} FOR ${formData.voltage} ${formData.core} ${formData.size} ${formData.material} CABLE`;
 
     updatingCart(sku, formData.quantity, name, terminationType, formData);
   };
@@ -309,7 +309,7 @@ export default function Component() {
                       <SelectValue placeholder="Select Technology" />
                     </SelectTrigger>
                     <SelectContent>
-                      {["Indoor", "Outdoor", "Straight-Through"].map(
+                      {["Indoor Termination", "Outdoor Termination", "Straight-Through Joint"].map(
                         (option) => (
                           <SelectItem key={option} value={option}>
                             {option}

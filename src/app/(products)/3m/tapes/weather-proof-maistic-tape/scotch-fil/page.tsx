@@ -52,7 +52,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_WPT_SF";
       const quantity = formData.quantity;
-      const name = `Scotch Fil ${formData.size}`;
+      const name = `3M Weather-Proof-Maistic-Tape Scotch Fil ${formData.size}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

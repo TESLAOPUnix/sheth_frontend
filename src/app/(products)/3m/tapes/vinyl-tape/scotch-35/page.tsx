@@ -52,7 +52,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_VT_S35";
       const quantity = formData.quantity;
-      const name = `Scotch 35 ${formData.size}`;
+      const name = `3M Vinyl-Tape Scotch 35 ${formData.size}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

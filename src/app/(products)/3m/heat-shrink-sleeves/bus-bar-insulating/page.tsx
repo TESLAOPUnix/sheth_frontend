@@ -68,7 +68,7 @@ export default function Component() {
         formData.size.split(" ")[0]
       }`;
       const quantity = formData.quantity;
-      const name = `Bus Bar Insulating ${formData.size} ${formData.voltage}`;
+      const name = `3M Bus Bar Insulating ${formData.size} FOR ${formData.voltage}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

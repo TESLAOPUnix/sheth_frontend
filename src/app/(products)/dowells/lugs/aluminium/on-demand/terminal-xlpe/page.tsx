@@ -66,7 +66,7 @@ export default function Component() {
       setIsVisible(false);
       const cat_no = formData.pack as string; // Use the selected cat_no as the cat_no
       const quantity = formData.quantity;
-      const name = `TERMINALS FOR XLPE CONDUCTORS ${formData.pack}`;
+      const name = `Dowell's Lugs Aluminium On-Demand TERMINALS FOR XLPE CONDUCTORS ${formData.pack}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

@@ -60,7 +60,7 @@ export default function Component() {
       const sku = skuMap[formData.size as "19mm" | "25mm" | "38mm" | "50mm"];
 
       const quantity = formData.quantity;
-      const name = `Scotch 23 ${formData.size}`;
+      const name = `3M H-1 Tape Scotch 23 ${formData.size}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

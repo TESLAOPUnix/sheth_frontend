@@ -16,9 +16,9 @@ interface SkuMappings {
 export const technology: Technology[] = ["Heat Shrink"];
 
 export const terminationTypes: TerminationType[] = [
-  "Indoor",
-  "Outdoor",
-  "Straight through",
+  "Indoor Termination",
+  "Outdoor Termination",
+  "Straight-Through Joint",
 ];
 export const voltageTypes: VoltageType[] = [
   "1.1KV(E)",
@@ -60,9 +60,9 @@ export const cableTypes: CableType[] = ["XLPE", "PVC", "EPR", "ABC"];
 export const conductorTypes: ConductorType[] = ["ALUMINIUM", "COPPER"];
 
 const typeToSkuMap: SkuMappings = {
-  Indoor: "I",
-  Outdoor: "O",
-  "Straight through": "S",
+  "Indoor Termination": "I",
+  "Outdoor Termination": "O",
+  "Straight-Through Joint": "S",
 };
 
 const typeToSku = (type: TerminationType): string => typeToSkuMap[type];
@@ -72,7 +72,7 @@ const cableTypeToSku = (
   type: TerminationType
 ): string => {
   if (cableType === "XLPE" || cableType == "PVC") {
-    return type === "Straight through" ? "XXA" : "X_A";
+    return type === "Straight-Through Joint" ? "XXA" : "X_A";
   } else if (cableType === "EPR") {
     return "TCU";
   } else if (cableType === "ABC") {

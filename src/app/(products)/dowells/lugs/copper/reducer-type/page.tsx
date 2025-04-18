@@ -95,7 +95,7 @@ export default function Component() {
       setIsVisible(false);
       const cat_no = formData.pack as string; // Use the selected cat_no as the cat_no
       const quantity = formData.quantity;
-      const name = `Reducer Type ${formData.pack}`;
+      const name = `Dowell's Lugs Copper Reducer Type ${formData.pack}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

@@ -51,7 +51,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_AS_1602-R";
       const quantity = formData.quantity;
-      const name = `Red Insulation Sealer AEROSOL 1602-R`;
+      const name = `3M Red Insulation Sealer AEROSOL 1602-R`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

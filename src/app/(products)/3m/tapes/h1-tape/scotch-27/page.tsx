@@ -52,7 +52,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_HT_S27";
       const quantity = formData.quantity;
-      const name = `Scotch 27 ${formData.size}`;
+      const name = `3M H-1 Tape Scotch 27 ${formData.size}`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,

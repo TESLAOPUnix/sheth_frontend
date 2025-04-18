@@ -51,7 +51,7 @@ export default function Component() {
       setIsVisible(false);
       const sku = "3M_CST_S24";
       const quantity = formData.quantity;
-      const name = `Copper Sheilding Tape Scotch 24`;
+      const name = `3M Copper Sheilding Tape Scotch 24`;
 
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order`,
