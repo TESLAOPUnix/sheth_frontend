@@ -376,15 +376,15 @@ export default function ReplyModal({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Immediate">Immediate</SelectItem>
-                <SelectItem value="100% after Performa Invoice">
-                  100% after Performa Invoice
+                <SelectItem value="100% against Proforma Invoice">
+                100% against Proforma Invoice
                 </SelectItem>
                 <SelectItem value="Within 7 days">Within 7 days</SelectItem>
-                <SelectItem value="25% against Performa">
-                  25% against Performa
+                <SelectItem value="25% Advance balance against Proforma invoice">
+                25% Advance balance against Proforma invoice 
                 </SelectItem>
-                <SelectItem value="100% within 30 days">
-                  100% within 30 days
+                <SelectItem value="100% Within 30 days from the date of invoice">
+                100% Within 30 days from the date of invoice
                 </SelectItem>
               </SelectContent>
             </Select>
@@ -401,10 +401,10 @@ export default function ReplyModal({
                 <SelectValue placeholder="Select validity" />
               </SelectTrigger>
               <SelectContent>
+                <SelectItem value="2 Days">2 Days</SelectItem>
                 <SelectItem value="7 Days">7 Days</SelectItem>
-                <SelectItem value="10 Days">10 Days</SelectItem>
-                <SelectItem value="14 Days">14 Days</SelectItem>
                 <SelectItem value="15 Days">15 Days</SelectItem>
+                <SelectItem value="130 Days">30 Days</SelectItem>
               </SelectContent>
             </Select>
           </div>

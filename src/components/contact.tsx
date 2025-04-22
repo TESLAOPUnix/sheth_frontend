@@ -138,7 +138,7 @@ export default function ContactSection() {
             Email
           </h3>
           <p className="text-[#5C1E1E] font-semibold text-center">
-            enquiry@shethtrading.com
+            shethtrd@gmail.com
           </p>
         </Card>
 
@@ -151,8 +151,8 @@ export default function ContactSection() {
             Address
           </h3>
           <p className="text-[#5C1E1E] font-semibold text-center">
-            22, Shop Number 322, Rabindra Sarani, Tiretti, Kolkata, West Bengal
-            700073
+          22 Rabindra Sarani, Tiretti Market,
+          Shop #322, Kolkata - 700073
           </p>
         </Card>
       </div>

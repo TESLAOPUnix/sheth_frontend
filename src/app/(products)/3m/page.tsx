@@ -11,17 +11,17 @@ const products = [
     slug: "heat-shrink-cable-jointing-kit",
   },
   {
-    name: "Scotch cast 450",
+    name: "Cable Jointing Compound",
     image: "/3m/SCOTCHCAST_450/img1.png",
     slug: "scotch-cast-450",
   },
   {
-    name: "Heat shrink sleeves",
+    name: "Heat Shrink Sleeves",
     image: "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/img1.png",
     slug: "heat-shrink-sleeves",
   },
   {
-    name: "Red insulation sealer",
+    name: "Red Insulation Sealer",
     image: "/3m/RED_INSULATION_SEALER/img1.png",
     slug: "red-insulation-sealer",
   },

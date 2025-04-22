@@ -100,7 +100,7 @@ export default function Page() {
           <p>
             If you have any questions about this Privacy Policy, you can contact us at:
           </p>
-          <p><strong>Email:</strong> enquiry@shethtrading.com</p>
+          <p><strong>Email:</strong> shethtrd@gmail.com</p>
         </div>
       </section>
 

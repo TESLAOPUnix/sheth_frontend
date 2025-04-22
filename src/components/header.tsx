@@ -24,8 +24,8 @@ export default function Header() {
         <div className="flex flex-col items-end gap-2">
           <div className="flex items-center gap-2">
             <Mail className="h-4 w-4" />
-            <a href="mailto:enquiry@shethtrading.com" className="text-sm hover:underline">
-              enquiry@shethtrading.com
+            <a href="mailto:shethtrd@gmail.com" className="text-sm hover:underline">
+              shethtrd@gmail.com
             </a>
           </div>
           <Button variant="default" className="bg-[#5C1E1E] hover:bg-[#4A1818]">

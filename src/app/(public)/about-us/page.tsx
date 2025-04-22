@@ -79,14 +79,14 @@ export default function Page() {
                   3M and Dowell's Dealer in Kolkata
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  3M India Ltd, a subsidiary of the American multinational 3M,
-                  is known for its innovation and quality. Based in Maplewood,
-                  Minnesota, 3M offers
+                3M India Ltd, a subsidiary of the American multinational 3M,
+is known for its innovation and quality. Based in Maplewood,
+Minnesota, 3M offers a wide range of products across various industries.
                 </p>
                 <p className="text-gray-600">
-                  Since 1969, Dowell's has been a pioneer in solderless crimping
-                  technology in India. Its high standards have made it a leader
-                  in
+                Since 1969, Dowell's has been a pioneer in solderless crimping
+technology in India. Its high standards have made it a leader
+in electrical connectivity solutions across the country.
                 </p>
               </div>
 

@@ -34,7 +34,7 @@ export default function Component() {
     "/3m/TAPES/img3.png"
   ];
 
-  const sizeOption = ["19mm", "25mm", "38mm", "50mm"];
+  const sizeOption = ["19mm X 9.1 mtr", "25mm X 9.1 mtr", "38mm X 9.1 mtr", "50mm X 9.1 mtr"];
 
   const handleInputChange = (field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -50,14 +50,14 @@ export default function Component() {
 
     try {
       setIsVisible(false);
-      const skuMap: Record<"19mm" | "25mm" | "38mm" | "50mm", string> = {
-        "19mm": "3M_HT_S23_19",
-        "25mm": "3M_HT_S23_25",
-        "38mm": "3M_HT_S23_38",
-        "50mm": "3M_HT_S23_50",
+      const skuMap: Record<"19mm X 9.1 mtr" | "25mm X 9.1 mtr" | "38mm X 9.1 mtr" | "50mm X 9.1 mtr", string> = {
+        "19mm X 9.1 mtr": "3M_HT_S23_19",
+        "25mm X 9.1 mtr": "3M_HT_S23_25",
+        "38mm X 9.1 mtr": "3M_HT_S23_38",
+        "50mm X 9.1 mtr": "3M_HT_S23_50",
       };
 
-      const sku = skuMap[formData.size as "19mm" | "25mm" | "38mm" | "50mm"];
+      const sku = skuMap[formData.size as "19mm X 9.1 mtr" | "25mm X 9.1 mtr" | "38mm X 9.1 mtr" | "50mm X 9.1 mtr"];
 
       const quantity = formData.quantity;
       const name = `3M H-1 Tape Scotch 23 ${formData.size}`;
