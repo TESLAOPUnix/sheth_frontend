@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Cart from "./cart";
 import { usePathname } from "next/navigation";
+import SearchBar from "./search";
 
 const navItems = [
   { name: "HOME", href: "/" },
@@ -37,7 +38,7 @@ export default function Navigation() {
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Menu className="h-6 w-6" />
+            {!isOpen ? <Menu className="h-6 w-6" /> : <X size={18} />}
           </Button>
         </div>
 
@@ -60,7 +61,9 @@ export default function Navigation() {
                 </li>
               ))}
             </div>
-            <li className="lg:ml-auto">
+
+            <li className="flex flex-col md:flex-row gap-2 md:items-center lg:ml-auto">
+              <SearchBar />
               <Cart />
             </li>
           </ul>

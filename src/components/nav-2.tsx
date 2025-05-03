@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Cart from "./cart";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import SearchBar from "./search";
 
 const navItems = [
   { name: "HOME", href: "/" },
@@ -69,7 +70,11 @@ export default function Navigation({ alwaysVisible = false }) {
                 size="icon"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                <Menu className="h-6 w-6" />
+                {!isOpen ? (
+                  <Menu className="h-6 w-6" />
+                ) : (
+                  <X className="h-6 w-6" />
+                )}
               </Button>
             </div>
 
@@ -93,22 +98,27 @@ export default function Navigation({ alwaysVisible = false }) {
                       </a>
                     </li>
                   ))}
+                  <li className="mr-auto lg:hidden">
+                    <SearchBar />
+                  </li>
                 </div>
                 {!alwaysVisible ? (
                   <li className="lg:ml-auto">
                     <Cart />
                   </li>
                 ) : (
-                  <a href="/" className="font-semibold hidden lg:block">
-                    <Image
-                      src="/sheth_logo.png"
-                      alt="Sheth Trading Corporation Logo"
-                      width={100}
-                      height={20}
-                      className="h-auto w-28"
-                    />
-                  </a>
-                  
+                  <div className="hidden lg:flex items-center gap-2">
+                    <SearchBar />
+                    <a href="/" className="font-semibold hidden lg:block">
+                      <Image
+                        src="/sheth_logo.png"
+                        alt="Sheth Trading Corporation Logo"
+                        width={100}
+                        height={20}
+                        className="h-auto w-28"
+                      />
+                    </a>
+                  </div>
                 )}
               </ul>
             </div>

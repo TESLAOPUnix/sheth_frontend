@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <div className="relative">
       <Navigation alwaysVisible={true} />
-      <div className="mx-[1rem] md:mx-[6rem] flex items-center justify-between fixed top-[5rem] left-0 right-0 z-50">
+      <div className="mx-[1rem] md:mx-[6rem] flex items-center justify-between fixed top-[5rem] md:top-[7rem] lg:top-[5rem] left-0 right-0 z-40">
         <Button
           variant="secondary"
           className="flex items-center "
