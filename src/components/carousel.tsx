@@ -3,13 +3,12 @@ import React, { useEffect, useState } from "react";
 
 export default function Carousel() {
   const images = [
-    "Pi7_Tool_img1.png",
-    "Pi7_Tool_img2.jpg",
-    "Pi7_Tool_img3.png",
-    "img4.webp",
-    "Pi7_Tool_img5.png",
-    "Pi7_Tool_img6.png",
-    "Pi7_Tool_img7.jpg",
+    "c1.png",
+    "c2.png",
+    "c3.png",
+    "c4.png",
+    "c5.png",
+    "c6.png",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
