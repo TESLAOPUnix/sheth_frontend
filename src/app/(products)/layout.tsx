@@ -1,6 +1,6 @@
 "use client";
 
-import Navigation from "@/components/nav-2";
+import Navigation from "@/components/nav-3";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <div className="relative">
       <Navigation alwaysVisible={true} />
-      <div className="mx-[1rem] md:mx-[6rem] flex items-center justify-between fixed top-[5rem] md:top-[7rem] lg:top-[5rem] left-0 right-0 z-40">
+      <div className="mx-[1rem] md:mx-[6rem] flex items-center justify-between fixed top-[11rem] md:top-[13rem] lg:top-[11rem] left-0 right-0 z-40">
         <Button
           variant="secondary"
           className="flex items-center "
@@ -35,7 +35,7 @@ export default function RootLayout({
         <h1 className="text-3xl font-bold text-center flex-grow"></h1>
         <div className="pr-[1rem]">{isVisible && <Cart />}</div>
       </div>
-      <div className=" mx-auto mt-[0rem]">{children}</div>
+      <div className=" mx-auto  mt-[5rem] md:mt-[7rem] lg:mt-[5rem]">{children}</div>
     </div>
   );
 }

@@ -12,7 +12,7 @@ import Carousel from "@/components/carousel";
 export default function Page() {
   return (
     <main>
-      <TopBar />
+     
       <Header />
 
       {/* Hero Section */}
@@ -26,19 +26,7 @@ export default function Page() {
             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
               Pricelist & Brochure
             </h1>
-            <nav className="flex items-center text-white text-sm mt-[1rem]">
-              <Link
-                href="/"
-                className="flex items-center justify-center hover:text-gray-300 transition-colors"
-              >
-                <Home size={24} className="mr-1 font-bold" fontWeight={300} />
-                <span className="font-semibold text-[1.1rem]">HOME</span>
-              </Link>
-              <span className="mx-2 text-gray-400">›</span>
-              <span className="text-gray-300 font-medium">
-                PRICELIST & BROCHURE
-              </span>
-            </nav>
+            
           </div>
           <a href="/products">
             <Button
@@ -51,7 +39,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="w-full bg-[#9e3b11] py-12 px-4 flex-grow">
+      <section className="w-full bg-[#5C1E1E] py-12 px-4 flex-grow">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-white text-3xl font-bold text-center mb-12">
             <span className="font-extrabold">3M</span> Pricelist and Brochure
@@ -102,13 +90,11 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      <section className="w-full bg-[#9e3b11] py-12 px-4 flex-grow">
+      <section className="w-full bg-[#5C1E1E] py-12 px-4 flex-grow">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-white text-3xl font-bold text-center mb-12">
             <span className="font-extrabold">Dowell's</span> Pricelist and Brochure
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
             {/* Pricelist Card */}
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-[23rem]">
@@ -145,7 +131,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Glands Catalogue PDF
               </h3>
-              <a download href="/gland_cat/Glands_catalogue.pdf">
+              <a download href="/sock_cat/Sockets_catalogue_1.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Brochure
                 </button>
@@ -166,7 +152,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Sockets Catalogue
               </h3>
-              <a download href="/sock_cat/Sockets_catalogue.pdf">
+              <a download href="/sock_cat/Sockets_catalogue_1.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Brochure
                 </button>

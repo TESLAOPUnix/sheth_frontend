@@ -27,7 +27,7 @@ export default function Carousel() {
       {images.map((image, index) => (
        <div
        key={image}
-       className={`absolute left-1/2 -translate-x-1/2 top-0 h-[600px] w-[5000px] bg-contain bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+       className={`absolute left-1/2 -translate-x-1/2 top-0 h-[600px] w-[5000px] bg-contain bg-center bg-no-repeat transition-all duration-[1500ms] ease-[cubic-bezier(0.4, 0, 0.2, 1)] ${
          index === currentImageIndex ? "opacity-100 visible" : "opacity-0 invisible"
        }`}
        style={{

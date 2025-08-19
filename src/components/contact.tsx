@@ -172,7 +172,7 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-[#9e3b11] rounded-md p-6 text-white">
+        <div className="bg-[#5C1E1E] rounded-md p-6 text-white">
           <h2 className="text-2xl font-medium mb-6">Contact Us</h2>
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -231,7 +231,7 @@ export default function ContactSection() {
             />
             <Button
               type="submit"
-              className="bg-[#5C1E1E] text-white hover:bg-[#4a1919] transition-colors"
+              className="bg-[#9e3b11] text-white hover:bg-[#4a1919] transition-colors"
               disabled={isSubmitting}
             >
               {isSubmitting ? "SENDING..." : "SEND A MESSAGE"}

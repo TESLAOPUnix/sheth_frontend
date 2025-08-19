@@ -2,11 +2,12 @@ import { Users, Lightbulb, Phone } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import AnimatedTitle from "./animated-title";
+import Link from "next/link";
 
 export default function AboutCompany() {
   return (
     <section className="py-16 md:py-24 max-w-full mx-auto relative">
-      <div className="absolute inset-x-0 bg-white h-full -z-50 -top-4"></div>
+      <div className="absolute inset-x-0 bg-[#FAFAF7] h-full -z-50 -top-4"></div>
       <div className="container max-w-[76rem] mx-auto px-4">
         {/* Header with decorative lines */}
         <div className="mb-16 flex items-center justify-center space-x-4">
@@ -40,14 +41,13 @@ export default function AboutCompany() {
           {/* Content column */}
           <div className="space-y-8 p-[1.5rem] text-[1rem]  sm:text-[1.2rem]">
             {/* Main description */}
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-start">
               At Sheth Trading Corporation, we are committed to delivering
               excellence in electrical solutions. As Authorized Distributors for
               renowned brands 3M and Dowell's, our mission is to provide
-              high-quality products and exceptional service to meet the diverse
+              high-quality products and exceptional service to meet the
               needs of our customers. Founded in 1968 by Anil Parekh, Sheth
-              Trading Corporation has over 45 years of experience in the
-              industrial sector.
+              Trading Corporation brings over 45 years of expertise in the industrial sector.
             </p>
 
             {/* Our Team section */}
@@ -79,23 +79,27 @@ export default function AboutCompany() {
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-start">
                   To be the leading distributor of high-quality electrical
-                  solutions in India, recognized for our commitment to
+                  solutions in India and we are recognized for our commitment to
                   innovation, reliability, and customer satisfaction.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-wrap sm:px-[1.5rem] items-center justify-center gap-2">
-              <Button
-                variant="default"
-                className="bg-[#5C1E1E] hover:bg-[#513818e4] text-[1.1rem]"
-              >
-                Discover More
-              </Button>
-              <span className="flex gap-2 items-center justify-center text-amber-900 text-[1.2rem] font-semibold">
-                <Phone className="mr-2 h-4 w-4" />
-                <span>+91 (033) 2237 9239</span>
-              </span>
+              <Link href="/about-us">
+          <Button
+          variant="default"
+        className="bg-[#5C1E1E] hover:bg-[#513818e4] text-[1.1rem]"
+        >
+        Discover More
+        </Button>
+          </Link>
+              <a href="tel:+9103322379239">
+          <Button variant="default" className="bg-[#5C1E1E] hover:bg-[#4A1818]">
+            <Phone className="mr-2 h-4 w-4" />
+            <span>Call us</span>
+          </Button>
+          </a>
             </div>
           </div>
         </div>

@@ -15,7 +15,6 @@ import Carousel from "@/components/carousel";
 export default function Page() {
   return (
     <main>
-      <TopBar />
       <Header />
 
       {/* Hero Section */}
@@ -29,23 +28,12 @@ export default function Page() {
             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
               About Us
             </h1>
-            <nav className="flex items-center text-white text-sm mt-[1rem]">
-              <Link
-                href="/"
-                className="flex items-center justify-center hover:text-gray-300 transition-colors"
-              >
-                <Home size={24} className="mr-1 font-bold" fontWeight={300} />
-                <span className="font-semibold text-[1.1rem]">HOME</span>
-              </Link>
-              <span className="mx-2 text-gray-400">›</span>
-              <span className="text-gray-300 font-medium">ABOUT US</span>
-            </nav>
           </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="w-full py-12 bg-white">
+      <section className="w-full py-12 bg-gray-100">
         <div className="container mx-auto max-w-[76rem] px-4 md:px-6">
           {/* About Company Header */}
           <div className="mb-8 text-right mx-auto w-auto">
@@ -275,7 +263,7 @@ in electrical connectivity solutions across the country.
           {/* Services Grid - First Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {/* Power Generation Card */}
-            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-amber-900 hover:text-white group">
+            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-[#5C1E1E] hover:text-white group">
               <div className="flex items-start">
                 <div className="mr-4 p-3 border border-gray-200 rounded-full group-hover:border-amber-700">
                   <Zap className="w-6 h-6 text-gray-700 group-hover:text-white" />
@@ -293,7 +281,7 @@ in electrical connectivity solutions across the country.
             </div>
 
             {/* Oil & Gas Card - Default Brown */}
-            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-amber-900 hover:text-white group">
+            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-[#5C1E1E] hover:text-white group">
               <div className="flex items-start">
                 <div className="mr-4 p-3 border border-gray-200 rounded-full group-hover:border-amber-700">
                   <Flame className="w-6 h-6 text-gray-700 group-hover:text-white" />
@@ -310,7 +298,7 @@ in electrical connectivity solutions across the country.
             </div>
 
             {/* Telecommunications Card */}
-            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-amber-900 hover:text-white group">
+            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-[#5C1E1E] hover:text-white group">
               <div className="flex items-start">
                 <div className="mr-4 p-3 border border-gray-200 rounded-full group-hover:border-amber-700">
                   <Radio className="w-6 h-6 text-gray-700 group-hover:text-white" />
@@ -330,7 +318,7 @@ in electrical connectivity solutions across the country.
           {/* Services Grid - Second Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Industrial Manufacturing Card */}
-            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-amber-900 hover:text-white group">
+            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-[#5C1E1E] hover:text-white group">
               <div className="flex items-start">
                 <div className="mr-4 p-3 border border-gray-200 rounded-full group-hover:border-amber-700">
                   <Factory className="w-6 h-6 text-gray-700 group-hover:text-white" />
@@ -347,7 +335,7 @@ in electrical connectivity solutions across the country.
             </div>
 
             {/* Construction & Infrastructure Card */}
-            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-amber-900 hover:text-white group">
+            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-[#5C1E1E] hover:text-white group">
               <div className="flex items-start">
                 <div className="mr-4 p-3 border border-gray-200 rounded-full group-hover:border-amber-700">
                   <Building2 className="w-6 h-6 text-gray-700 group-hover:text-white" />
@@ -365,7 +353,7 @@ in electrical connectivity solutions across the country.
             </div>
 
             {/* Transportation Card */}
-            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-amber-900 hover:text-white group">
+            <div className="bg-white rounded-lg p-6 shadow-sm transition-colors duration-300 hover:bg-[#5C1E1E] hover:text-white group">
               <div className="flex items-start">
                 <div className="mr-4 p-3 border border-gray-200 rounded-full group-hover:border-amber-700">
                   <Train className="w-6 h-6 text-gray-700 group-hover:text-white" />

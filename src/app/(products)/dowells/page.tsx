@@ -54,12 +54,12 @@ export default function Component() {
   ];
 
   return (
-    <div className="flex flex-col justify-center w-full mx-auto min-h-screen bg-background relative">
+    <div className="flex flex-col justify-center w-full mx-auto min-h-screen bg-background relative pb-8">
       {/* Hero Section */}
 
       <section className="relative h-[400px] overflow-hidden mb-[2rem]">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-top bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/terms.jpg')`,
           }}

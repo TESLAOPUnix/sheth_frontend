@@ -14,7 +14,7 @@ import Carousel from "@/components/carousel";
 export default function Page() {
   return (
     <main>
-      <TopBar />
+      
       <Header />
 
       {/* Hero Section */}
@@ -28,17 +28,7 @@ export default function Page() {
             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
               Contact Us
             </h1>
-            <nav className="flex items-center text-white text-sm mt-[1rem]">
-              <Link
-                href="/"
-                className="flex items-center justify-center hover:text-gray-300 transition-colors"
-              >
-                <Home size={24} className="mr-1 font-bold" fontWeight={300} />
-                <span className="font-semibold text-[1.1rem]">HOME</span>
-              </Link>
-              <span className="mx-2 text-gray-400">›</span>
-              <span className="text-gray-300 font-medium">CONTACT US</span>
-            </nav>
+           
           </div>
         </div>
       </section>

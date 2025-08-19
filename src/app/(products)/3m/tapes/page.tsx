@@ -8,10 +8,15 @@ import Cart from "@/components/cart";
 import Link from "next/link";
 
 const products = [
-  {
-    name: "Vinyl Tape",
+   {
+    name: "Scotch 35",
     image: "/placeholder.svg?height=200&width=200",
-    slug: "vinyl-tape",
+    slug: "vinyl-tape/scotch-35",
+  },
+  {
+    name: "Super 33",
+    image: "/placeholder.svg?height=200&width=200",
+    slug: "vinyl-tape/super-33",
   },
   {
     name: "Duct Tape",
@@ -19,9 +24,29 @@ const products = [
     slug: "duct-tape",
   },
   {
-    name: "HT Tape",
+    name: "Scotch 23",
     image: "/placeholder.svg?height=200&width=200",
-    slug: "h1-tape",
+    slug: "h1-tape/scotch-23",
+  },
+  {
+    name: "Scotch 70",
+    image: "/placeholder.svg?height=200&width=200",
+    slug: "h1-tape/scotch-70",
+  },
+  {
+    name: "Scotch 69",
+    image: "/placeholder.svg?height=200&width=200",
+    slug: "h1-tape/scotch-69",
+  },
+  {
+    name: "Scotch 27",
+    image: "/placeholder.svg?height=200&width=200",
+    slug: "h1-tape/scotch-27",
+  },
+  {
+    name: "Scotch 130C",
+    image: "/placeholder.svg?height=200&width=200",
+    slug: "h1-tape/scotch-130c",
   },
   {
     name: "Copper Sheilding Tape",
@@ -34,9 +59,14 @@ const products = [
     slug: "cable-jacket-repair-tape",
   },
   {
-    name: "Weather Proof Maistic Tape",
+    name: "Monoplast",
     image: "/placeholder.svg?height=200&width=200",
-    slug: "weather-proof-maistic-tape",
+    slug: "weather-proof-maistic-tape/monoplast",
+  },
+  {
+    name: "Scotch Fil",
+    image: "/placeholder.svg?height=200&width=200",
+    slug: "weather-proof-maistic-tape/scotch-fil",
   },
 ];
 
