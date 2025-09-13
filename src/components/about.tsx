@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function AboutCompany() {
   return (
-    <section className="py-16 md:py-24 max-w-full mx-auto relative">
-      <div className="absolute inset-x-0 bg-[#FAFAF7] h-full -z-50 -top-4"></div>
+    <section className="py-16 md:py-24 max-w-full mx-auto relative ">
+      <div className="absolute inset-x-0  bg-gray-50 h-full -z-50 -top-4"></div>
       <div className="container max-w-[76rem] mx-auto px-4">
         {/* Header with decorative lines */}
         <div className="mb-16 flex items-center justify-center space-x-4">
@@ -22,7 +22,7 @@ export default function AboutCompany() {
           <div className="space-y-8">
     <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
       <Image
-        src="/a1.jpeg"
+        src="/3m_logo.webp"
         alt="Primary Company Image"
         fill
         className="object-contain"
@@ -30,7 +30,7 @@ export default function AboutCompany() {
     </div>
     <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
       <Image
-        src="/a2.jpeg"
+        src="/dowell.png"
         alt="Secondary Company Image"
         fill
         className="object-contain"

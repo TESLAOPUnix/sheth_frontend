@@ -67,11 +67,11 @@ export default function BrandCards() {
   };
 
   return (
-    <div className="">
+    <div className=" bg-gray-50">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] overflow-hidden">
+      <section className="relative h-[400px] overflow-hidden ">
         <Navigation />
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -82,7 +82,7 @@ export default function BrandCards() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
+        <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem] ">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
               Products
@@ -90,7 +90,7 @@ export default function BrandCards() {
           </div>
         </div>
       </section>
-      <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row my-[3rem] px-[1rem]">
+      <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row my-[3rem] px-[1rem]  bg-gray-50">
         <BrandCard brand="3M" onClick={() => handleRedirect("3M")} />
         <BrandCard brand="Dowells" onClick={() => handleRedirect("Dowells")} />
       </div>

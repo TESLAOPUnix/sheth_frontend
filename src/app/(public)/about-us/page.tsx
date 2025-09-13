@@ -376,8 +376,8 @@ in electrical connectivity solutions across the country.
       <StepsGuide />
 
       {/* Stats */}
-      <div className="p-[1rem]">
-        <div className="w-full mb-[4rem] max-w-7xl mx-auto shadow-lg rounded-xl overflow-hidden">
+      <div className="p-[1rem] bg-gray-50">
+        <div className="w-full mb-[4rem]  max-w-7xl mx-auto shadow-lg rounded-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Hours Section */}
             <div className="flex items-center justify-center bg-gray-900 text-white p-6 md:p-8 flex-1">

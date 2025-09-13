@@ -32,7 +32,7 @@ const steps = [
 
 export default function StepsGuide() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h3 className="sub-title">GUIDE TO USING THIS WEBSITE</h3>

@@ -13,18 +13,18 @@ import Carousel from "@/components/carousel";
 
 export default function Page() {
   return (
-    <main>
+    <main className=" bg-gray-50">
       
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[500px] overflow-hidden">
+      <section className="relative h-[500px] overflow-hidden ">
         <Navigation />
         {/* Carousel with fade transition */}
         <Carousel />
 
         <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl ">
             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
               Contact Us
             </h1>

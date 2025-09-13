@@ -15,7 +15,7 @@ import Navigation from "@/components/nav-2";
 export default function Home() {
   
   return (
-    <main className="relative">
+    <main className="relative  bg-gray-100">
 
       <Navigation />
     

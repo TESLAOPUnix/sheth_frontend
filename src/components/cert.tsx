@@ -71,7 +71,7 @@ export default function CertificatesSection() {
   }, [current, next, prev, autoplayDirection])
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-gray-100">
       <div className="container mx-auto max-w-[76rem] px-4">
         {/* Header with decorative lines */}
         <div className="mb-8 flex items-center justify-center space-x-4">

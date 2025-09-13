@@ -114,8 +114,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    <section className="w-full max-w-7xl mx-auto px-4 py-8 ">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8 bg-gray-50">
         {/* Phone Card */}
         <Card className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-md shadow-sm">
           <div className="w-12 h-12 flex items-center justify-center mb-3">
