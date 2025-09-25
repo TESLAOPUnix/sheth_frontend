@@ -42,12 +42,8 @@ export default function AboutCompany() {
           <div className="space-y-8 p-[1.5rem] text-[1rem]  sm:text-[1.2rem]">
             {/* Main description */}
             <p className="text-gray-600 leading-relaxed text-start">
-              At Sheth Trading Corporation, we are committed to delivering
-              excellence in electrical solutions. As Authorized Distributors for
-              renowned brands 3M and Dowell's, our mission is to provide
-              high-quality products and exceptional service to meet the
-              needs of our customers. Founded in 1968 by Anil Parekh, Sheth
-              Trading Corporation brings over 45 years of expertise in the industrial sector.
+             Founded in 1968 by Anil Parekh, Sheth Trading Corporation brings over 45 years of expertise in the industrial sector. Sheth Trading Corporation has grown to become a trusted name in India’s electrical and energy sector, specializing in high-voltage cable management solutions. With a legacy built on reliability, service excellence, and strong industry partnerships, we are proud to be an authorized distributor of globally renowned brands 3M and Dowells.
+
             </p>
 
             {/* Our Team section */}
@@ -60,10 +56,8 @@ export default function AboutCompany() {
                   Our Team
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-start">
-                  Our team of techno-commercial professionals is dedicated to
-                  understanding your needs and offering tailored solutions. We
-                  focus on providing value-enhancing products and exceptional
-                  support to ensure the best possible service.
+                  Our team of techno-commercial professionals is dedicated to understanding your needs and offering tailored solutions. We focus on providing value-enhancing products and exceptional support to ensure the best possible service.
+
                 </p>
               </div>
             </div>
@@ -78,9 +72,8 @@ export default function AboutCompany() {
                   Our Vision
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-start">
-                  To be the leading distributor of high-quality electrical
-                  solutions in India and we are recognized for our commitment to
-                  innovation, reliability, and customer satisfaction.
+                 To be the leading distributor of high-quality electrical solutions in India and we are recognized for our commitment to innovation, reliability, and customer satisfaction.
+
                 </p>
               </div>
             </div>

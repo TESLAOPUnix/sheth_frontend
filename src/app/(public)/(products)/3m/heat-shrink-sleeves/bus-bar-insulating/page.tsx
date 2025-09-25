@@ -93,21 +93,20 @@ export default function Component() {
   return (
     <div className="container mx-auto px-4 py-8 mt-[3rem]">
       {loading && <LoadingSpinner />}
-
       <Card className="overflow-hidden">
         <CardContent className="p-0">
-          <div className="flex flex-col lg:flex-row">
-            {/* Left side - Images */}
-            <div className="w-full lg:w-1/2 p-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
-              <div className="sticky top-0 bg-background pt-4">
-                <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mb-4">
-                  <Image
-                    src={productImages[selectedImage]}
-                    alt={`Product Image ${selectedImage + 1}`}
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded-lg"
-                  />
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                 {/* Left side - Image + Thumbnails + Description */}
+                 <div className="p-6 space-y-8">
+                   {/* Main product image */}
+                   <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-lg overflow-hidden bg-white shadow">
+                     <Image
+                       src={productImages[selectedImage]}
+                       alt={`Product Image ${selectedImage + 1}`}
+                       layout="fill"
+                       objectFit="contain"
+                       className="rounded-lg"
+                     />
                   {/* Add download button - positioned absolutely */}
                   <div className="absolute -bottom-6 right-4 z-10">
                     <a
@@ -118,7 +117,6 @@ export default function Component() {
                       <Download className="h-3 w-3" />
                       <span className="text-xs font-medium">Tech Sheet</span>
                     </a>
-                  </div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 pb-4">
@@ -139,7 +137,33 @@ export default function Component() {
                   </button>
                 ))}
               </div>
-            </div>
+            <div className="prose max-w-none text-gray-700">
+            <h2 className="text-xl font-semibold">Product Description</h2>
+            <p>
+             Our Heat Shrink Tubing for Busbars is designed to provide reliable insulation and protection for indoor and outdoor applications up to 52kV. Suitable for both round and rectangular busbars, this high-performance tubing ensures safety, durability, and operational efficiency in critical electrical environments.
+By preventing bird and animal-related faults as well as flashovers in reduced clearance situations, it enhances the reliability of power systems while reducing maintenance risks.
+
+            </p>
+
+            <h3 className="font-semibold mt-4">Features:</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Easy to install with heat shrink technology.</li>
+              <li>Excellent anti-tracking and insulation properties.</li>
+              <li>Prevents bird and animal interference.</li>
+              <li>Reduces risk of flashovers in compact installations.</li>
+            </ul>
+
+            <h3 className="font-semibold mt-4">Applications:</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Indoor and outdoor busbar insulation up to 52kV</li>
+              <li>
+                Round and rectangular busbars
+              </li>
+              <li>Busbar and cable connection insulation</li>
+              <li>Busbars in switchgear cabinets and panels</li>
+            </ul>
+          </div>
+        </div>
 
             {/* Right side - Product details and form */}
             <div className="w-full lg:w-1/2 p-6 flex flex-col">

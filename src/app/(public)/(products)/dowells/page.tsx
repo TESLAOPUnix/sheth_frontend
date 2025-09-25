@@ -54,8 +54,59 @@ export default function Component() {
   ];
 
   return (
+         <div className="w-full max-w-8xl mx-auto px-4 py-8 space-y-10">
+      {/* ---------- Description Section ---------- */}
+      <div className="bg-white shadow-md rounded-2xl p-6 space-y-4">
+       <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
+  Dowells – Engineered Terminals & Splices for Reliable Connections
+</h1>
 
-      <div className="w-full max-w-6xl mx-auto bg-gray-100">
+<p className="text-gray-600 leading-relaxed">
+  Dowells terminals and splices are extensively engineered for use in large power cables and electrical leads, making them ideal for power generation, distribution systems, and heavy-duty equipment such as generators, motors, and panel boards. Designed to support a wide range of copper and aluminium conductors (up to 1000 mm²), they provide the perfect balance of reliability, flexibility, and cost-effectiveness.
+</p>
+
+<p className="text-gray-600 leading-relaxed">
+  The Dowells product range includes a wide variety of terminals and splices to suit diverse customer requirements. With a focus on solving practical electrical challenges, Dowells ensures that every product delivers the most technically sound and appropriate solution.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-700 mt-4">
+  Compression Crimping Excellence
+</h2>
+<p className="text-gray-600 leading-relaxed">
+  Dowells uses a precision compression crimping method for terminating electrical wires, ensuring a mechanical, uniform, and repeatable crimp every time. Unlike soldering, this method eliminates variables such as melting temperature, oxidation, or entrapped gases. The result is a termination that consistently meets the highest mechanical strength and electrical conductivity standards.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-700 mt-4">
+  Quality & Finish
+</h2>
+<ul className="list-disc pl-5 text-gray-600 space-y-2">
+  <li>
+    Manufactured from oxygen-free, high-conductivity seamless copper tubes for maximum electrical efficiency.
+  </li>
+  <li>
+    Special tin plating process prevents corrosion and guarantees long-term, trouble-free service.
+  </li>
+  <li>
+    Unique design with double-thick tongues and short transfer sections provides a strong grip and ensures superior electrical and mechanical performance.
+  </li>
+</ul>
+
+<h2 className="text-xl font-semibold text-gray-700 mt-4">
+  Our Dowells Product Range Covers
+</h2>
+<ul className="list-disc pl-5 text-gray-600 space-y-2">
+  <li>
+    <strong>Cable End Terminals (Copper & Aluminium) –</strong> Durable lugs designed for maximum conductivity and safety.
+  </li>
+  <li>
+    <strong>Cable Glands –</strong> Strong, protective glands for safe cable entry and sealing in panels and equipment.
+  </li>
+  <li>
+    <strong>Crimping Tools & Accessories –</strong> Precision tools ensuring accurate crimping for secure installations.
+  </li>
+</ul>
+
+      </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <Card

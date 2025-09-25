@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-
-import Image from "next/image";
-import Link from "next/link";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { toast } from "@/hooks/use-toast";
 
 const industriesWeServe = [
@@ -25,8 +23,8 @@ const usefulLinks = [
 
 export default function Footer() {
   const [subscribeEmail, setSubscribeEmail] = useState("");
+
   const subscribeToNewsletter = async (email: string) => {
-    // Check if email is empty or invalid
     if (!email || !email.includes("@") || !email.includes(".")) {
       toast({
         variant: "destructive",
@@ -36,30 +34,13 @@ export default function Footer() {
     }
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/mailSub`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
-        }
-      );
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      const data = await response.json();
-
-      if (data.success) {
-        toast({
-          variant: "default",
-          description: "Thank you for subscribing.",
-        });
-        return data.data;
-      } else {
-        toast({
-          variant: "destructive",
-          description: data.message || "Failed to subscribe.",
-        });
-        return null;
-      }
+      toast({
+        variant: "default",
+        description: "Thank you for subscribing.",
+      });
+      return true;
     } catch (error) {
       console.error("Subscription error:", error);
       toast({
@@ -70,7 +51,6 @@ export default function Footer() {
     }
   };
 
-  // Usage in your existing code:
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     subscribeToNewsletter(subscribeEmail);
@@ -78,74 +58,55 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1A1A1A] text-gray-300 ">
-      {/* Top Section */}
-      <div className="border-b border-gray-800 mx-auto max-w-[76rem]">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col items-end justify-between gap-6 md:flex-row mt-6" >
-            {/* Logo Section */}
-            <div className="flex items-center flex-wrap space-x-4">
-              <Image
-                src="/sheth_logo.png"
-                alt="Sheth Trading Corporation Logo"
-                width={200}
-                height={60}
-                className="h-auto w-48 invert"
-              />
-              <Image
-                src="/msme_logo.png"
-                alt="Partner Logo 1"
-                width={40}
-                height={40}
-              />
-              <Image
-                src="/gem_logo.png"
-                alt="Partner Logo 2"
-                width={40}
-                height={40}
-              />
-              <Image
-                src="/ireps_logo.png"
-                alt="Partner Logo 3"
-                width={40}
-                height={40}
-              />
-            </div>
+  <footer className="bg-[#1A1A1A] text-gray-300">
+    <div className="container mx-auto px-4 py-10 flex flex-col lg:flex-row gap-8 mt-10">
+      {/* Left Column - Logos */}
+      <div className="flex flex-col items-center space-y-2 lg:w-1/4">
+        {/* Sheth Logo - Big */}
+        <div className="relative h-48 w-80 ">
+          <Image
+            src="/sheth_logo.png"
+            alt="Sheth Trading Corporation Logo"
+            fill
+            className="object-contain filter invert"
+          />
+        </div>
 
-            {/* Subscribe Form 
-            <form
-              onSubmit={handleSubscribe}
-              className="flex w-full max-w-md items-center gap-2"
-            >
-              <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
-                <input
-                  type="email"
-                  value={subscribeEmail}
-                  onChange={(e) => setSubscribeEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="w-full rounded-md bg-[#2A2A2A] px-10 py-2 text-gray-300 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#993300]"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="bg-[#993300] px-6 hover:bg-[#7A2900]"
-              >
-                SUBSCRIBE
-              </Button>
-            </form> */}
+        {/* Other 3 Logos in a single row */}
+        <div className="flex items-center justify-center space-x-6">
+          <div className="relative h-12 w-16">
+            <Image
+              src="/msme_logo.png"
+              alt="MSME Certification"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative h-12 w-16">
+            <Image
+              src="/gem_logo.png"
+              alt="GEM Certification"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative h-12 w-16">
+            <Image
+              src="/ireps_logo.png"
+              alt="IREPS Certification"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </div>
 
-      {/* Main Footer Content */}
-      <div className="container mx-auto max-w-[76rem] px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {/* Right Section - Three Columns */}
+      <div className="flex-1">
+        <div className="grid gap-8 md:grid-cols-3">
           {/* Get In Touch */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-white">
-              Get In Touch
-            </h3>
+            <h3 className="mb-6 text-xl font-semibold text-white">Get In Touch</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="mt-1 h-5 w-5 text-[#993300]" />
@@ -182,17 +143,11 @@ export default function Footer() {
 
           {/* Industries We Serve */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-white">
-              Industries We Serve
-            </h3>
+            <h3 className="mb-6 text-xl font-semibold text-white">Industries We Serve</h3>
             <ul className="space-y-3">
               {industriesWeServe.map((industry) => (
                 <li key={industry}>
-                  <p
-                    className="inline-block "
-                  >
-                    {industry}
-                  </p>
+                  <p>{industry}</p>
                 </li>
               ))}
             </ul>
@@ -200,34 +155,32 @@ export default function Footer() {
 
           {/* Useful Links */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-white">
-              Useful Links
-            </h3>
+            <h3 className="mb-6 text-xl font-semibold text-white">Useful Links</h3>
             <ul className="space-y-3">
               {usefulLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
+                  <a
                     href={link.href}
-                    className="inline-block hover:text-white hover:underline"
+                    className="hover:text-white hover:underline"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
+    </div>
 
-      {/* Copyright */}
-      <div className="border-t border-gray-800 bg-[#151515]">
-        <div className="container mx-auto px-4 py-4">
-          <p className="text-center text-sm">
-            © {new Date().getFullYear()} Sheth Trading Corporation. All rights
-            reserved.
-          </p>
-        </div>
+    {/* Copyright */}
+    <div className="bg-[#151515]">
+      <div className="container mx-auto px-4 py-4">
+        <p className="text-center text-sm">
+          © {new Date().getFullYear()} Sheth Trading Corporation. All rights reserved.
+        </p>
       </div>
-    </footer>
+    </div>
+  </footer>
   );
 }

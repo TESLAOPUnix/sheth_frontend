@@ -115,46 +115,58 @@ export default function ContactSection() {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-8 ">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8 bg-gray-50">
-        {/* Phone Card */}
-        <Card className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-md shadow-sm">
-          <div className="w-12 h-12 flex items-center justify-center mb-3">
-            <Phone className="w-8 h-8 text-[#5C1E1E]" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2 uppercase ">
-            Phone
-          </h3>
-          <p className="text-[#5C1E1E] font-semibold text-center">
-            +91 (033) 2237 9239
-          </p>
-        </Card>
+      <div className="p-[1rem] bg-gray-50">
+        <div className="w-full mb-[4rem]  max-w-7xl mx-auto shadow-lg rounded-xl overflow-hidden">
+          <div className="flex flex-col md:flex-row">
+            {/* Hours Section */}
+            <div className="flex items-center justify-center bg-gray-900 text-white p-6 md:p-8 flex-1">
+              <div className="mr-4">
+                <Phone size={28} className="text-white" />
+              </div>
+              <div>
+                <h3 className="text-base text-left px-2 font-medium uppercase mb-1">
+                  PHONE
+                </h3>
+                <p className="text-base md:text-2xl font-semibold">
+                </p>
+                 <p className="text-base md:text-2xl font-semibold">
+                  shethtrd@gmail.com
+                </p>
+              </div>
+            </div>
 
-        {/* Email Card */}
-        <Card className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-md shadow-sm">
-          <div className="w-12 h-12 flex items-center justify-center mb-3">
-            <Mail className="w-8 h-8 text-[#5C1E1E]" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2 uppercase">
-            Email
-          </h3>
-          <p className="text-[#5C1E1E] font-semibold text-center">
-            shethtrd@gmail.com
-          </p>
-        </Card>
+            {/* Call Section */}
+            <div className="flex items-center justify-center bg-red-900 text-white p-6 md:p-8 flex-1">
+              <div className="mr-4">
+                <Phone size={28} className="text-white" />
+              </div>
+              <div>
+                <h3 className="text-base text-left px-2 font-medium uppercase mb-1">
+                  EMAIL
+                </h3>
+                <p className="text-base md:text-2xl font-semibold">
+                  +91 (033) 2237 9239
+                </p>
+              </div>
+            </div>
 
-        {/* Address Card */}
-        <Card className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-md shadow-sm">
-          <div className="w-12 h-12 flex items-center justify-center mb-3">
-            <MapPin className="w-8 h-8 text-[#5C1E1E]" />
+            {/* Address Section */}
+            <div className="flex items-center justify-center bg-gray-900 text-white p-6 md:p-8 flex-1">
+              <div className="mr-4">
+                <MapPin size={28} className="text-white" />
+              </div>
+              <div>
+                <h3 className="text-base text-left px-2 font-medium uppercase mb-1">
+                  OUR OFFICE ADDRESS
+                </h3>
+                <p className="text-xs md:text-base font-bold">
+                  22 Rabindra Sarani, Tirreti Market. Shop #322, Kolkata -
+                  700073
+                </p>
+              </div>
+            </div>
           </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-2 uppercase">
-            Address
-          </h3>
-          <p className="text-[#5C1E1E] font-semibold text-center">
-          22 Rabindra Sarani, Tiretti Market,
-          Shop #322, Kolkata - 700073
-          </p>
-        </Card>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

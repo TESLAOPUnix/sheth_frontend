@@ -11,6 +11,7 @@ import { Clock, Phone, MapPin } from "lucide-react";
 import CertificatesSection from "@/components/cert";
 import Link from "next/link";
 import Carousel from "@/components/carousel";
+import MetricsSectionn from "@/components/about-us-metric";
 
 export default function Page() {
   return (
@@ -33,219 +34,115 @@ export default function Page() {
       </section>
 
       {/* About Us Section */}
-      <section className="w-full py-12 bg-gray-100">
-        <div className="container mx-auto max-w-[76rem] px-4 md:px-6">
-          {/* About Company Header */}
-          <div className="mb-8 text-right mx-auto w-auto">
-            <h3 className="text-gray-500 uppercase tracking-wider text-sm md:text-base text-center">
-              ABOUT COMPANY
+     <section className="w-full py-12 bg-gray-100">
+  <div className="container mx-auto max-w-[76rem] px-4 md:px-6">
+    {/* About Company Header */}
+    <div className="mb-8 text-right mx-auto w-auto">
+      <h3 className="text-gray-500 uppercase tracking-wider text-sm md:text-base text-center">
+        ABOUT COMPANY
+      </h3>
+    </div>
+
+    {/* Main Content Area */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      {/* Left Column - Images */}
+      <div className="space-y-4">
+        <div className="relative w-full h-[350px] md:h-[400px]">
+          <Image
+            src="/about.png"
+            alt="Sheth Trading Corporation - Electrical Solutions"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+      </div>
+
+      {/* Right Column - Text Content */}
+      <div className="space-y-6">
+        <div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            Welcome to Sheth Trading Corporation
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
+            Authorized Distributor of 3M & Dowells
+          </h2>
+
+          <p className="text-gray-600 mb-4">
+            Founded in 1994, Sheth Trading Corporation has established itself as
+            a trusted name in India’s electrical and energy sector, specializing
+            in high-voltage cable management solutions. With a strong legacy of
+            reliability and service excellence, we are proud to be an authorized
+            distributor of <strong>3M</strong> and <strong>Dowells</strong>, two
+            globally respected leaders in electrical technology.
+          </p>
+
+          <p className="text-gray-600 mb-4">
+            <strong>3M Heat Shrink Cable Jointing Kits</strong> – Engineered for
+            safety, durability, and superior insulation, these kits deliver
+            long-lasting performance in medium- and high-voltage networks. Known
+            for ease of installation and global standards, 3M kits are trusted
+            worldwide for secure power connections.
+          </p>
+
+          <p className="text-gray-600 mb-4">
+            <strong>Dowells Cable End Terminals and Cable Glands</strong> –
+            Designed with precision and quality, Dowells products ensure
+            excellent conductivity, secure termination, and robust protection.
+            From copper and aluminum lugs to a wide range of glands, Dowells is
+            the benchmark for consistency and performance.
+          </p>
+
+          <p className="text-gray-600 mb-4">
+            Over the past three decades, we have earned the trust of contractors,
+            OEMs, EPC companies, and utility providers by consistently delivering
+            genuine products, on-time service, and tailored solutions. What sets
+            us apart is not just our product range, but our dedicated team,
+            guiding clients with technical expertise, competitive quotations,
+            and reliable after-sales support.
+          </p>
+
+          <p className="text-gray-600">
+            By adopting digital tools, data-driven inventory management, and
+            modern service practices, Sheth Trading Corporation continues to
+            evolve while staying true to its values of trust, reliability, and
+            customer commitment.
+          </p>
+        </div>
+
+        {/* Vision & Mission */}
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-xl font-semibold text-amber-800 mb-2">
+              Our Vision
             </h3>
+            <p className="text-gray-600">
+              To be a national leader in electrical distribution, expanding our
+              reach with brand-certified products, technology-driven operations,
+              and value-added services that support the evolving needs of
+              industries across India.
+            </p>
           </div>
 
-          {/* Main Content Area */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            {/* Left Column - Images */}
-            <div className="space-y-4">
-              <div className="relative w-full h-[350px] md:h-[400px]">
-                <Image
-                  src="/about.png"
-                  alt="Electrical installation with red cables"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            </div>
-
-            {/* Right Column - Text Content */}
-            <div className="space-y-6">
-              <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-                  Welcome to Sheth Trading Corporation
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
-                  3M and Dowell's Dealer in Kolkata
-                </h2>
-                <p className="text-gray-600 mb-4">
-                3M India Ltd, a subsidiary of the American multinational 3M,
-is known for its innovation and quality. Based in Maplewood,
-Minnesota, 3M offers a wide range of products across various industries.
-                </p>
-                <p className="text-gray-600">
-                Since 1969, Dowell's has been a pioneer in solderless crimping
-technology in India. Its high standards have made it a leader
-in electrical connectivity solutions across the country.
-                </p>
-              </div>
-
-              {/* Product Categories */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-6">
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-50 flex-shrink-0">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        className="fill-amber-800"
-                      />
-                      <path d="M10 17l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </span>
-                  <span className="text-amber-800 font-medium">
-                    Heat Shrink Solution
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-50 flex-shrink-0">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        className="fill-amber-800"
-                      />
-                      <path d="M10 17l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </span>
-                  <span className="text-amber-800 font-medium">
-                    Auxiliary Products
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-50 flex-shrink-0">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        className="fill-amber-800"
-                      />
-                      <path d="M10 17l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </span>
-                  <span className="text-amber-800 font-medium">
-                    Scotch Tapes and Compounds
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-50 flex-shrink-0">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        className="fill-amber-800"
-                      />
-                      <path d="M10 17l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </span>
-                  <span className="text-amber-800 font-medium">
-                    Cable End Terminals
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-50 flex-shrink-0">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        className="fill-amber-800"
-                      />
-                      <path d="M10 17l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </span>
-                  <span className="text-amber-800 font-medium">
-                    Cable Glands
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-50 flex-shrink-0">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        className="fill-amber-800"
-                      />
-                      <path d="M10 17l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </span>
-                  <span className="text-amber-800 font-medium">
-                    Crimping Tools
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div>
+            <h3 className="text-xl font-semibold text-amber-800 mb-2">
+              Our Mission
+            </h3>
+            <p className="text-gray-600">
+              To provide safe, high-performance, and certified electrical
+              solutions backed by technical expertise, excellent service, and
+              long-term partnerships—ensuring reliability and growth for every
+              customer we serve.
+            </p>
+            <br/>
           </div>
+        </div>
+      </div>
+    </div>
+
 
           {/* Stats Section */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="flex flex-col items-center">
-              <div className="text-amber-800 mb-2">
-                <Users className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-amber-800">
-                3500+
-              </h3>
-              <p className="text-amber-700">Satisfied Clients</p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="text-amber-800 mb-2">
-                <Briefcase className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-amber-800">
-                30+
-              </h3>
-              <p className="text-amber-700">Active Project</p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="text-amber-800 mb-2">
-                <Trophy className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-amber-800">
-                2000+
-              </h3>
-              <p className="text-amber-700">Product Portfolio</p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="text-amber-800 mb-2">
-                <TrendingUp className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-amber-800">
-                35% +
-              </h3>
-              <p className="text-amber-700">Companies YOY growth</p>
-            </div>
-          </div>
+          <MetricsSectionn />
         </div>
       </section>
 
