@@ -103,7 +103,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -212,6 +212,23 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Double Compression Brass Cable Gland (For Armoured Cable)</h2>
+  <p>
+    Double Compression Brass Cable Glands are manufactured from high-quality brass with a bright 
+    nickel-plated finish for enhanced corrosion resistance and durability. Designed for armoured cables, 
+    these glands provide secure and reliable cable termination.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-quality brass.</li>
+    <li>Bright nickel-plated finish for corrosion resistance.</li>
+    <li>Double compression design ensures secure cable termination.</li>
+    <li>Ideal for use with armoured cables in industrial and commercial installations.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

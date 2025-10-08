@@ -33,11 +33,9 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
+    "/new_pics/Bus-Bar-Insulating.jpg",
     "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/img1.png",
     "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/img2.png",
-    "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/bb_1.jpg",
-    "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/bb_2.jpg",
-    "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/bb_3.jpg",
   ];
 
   const sizeOptions = [
@@ -91,7 +89,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-8 mt-[3rem]">
       {loading && <LoadingSpinner />}
       <Card className="overflow-hidden">
         <CardContent className="p-0">
@@ -137,32 +135,6 @@ export default function Component() {
                   </button>
                 ))}
               </div>
-            <div className="prose max-w-none text-gray-700">
-            <h2 className="text-xl font-semibold">Product Description</h2>
-            <p>
-             Our Heat Shrink Tubing for Busbars is designed to provide reliable insulation and protection for indoor and outdoor applications up to 52kV. Suitable for both round and rectangular busbars, this high-performance tubing ensures safety, durability, and operational efficiency in critical electrical environments.
-By preventing bird and animal-related faults as well as flashovers in reduced clearance situations, it enhances the reliability of power systems while reducing maintenance risks.
-
-            </p>
-
-            <h3 className="font-semibold mt-4">Features:</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Easy to install with heat shrink technology.</li>
-              <li>Excellent anti-tracking and insulation properties.</li>
-              <li>Prevents bird and animal interference.</li>
-              <li>Reduces risk of flashovers in compact installations.</li>
-            </ul>
-
-            <h3 className="font-semibold mt-4">Applications:</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Indoor and outdoor busbar insulation up to 52kV</li>
-              <li>
-                Round and rectangular busbars
-              </li>
-              <li>Busbar and cable connection insulation</li>
-              <li>Busbars in switchgear cabinets and panels</li>
-            </ul>
-          </div>
         </div>
 
             {/* Right side - Product details and form */}
@@ -241,6 +213,32 @@ By preventing bird and animal-related faults as well as flashovers in reduced cl
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+            <h2 className="text-xl font-semibold"> Heat Shrink Sleeves Bus Bar Product Description</h2>
+            <p>
+             Our Heat Shrink Tubing for Busbars is designed to provide reliable insulation and protection for indoor and outdoor applications up to 52kV. Suitable for both round and rectangular busbars, this high-performance tubing ensures safety, durability, and operational efficiency in critical electrical environments.
+By preventing bird and animal-related faults as well as flashovers in reduced clearance situations, it enhances the reliability of power systems while reducing maintenance risks.
+
+            </p>
+
+            <h3 className="font-semibold mt-4">Features:</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Easy to install with heat shrink technology.</li>
+              <li>Excellent anti-tracking and insulation properties.</li>
+              <li>Prevents bird and animal interference.</li>
+              <li>Reduces risk of flashovers in compact installations.</li>
+            </ul>
+
+            <h3 className="font-semibold mt-4">Applications:</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Indoor and outdoor busbar insulation up to 52kV</li>
+              <li>
+                Round and rectangular busbars
+              </li>
+              <li>Busbar and cable connection insulation</li>
+              <li>Busbars in switchgear cabinets and panels</li>
+            </ul>
+          </div>
     </div>
   );
 }

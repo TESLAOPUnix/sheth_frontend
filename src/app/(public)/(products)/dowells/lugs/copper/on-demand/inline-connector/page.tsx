@@ -34,41 +34,29 @@ export default function Component() {
   ];
 
   const packOptions = [
-    { label: "2.5-5 / CEB-05", value: "CEB-05" },
-    { label: "4-6 / CEB-06", value: "CEB-06" },
-    { label: "6-6 / CEB-07", value: "CEB-07" },
-    { label: "10-6 / CEB-08", value: "CEB-08" },
-    { label: "16-6 / CEB-09", value: "CEB-09" },
-    { label: "25-6 / CEB-10", value: "CEB-10" },
-    { label: "35-6 / CEB-11", value: "CEB-11" },
-    { label: "35-8 / CEB-12", value: "CEB-12" },
-    { label: "50-6 / CEB-13", value: "CEB-13" },
-    { label: "50-8 / CEB-14", value: "CEB-14" },
-    { label: "50-10 / CEB-15", value: "CEB-15" },
-    { label: "70-8 / CEB-16", value: "CEB-16" },
-    { label: "70-10 / CEB-17", value: "CEB-17" },
-    { label: "70-12 / CEB-18", value: "CEB-18" },
-    { label: "95-10 / CEB-19", value: "CEB-19" },
-    { label: "95-12 / CEB-20", value: "CEB-20" },
-    { label: "120-10 / CEB-21", value: "CEB-21" },
-    { label: "120-12 / CEB-22", value: "CEB-22" },
-    { label: "120-16 / CEB-23", value: "CEB-23" },
-    { label: "150-10 / CEB-24", value: "CEB-24" },
-    { label: "150-12 / CEB-25", value: "CEB-25" },
-    { label: "150-16 / CEB-26", value: "CEB-26" },
-    { label: "185-12 / CEB-27", value: "CEB-27" },
-    { label: "185-16 / CEB-28", value: "CEB-28" },
-    { label: "225-16 / CEB-231", value: "CEB-231" },
-    { label: "240-16 / CEB-29", value: "CEB-29" },
-    { label: "240-20 / CEB-30", value: "CEB-30" },
-    { label: "300-16 / CEB-31", value: "CEB-31" },
-    { label: "300-20 / CEB-32", value: "CEB-32" },
-    { label: "400-20 / CEB-33", value: "CEB-33" },
-    { label: "500-20 / CEB-34", value: "CEB-34" },
-    { label: "630-20 / CEB-35", value: "CEB-35" },
-    { label: "800 / CEB-62", value: "CEB-62" },
-    { label: "1000 / CEB-76", value: "CEB-76" },
-  ];
+  { label: "2.5-5 / CBL-453", value: "CBL-453" },
+  { label: "4-6 / CBL-23", value: "CBL-23" },
+  { label: "6-6 / CBL-3", value: "CBL-3" },
+  { label: "10-6 / CBL-4", value: "CBL-4" },
+  { label: "16-6 / CBL-460", value: "CBL-460" },
+  { label: "25-6 / CBL-6", value: "CBL-6" },
+  { label: "35-6 / CBL-7", value: "CBL-7" },
+  { label: "35-8 / CBL-8", value: "CBL-8" },
+  { label: "50-6 / CBL-9", value: "CBL-9" },
+  { label: "50-8 / CBL-10", value: "CBL-10" },
+  { label: "50-10 / CBL-11", value: "CBL-11" },
+  { label: "70-8 / CBL-12", value: "CBL-12" },
+  { label: "70-10 / CBL-13", value: "CBL-13" },
+  { label: "70-12 / CBL-14", value: "CBL-14" },
+  { label: "95-10 / CBL-20", value: "CBL-20" },
+  { label: "95-12 / CBL-15", value: "CBL-15" },
+  { label: "120-10 / CBL-16", value: "CBL-16" },
+  { label: "120-12 / CBL-17", value: "CBL-17" },
+  { label: "120-16 / CBL-18", value: "CBL-18" },
+  { label: "150-10 / CBL-19", value: "CBL-19" },
+  { label: "150-12 / CBL-21", value: "CBL-21" },
+  { label: "150-16 / CBL-22", value: "CBL-22" },
+];
 
   const handleInputChange = (field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -111,7 +99,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">

@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/d_t_m_1.png","/d_t_m_2.png"];
+  const productImages = ["/new_pics/Lugs/Copper Tube Terminal - Medium Duty.png"];
 
   const packOptions = [
     { label: "2.5-5 / CUS-05", value: "CUS-05" },
@@ -110,7 +110,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -219,6 +219,28 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Tube Terminals (Medium Duty)</h2>
+  <p>
+    Copper Tube Terminals (Medium Duty) are manufactured from high-conductivity EC Grade Copper 
+    (Cu ≥ 99.9%) and finished with electro-tinning for excellent corrosion resistance. Designed 
+    without an inspection window, they are suitable for use in corrosive environments.  
+  </p>
+  <p>
+    The barrel is designed with an internal chamfer at the wire entry to ensure smooth conductor 
+    insertion, and the short/standard-length barrel is ideal for installations where space is limited.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for corrosion resistance.</li>
+    <li>No inspection window, ideal for corrosive environments.</li>
+    <li>Internal chamfer ensures smooth wire insertion.</li>
+    <li>Short/standard-length barrel recommended for limited-space installations.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

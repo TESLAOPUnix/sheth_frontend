@@ -31,6 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
+    "/new_pics/Scotch-23.jpg",
     "/3m/TAPES/img3.png"
   ];
 
@@ -83,7 +84,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -193,6 +194,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Scotch® 23 Rubber Splicing Tape Product Description</h2>
+  <p>
+    Scotch® 23 is a self-fusing, high-insulation splicing tape designed for splicing and terminating 
+    power cables up to 69kV. It maintains excellent dielectric strength, ensures reliable electrical 
+    performance, and provides effective moisture sealing for long-lasting durability in demanding 
+    environments.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Self-fusing and moisture-resistant.</li>
+    <li>Excellent electrical properties.</li>
+    <li>Handles high-voltage splicing and terminating.</li>
+    <li>Withstands UV, ozone, and varying temperatures.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

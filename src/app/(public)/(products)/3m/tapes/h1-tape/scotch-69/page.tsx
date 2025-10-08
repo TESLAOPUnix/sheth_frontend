@@ -31,7 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/scotcxh_69.jpg"
+    "/new_pics/Scotch-69.jpg"
   ];
 
   const sizeOption = ["0 , 177mm"];
@@ -75,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -185,6 +185,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">3M™ Scotch® 69 Glass Cloth Electrical Tape Product Description</h2>
+  <p>
+    Scotch® 69 is a high-temperature glass cloth electrical tape with a silicone adhesive, rated for 
+    continuous use in applications up to 200°C (392°F). It offers exceptional dielectric strength, 
+    heat resistance, and durability, making it ideal for motors, transformers, and other 
+    heat-intensive environments.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>High dielectric strength and heat resistance.</li>
+    <li>Flame-retardant and solvent-resistant.</li>
+    <li>Excellent mechanical strength.</li>
+    <li>Suitable for coils, transformers, and splicing in hot spots.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

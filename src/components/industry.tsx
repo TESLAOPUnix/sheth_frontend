@@ -52,7 +52,7 @@ export default function CustomIndustryCarousel() {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 overflow-x-hidden  bg-gray-50">
+    <section className="w-full py-16 md:py-16 overflow-x-hidden  bg-gray-50">
       <div className="container px-4 max-w-[76rem] mx-auto">
         <div className="mb-16 text-center">
           <div className="flex justify-center space-x-2">

@@ -29,7 +29,7 @@ export default function Component() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const productImages = ["/3m/SCOTCHCAST_450/img1.png","/3m/SCOTCHCAST_450/sc_1.jpg","/3m/SCOTCHCAST_450/sc_2.jpg"];
+  const productImages = ["/new_pics/Cable-Jointing-Compound.png"];
 
   const packOptions = [
     "N Pack (2.407 Kg)",
@@ -91,7 +91,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">

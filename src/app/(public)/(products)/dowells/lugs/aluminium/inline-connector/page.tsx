@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/alu/inline/al_2_1.jpg","/dowells/lugs/alu/inline/al_2_2.jpg"];
+  const productImages = ["/new_pics/Lugs/Aluminium Inline Connector.jpg","/dowells/lugs/alu/inline/al_2_1.jpg","/dowells/lugs/alu/inline/al_2_2.jpg"];
 
   const packOptions = [
     { label: "2.5 / ALS-145", value: "ALS-145" },
@@ -99,7 +99,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -211,6 +211,23 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Aluminium Inline Connector Product Description</h2>
+  <p>
+    Inline Connectors are manufactured from seamless EC Grade Aluminium tubing with a natural finish. 
+    Designed for reliability and efficiency, they provide excellent conductivity, low electrical resistance, 
+    and high ductility, ensuring durable performance in electrical connections.  
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Manufactured from seamless EC Grade Aluminium tubing.</li>
+    <li>Natural finish for durability and conductivity.</li>
+    <li>Provides maximum electrical conductivity.</li>
+    <li>Low resistance with high ductility for reliable performance.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

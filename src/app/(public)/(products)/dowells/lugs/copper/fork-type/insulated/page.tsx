@@ -30,7 +30,8 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/f_i.png"];
+  const productImages = [
+    "/new_pics/Lugs/Copper Lug Fork Type Insulated.png"];
 
   const packOptions = [
     { label: "1-3 / RSI-7926SPL", value: "RSI-7926SPL" },
@@ -82,7 +83,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -191,6 +192,29 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Fork Terminals (Insulated)</h2>
+  <p>
+    Copper Fork Terminals (Insulated) are manufactured from high-conductivity EC Grade Copper 
+    and finished with electro-tinning for corrosion resistance and long-lasting performance.  
+  </p>
+  <p>
+    The fork tongue design allows for quick and easy installation, while the insulated sleeve 
+    provides additional support and flexibility. An easy visual check of wire insertion ensures 
+    proper electrical contact.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper.</li>
+    <li>Electro-tinned finish for superior corrosion resistance.</li>
+    <li>Fork tongue design enables fast and easy installation.</li>
+    <li>Insulated sleeve provides support and flexibility.</li>
+    <li>Allows easy visual confirmation of wire insertion.</li>
+    <li>Ensures reliable electrical contact and long service life.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

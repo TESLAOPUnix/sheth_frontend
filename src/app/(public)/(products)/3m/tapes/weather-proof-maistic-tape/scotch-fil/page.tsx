@@ -31,7 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/WEATHER_PROOF_MASTIC_TAPE/SCOTCHFILL/img5.png",
+    "/new_pics/Scotchfil.jpg"
   ];
 
   const sizeOption = ["3.17mm"];
@@ -75,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">

@@ -30,6 +30,9 @@ export default function Home() {
         }}
       >
         <StepsGuide />
+
+        <div className="bg-gray-100 mt-16"></div>
+
       </AnimatedContainer>
       <AnimatedContainer
         className="text-center"

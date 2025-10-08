@@ -83,7 +83,7 @@ const MetricsSection = () => {
   return (
     <div className="w-full">
       {/* Header Section (without background image) */}
-      <div className="bg-white">
+      <div className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           {/* Header with Logo and Decoration */}
           <div className="text-center">

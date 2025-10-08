@@ -91,11 +91,11 @@ export default function Page() {
         </div>
       </section>
       <section className="w-full bg-[#5C1E1E] py-12 px-4 flex-grow">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl space-x-2 mx-auto">
           <h2 className="text-white text-3xl font-bold text-center mb-12">
             <span className="font-extrabold">Dowell's</span> Pricelist and Brochure
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
             {/* Pricelist Card */}
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-[23rem]">
               <div className="relative w-full h-[28rem] mb-6">
@@ -117,7 +117,7 @@ export default function Page() {
               </a>
             </div>
 
-            {/* Brochure Card */}
+            {/* Brochure Card 
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-[23rem]">
               <div className="relative w-full h-[28rem] mb-6">
                 <Image
@@ -137,12 +137,12 @@ export default function Page() {
                 </button>
               </a>
             </div>
-
+*/}
             {/* Brochure Card */}
             <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-[23rem]">
               <div className="relative w-full h-[28rem] mb-6">
                 <Image
-                  src="/sock_cat/img1.png"
+                  src="/Dowells-cat-new.png"
                   alt="3M Brochure Cover"
                   fill
                   className="object-cover rounded-md"
@@ -150,9 +150,9 @@ export default function Page() {
                 />
               </div>
               <h3 className="text-gray-800 text-xl font-medium mb-5">
-                Sockets Catalogue
+                Dowells Catalogue
               </h3>
-              <a download href="/sock_cat/Sockets_catalogue_1.pdf">
+              <a download href="/Dowells Catalogue New.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Brochure
                 </button>

@@ -31,8 +31,7 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
-    "/d_ic_1.png",
-    "/d_ic_2.png",
+    "/new_pics/Lugs/Copper In-Line  Connector (Ferrule).png"
   ];
 
   const packOptions = [
@@ -117,7 +116,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -226,6 +225,26 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Tube In-Line Connector</h2>
+  <p>
+    Copper Tube In-Line Connectors are manufactured from high-conductivity EC Grade Copper 
+    (Cu ≥ 99.9%) and finished with electro-tinning for corrosion resistance and long-lasting performance.  
+  </p>
+  <p>
+    Made from seamless tubing, these connectors provide maximum electrical conductivity, low resistance, 
+    and high ductility, ensuring reliable and durable performance in electrical connections.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for superior corrosion resistance.</li>
+    <li>Manufactured from seamless tubing for consistent quality.</li>
+    <li>Provides maximum conductivity, low resistance, and high ductility.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

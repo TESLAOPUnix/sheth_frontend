@@ -95,7 +95,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -204,6 +204,23 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">DC Type Medium Duty Brass Cable Glands (For Armoured Cable)</h2>
+  <p>
+    DC Type Medium Duty Brass Cable Glands are manufactured from high-quality brass with a bright 
+    nickel-plated finish for enhanced corrosion resistance and long-lasting durability. Designed 
+    specifically for armoured cables, they provide reliable and secure cable termination in medium-duty applications.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-quality brass.</li>
+    <li>Bright nickel-plated finish for superior corrosion resistance.</li>
+    <li>Medium-duty design suitable for a variety of armoured cable installations.</li>
+    <li>Provides secure and reliable cable termination.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

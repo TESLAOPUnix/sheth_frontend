@@ -15,7 +15,7 @@ export const lugsProducts: Product[] = [
   {
     id: 1,
     name: "Aluminium Lug Inline Connector",
-    image: "/dowells/lugs/alu/inline/al_2_1.jpg",
+    image: "/new_pics/Lugs/Aluminium Inline Connector.jpg",
     description: "Manufactured from seamless tubing. Provides maximum conductivity, low resistance and ductility",
     category: "Aluminium",
     subcategory: "Inline Connector",
@@ -35,7 +35,7 @@ export const lugsProducts: Product[] = [
   {
     id: 3,
     name: "Aluminium Lug On Demand Terminal XLPE",
-    image: "/dowells/lugs/alu/t-xlpe/al_4_1.jpg",
+    image: "/new_pics/Lugs/Aluminium Terminal for Xlpe Conductor.png",
     description: "Barrel is designed with an internal chamfer at the wire entry to ensure smooth insertion of the wire",
     category: "Aluminium",
     subcategory: "On Demand",
@@ -45,7 +45,7 @@ export const lugsProducts: Product[] = [
   {
     id: 4,
     name: "Aluminium Lug Reducer Terminal",
-    image: "/dowells/lugs/alu/reducer/al_3_1.jpg",
+    image: "/new_pics/Lugs/Reducer Terminal.jpg",
     description: "Barrel is designed with an internal chamfer at the wire entry to ensure smooth insertion of the wire",
     category: "Aluminium",
     subcategory: "Reducer Terminal",
@@ -55,7 +55,7 @@ export const lugsProducts: Product[] = [
   {
     id: 5,
     name: "Aluminium Lug Tube Terminal Long Barrel",
-    image: "/dowells/lugs/alu/long/al_5_1.jpg",
+    image: "/new_pics/Lugs/Aluminium Tube Terminal - Long Barrel.png",
     description: "Long barrel allows for an increased number of crimps which will increase the mechanical strength of the connection",
     category: "Aluminium",
     subcategory: "Tube Terminal",
@@ -65,7 +65,7 @@ export const lugsProducts: Product[] = [
   {
     id: 6,
     name: "Aluminium Lug Tube Terminal Short Barrel",
-    image: "/dowells/lugs/alu/short/al_6_1.jpg",
+    image: "/new_pics/Lugs/Aluminium  Tube Terminal.png",
     description: "Short/Standard length barrel is recommended for installations with limited space requirements",
     category: "Aluminium",
     subcategory: "Tube Terminal",
@@ -75,7 +75,7 @@ export const lugsProducts: Product[] = [
   {
     id: 7,
     name: "Bi-Metallic Inline Connector",
-    image: "/dowells/lugs/bi-metallic/inline/img1.png",
+    image: "/new_pics/Lugs/Bi-Metallic Connector (Friction Welded).png",
     description: "Durable Aluminium lug - tube type",
     category: "Bi-Metallic",
     subcategory: "Inline Connector",
@@ -85,7 +85,7 @@ export const lugsProducts: Product[] = [
   {
     id: 8,
     name: "Bi-Metallic Terminal",
-    image: "/dowells/lugs/bi-metallic/terminal/img1.png",
+    image: "/new_pics/Lugs/Bi-Metallic Terminal (Friction Welded).png",
     description: "Durable Copper lug - tube type",
     category: "Bi-Metallic",
     subcategory: "Terminal",
@@ -95,7 +95,7 @@ export const lugsProducts: Product[] = [
   {
     id: 9,
     name: "Copper Lug Fork Type Insulated",
-    image: "/f_i.png",
+    image: "/new_pics/Lugs/Copper Lug Fork Type Insulated.png",
     description: "Provides an easy visual check of wire insertion. Fork tongue design provides easy and fast installation. Provided with insulation support & flexibility",
     category: "Copper",
     subcategory: "Fork Type",
@@ -105,7 +105,7 @@ export const lugsProducts: Product[] = [
   {
     id: 10,
     name: "Copper Lug Fork Type Non Insulated",
-    image: "/f_ni.png",
+    image: "/new_pics/Lugs/Copper Lug Fork Type Non Insulated.png",
     description: "Provides an easy visual check of wire insertion. Fork tongue design provides easy and fast installation",
     category: "Copper",
     subcategory: "Fork Type",
@@ -115,7 +115,7 @@ export const lugsProducts: Product[] = [
     {
     id: 11,
     name: "Copper Lug Inline Connector",
-    image: "/d_ic_1.png",
+    image: "/new_pics/Lugs/Copper In-Line  Connector (Ferrule).png",
     description: "Manufactured from seamless tubing. Provides maximum conductivity, low resistance and ductility",
     category: "Copper",
     subcategory: "Inline Connector",
@@ -125,7 +125,7 @@ export const lugsProducts: Product[] = [
     {
     id: 12,
     name: "Copper Lug Insulated-Esf Insulated",
-    image: "/in_i.png",
+    image: "/new_pics/Lugs/Copper End Sealing  Ferrule (Insulated).png",
     description: "Durable Copper lug - tube type",
     category: "Copper",
     subcategory: "Insulated Esf",
@@ -135,7 +135,7 @@ export const lugsProducts: Product[] = [
     {
     id: 13,
     name: "Copper Lug Insulated-Esf Twin Type",
-    image: "/in_tt.jpg",
+    image: "/new_pics/Lugs/Copper Twin Type Lugs.png",
     description: "Durable Copper lug - tube type",
     category: "Copper",
     subcategory: "Insulated Esf",
@@ -175,7 +175,7 @@ export const lugsProducts: Product[] = [
     {
     id: 17,
     name: "Copper Lug Pin Type Double Grip ",
-    image: "/p_dg.png",
+    image: "/new_pics/Lugs/Copper Pin Terminal (Pre-Insulated).png",
     description: "Provides an easy visual check of wire insertion. Pin type tongue design provides an easy and effective way for termination. Provided with double grip for greater flexibility and insulation support",
     category: "Copper",
     subcategory: "Pin Type",
@@ -185,7 +185,7 @@ export const lugsProducts: Product[] = [
     {
     id: 18,
     name: "Copper Lug Pin Type Insulated",
-    image: "/p_i.png",
+    image: "/new_pics/Lugs/Copper Pin Terminal (Insulated).png",
     description: "Provides an easy visual check of wire insertion. Pin type tongue design provides an easy and effective way for termination. Provided with insulation support & flexibility",
     category: "Copper",
     subcategory: "Pin Type",
@@ -195,7 +195,7 @@ export const lugsProducts: Product[] = [
     {
     id: 19,
     name: "Copper Lug Pin Type Non Insulated",
-    image: "/p_ni.png",
+    image: "/new_pics/Lugs/Copper Pin Terminal (Non-Insulated).png",
     description: "Provides an easy visual check of wire insertion. Pin type tongue design provides an easy and effective way for termination",
     category: "Copper",
     subcategory: "Pin Type",
@@ -205,7 +205,7 @@ export const lugsProducts: Product[] = [
     {
     id: 20,
     name: "Copper Lug Reducer Type",
-    image: "/d_r_1.png",
+    image: "/new_pics/Lugs/Copper Reducer Terminal.png",
     description: "Short pin length design permits easy installation in limited space applications. Barrel is designed with an internal chamfer at the wire entry to ensure smooth insertion of the wire",
     category: "Copper",
     subcategory: "Reducer Type",
@@ -215,7 +215,7 @@ export const lugsProducts: Product[] = [
     {
     id: 21,
     name: "Copper Lug Ring Type Double Grip",
-    image: "/r_dg_1.png",
+    image: "/new_pics/Lugs/Copper Ring Terminal (Pre-Insulated).png",
     description: "Provides an easy visual check of wire insertion. Provided with double grip for greater flexibility and insulation suppor",
     category: "Copper",
     subcategory: "Ring Type",
@@ -225,7 +225,7 @@ export const lugsProducts: Product[] = [
   {
     id: 22,
     name: "Copper Lug Ring Type Insulated",
-    image: "/r_i_1.png",
+    image: "/new_pics/Lugs/Copper Ring Terminal (Insulated).png",
     description: "Provides an easy visual check of wire insertion. Provided with insulation support & flexibility",
     category: "Copper",
     subcategory: "Ring Type",
@@ -235,7 +235,7 @@ export const lugsProducts: Product[] = [
     {
     id: 23,
     name: "Copper Lug Ring Type Non Insulated",
-    image: "/r_ni_1.png",
+    image: "/new_pics/Lugs/Copper Ring Terminal (Non-Insulated).png",
     description: "Provides an easy visual check of wire insertion",
     category: "Copper",
     subcategory: "Ring Type",
@@ -266,7 +266,7 @@ export const lugsProducts: Product[] = [
     {
     id: 26,
     name: "Copper Lug Tube Terminal Heavy Duty Long Barrel",
-    image: "/d_t_h_l.png",
+    image: "/new_pics/Lugs/Copper Tube Terminal - Heavy Duty Long Barrel.png",
     description: "No inspection window is ideal for corrosive environments. Barrel is designed with an internal chamfer at the wire entry to ensure smooth insertion of the wire. Long barrel allows for an increased number of crimps which will increase the mechanical strength of the connection",
     category: "Copper",
     subcategory: "Tube Terminal",
@@ -276,7 +276,7 @@ export const lugsProducts: Product[] = [
   {
     id: 27,
     name: "Copper Lug Tube Terminal Heavy Duty Short Barrel",
-    image: "/d_t_h_s_1.png",
+    image: "/new_pics/Lugs/Copper Tube Terminal - Heavy Duty Short Barrel.png",
     description: "Inspection window allows for visual verification that the wire has been fully inserted prior to crimping the lug Barrel is designed with an internal chamfer at the wire entry to ensure smooth insertion of the wire Short/Standard length barrel is recommended for installations with limited space requirements",
     category: "Copper",
     subcategory: "Tube Terminal",
@@ -286,7 +286,7 @@ export const lugsProducts: Product[] = [
    {
     id: 28,
     name: "Copper Lug Tube Terminal Medium Duty",
-    image: "/d_t_m_1.png",
+    image: "/new_pics/Lugs/Copper Tube Terminal - Medium Duty.png",
     description: "No inspection window is ideal for corrosive environments. Barrel is designed with an internal chamfer at the wire entry to ensure smooth insertion of the wire. Short/Standard length barrel is recommended for installations with limited space requirements",
     category: "Copper",
     subcategory: "Tube Terminal",

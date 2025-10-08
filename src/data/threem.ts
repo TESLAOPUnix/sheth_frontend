@@ -23,7 +23,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 2,
     name: "Cable Jointing Compound (Scotchcast 450)",
-    image: "/3m/SCOTCHCAST_450/img1.png",
+    image: "/new_pics/Cable-Jointing-Compound.png",
     description: " Specialized compound for secure sealing and dependable performance in critical jointing applications.",
     category: "Jointing Compound",
     subcategory: "ScotchCast",
@@ -32,7 +32,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 3,
     name: "Heat Shrink Sleeves - Busbar",
-    image: "/3m/HEAT_SHRINK_SLEEVES/BUSBAR_SLEEVES/img1.png",
+    image: "/new_pics/Bus-Bar-Insulating.jpg",
     description: "High-quality insulation sleeves ensuring safe operation, mechanical durability, and extended busbar life",
     category: "Heat Shrink Sleeves",
     subcategory: "Busbar",
@@ -41,7 +41,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 4,
     name: "Heat Shrink Sleeves - Wrap Around",
-    image: "/3m/HEAT_SHRINK_SLEEVES/wrap_around/wps_1.jpg",
+    image: "/new_pics/Heat-Shrink-Sleeves-Wrap-Around.jpg",
     description: "High-quality insulation sleeves ensuring safe operation, mechanical durability, and extended busbar life",
     category: "Heat Shrink Sleeves",
     subcategory: "Wrap Around",
@@ -50,7 +50,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 5,
     name: "Red Insulation Sealer",
-    image: "/3m/RED_INSULATION_SEALER/img1.png",
+    image: "/new_pics/Red-Insulation-Sealer.jpg",
     description: " Quick, effective protection against moisture ingress, enhancing electrical safety and preventing breakdowns.",
     category: "Insulation Sealer",
     subcategory: "Red Insulation Sealer",
@@ -59,7 +59,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 6,
     name: "3M Electrical Tapes Cable Jacket Repair Tape",
-    image: "/3m/TAPES/CABLE_JACKET_REPAIR_TAPE/cjrt_1.jpg",
+    image: "/new_pics/Scotch-31.jpg",
     description: " Scotch® 31 Mining Tape is a high-dielectric, flame-retardant tape designed specifically for mining and heavy industrial applications. It provides reliable insulation and mechanical protection in harsh and demanding environments.",
     category: "Tapes",
     subcategory: "Tapes",
@@ -68,7 +68,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 7,
     name: "3M Electrical Tapes Copper Sheilding Tape",
-    image: "/3m/TAPES/sct_24.webp",
+    image: "/new_pics/Scotch-24.jpg",
     description: "Premium vinyl and rubber tapes for electrical insulation",
     category: "Tapes",
     subcategory: "Tapes",
@@ -77,7 +77,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 8,
     name: "3M Electrical Tapes Duct Tape",
-    image: "/3m/TAPES/DUCT_TAPE/duct_1.jpg",
+    image: "/new_pics/Duct-Tape.avif",
     description: "3M™ DT8 is an 8-mil duct tape with a polyethylene backing and natural rubber adhesive. It is widely used for light-duty bundling, repairs, and general-purpose applications.",
     category: "Tapes",
     subcategory: "Duct Tape",
@@ -86,7 +86,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 9,
     name: "3M Electrical Tapes HT Tape Scotch 23",
-    image: "/3m/TAPES/img3.png",
+    image: "/new_pics/Scotch-23.jpg",
     description: " Scotch® 23 is a self-fusing, high-insulation splicing tape designed for splicing and terminating up to 69kV cables. It maintains high dielectric strength and provides moisture sealing.",
     category: "Tapes",
     subcategory: "HT Tapes",
@@ -95,7 +95,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 10,
     name: "3M Electrical Tapes HT Tape Scotch 27",
-    image: "/3m/TAPES/sct_27.webp",
+    image: "/new_pics/Scotch-27.jpg",
     description: "Scotch® 27 is a 7-mil woven glass cloth electrical tape with rubber thermosetting adhesive, designed for 600V dry applications requiring high mechanical strength and heat resistance.",
     category: "Tapes",
     subcategory: "HT Tapes",
@@ -104,7 +104,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 11,
     name: "3M Electrical TapesHT Tape Scotch 69",
-    image: "/3m/TAPES/scotcxh_69.jpg",
+    image: "/new_pics/Scotch-69.jpg",
     description: " Scotch® 69 is a high-temperature glass cloth tape with silicone adhesive, rated for 200°C (392°F) applications. It is widely used in motors, transformers, and heat-intensive environments.",
     category: "Tapes",
     subcategory: "HT Tapes",
@@ -113,7 +113,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 12,
     name: "3M Electrical Tapes HT Tape Scotch 70",
-    image: "/3m/TAPES/img4.png",
+    image: "/new_pics/Scotch-70.jpg",
     description: " Scotch® 70 is a silicone rubber tape that fuses to itself, providing reliable insulation for high-temperature applications up to 180°C (356°F).",
     category: "Tapes",
     subcategory: "HT Tapes",
@@ -122,7 +122,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 13,
     name: "3M Electrical Tapes HT Tape Scotch 130c",
-    image: "/3m/TAPES/sct_130.webp",
+    image: "/new_pics/Scotch-130C.jpg",
     description: "Premium vinyl and rubber tapes for electrical insulation",
     category: "Tapes",
     subcategory: "HT Tapes",
@@ -131,7 +131,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 14,
     name: "3M Electrical Tapes Vinyl Tape Scotch 35",
-    image: "/3m/TAPES/VINYL_TAPE/img6.png",
+    image: "/new_pics/Scotch-35.jpg",
     description: " Scotch® 35 is a premium vinyl tape available in multiple colours, widely used for phase identification, marking, and insulation.",
     category: "Tapes",
     subcategory: "Vinyl Tapes",
@@ -140,7 +140,7 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 15,
     name: "3M Electrical Tapes Vinyl Tape Super 33",
-    image: "/3m/TAPES/scotch_33.jpg",
+    image: "/new_pics/Super-33+.jpg",
     description: " Scotch® Super 33+ is a premium-grade, all-weather vinyl insulating tape, designed to perform in extreme temperatures from -18°C to 105°C.",
     category: "Tapes",
     subcategory: "Vinyl Tapes",
@@ -158,10 +158,10 @@ export const threeMProducts: ThreeMProduct[] = [
   {
     id: 17,
     name: "3M Electrical Tapes Weather Proof Maistic Tape Scotch Fill",
-    image: "/3m/TAPES/WEATHER_PROOF_MASTIC_TAPE/SCOTCHFILL/img5.png",
+    image: "/new_pics/Scotchfil.jpg",
     description: "Premium vinyl and rubber tapes for electrical insulation",
     category: "Tapes",
     subcategory: "Weather Proof Maistic Tapes",
-    slug: "/3m/tapes/weather-proof-maistic-tape/scotch-fill",
+    slug: "/3m/tapes/weather-proof-maistic-tape/scotch-fil",
   },
 ];

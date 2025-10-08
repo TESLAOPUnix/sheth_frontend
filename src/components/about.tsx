@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function AboutCompany() {
   return (
-    <section className="py-16 md:py-24 max-w-full mx-auto relative ">
+    <section className="py-16 md:py-16 max-w-full mx-auto relative ">
       <div className="absolute inset-x-0  bg-gray-50 h-full -z-50 -top-4"></div>
       <div className="container max-w-[76rem] mx-auto px-4">
         {/* Header with decorative lines */}

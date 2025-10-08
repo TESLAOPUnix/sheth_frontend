@@ -34,11 +34,11 @@ export default function Page() {
       </section>
 
       {/* About Us Section */}
-     <section className="w-full py-12 bg-gray-100">
+     <section className="w-full py-[100px] bg-gray-50">
   <div className="container mx-auto max-w-[76rem] px-4 md:px-6">
     {/* About Company Header */}
     <div className="mb-8 text-right mx-auto w-auto">
-      <h3 className="text-gray-500 uppercase tracking-wider text-sm md:text-base text-center">
+      <h3 className="text-gray-500 uppercase font-extrabold tracking-wider text-sm md:text-lg text-center">
         ABOUT COMPANY
       </h3>
     </div>
@@ -139,15 +139,16 @@ export default function Page() {
         </div>
       </div>
     </div>
-
-
-          {/* Stats Section */}
-          <MetricsSectionn />
         </div>
       </section>
 
+      <div className="">
+          {/* Stats Section */}
+          <MetricsSectionn />
+        </div>
+
       {/* Industry */}
-      <section className="w-full py-16 bg-gray-50">
+      <section className="w-full py-24 bg-gray-100">
         <div className="container mx-auto max-w-[76rem] px-4 md:px-6">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -270,10 +271,10 @@ export default function Page() {
         </div>
       </section>
 
-      <StepsGuide />
+      {/*<StepsGuide /> */}
 
       {/* Stats */}
-      <div className="p-[1rem] bg-gray-50">
+      <div className="py-24 bg-gray-50">
         <div className="w-full mb-[4rem]  max-w-7xl mx-auto shadow-lg rounded-xl overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Hours Section */}

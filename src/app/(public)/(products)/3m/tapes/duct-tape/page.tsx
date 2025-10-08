@@ -31,8 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/DUCT_TAPE/duct_1.jpg",
-    "/3m/TAPES/DUCT_TAPE/duct_2.jpg",
+    "/new_pics/Duct-Tape.avif",
   ];
 
   const colorOption = ["Black"];
@@ -76,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -186,6 +185,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">3M™ All Purpose Duct Tape DT8 Product Description</h2>
+  <p>
+    3M™ DT8 is an 8-mil duct tape with a polyethylene backing and natural rubber adhesive. 
+    It is widely used for light-duty bundling, quick repairs, and general-purpose applications. 
+    With strong adhesion and easy handling, it offers versatile performance across various 
+    surfaces and conditions.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Aggressive adhesive bonds instantly to metal, glass, plastic, and concrete.</li>
+    <li>Easy hand-tear with woven cloth scrim.</li>
+    <li>Conformable for uneven surfaces.</li>
+    <li>Ideal for bundling, quick repairs, and marking.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="relative bg-amber-50 bg-opacity-60">
+        <main className="relative bg-gray-50">
           <VisibilityProvider>{children}</VisibilityProvider>
           <ScrollToTopButton />
         </main>

@@ -81,119 +81,119 @@ const MetricsSection = () => {
   }, [isInView]);
 
   return (
-    <div className="w-full">
-
-      {/* Metrics Section (with background image) */}
-      <div className="relative" ref={ref}>
-        {/* Background Image with Overlay */}
-        <div className="absolute bg-black inset-0 z-0">
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage: "url(/transforms.jpeg)",
-              opacity: "0.5",
-            }}
-          />
-        </div>
-
-        {/* Metrics Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Metrics Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
-            {/* Metric 1 */}
-            <div className="flex flex-col items-center">
-              <div className="mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-amber-600"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="8" r="7" />
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                </svg>
-              </div>
-              <motion.h3 className="text-4xl font-bold mb-2">
-                {clientsCount}+
-              </motion.h3>
-              <p className="text-xl">Satisfied Clients</p>
-            </div>
-
-            {/* Metric 2 */}
-            <div className="flex flex-col items-center">
-              <div className="mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-amber-600"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                </svg>
-              </div>
-              <motion.h3 className="text-4xl font-bold mb-2">
-                {projectsCount}+
-              </motion.h3>
-              <p className="text-xl">Active Project</p>
-            </div>
-
-            {/* Metric 3 */}
-            <div className="flex flex-col items-center">
-              <div className="mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-amber-600"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-              </div>
-              <motion.h3 className="text-4xl font-bold mb-2">
-                {portfolioCount}+
-              </motion.h3>
-              <p className="text-xl">Product Portfolio</p>
-            </div>
-
-            {/* Metric 4 */}
-            <div className="flex flex-col items-center">
-              <div className="mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10 text-amber-600"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                  <polyline points="16 7 22 7 22 13" />
-                </svg>
-              </div>
-              <motion.h3 className="text-4xl font-bold mb-2">
-                {growthCount}%
-              </motion.h3>
-              <p className="text-xl">Company YOY Growth</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div className="w-full bg-gray-100">
+   
+         {/* Metrics Section (with background image) */}
+         <div className="relative bg-gray-100" ref={ref}>
+           {/* Background Image with Overlay */}
+           <div className="absolute bg-black inset-0 z-0">
+             <div
+               className="w-full h-full bg-cover bg-center"
+               style={{
+                 backgroundImage: "url(/transforms.jpeg)",
+                 opacity: "0.5",
+               }}
+             />
+           </div>
+   
+           {/* Metrics Content */}
+           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+             {/* Metrics Grid */}
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+               {/* Metric 1 */}
+               <div className="flex flex-col items-center">
+                 <div className="mb-4">
+                   <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     className="h-10 w-10 text-amber-600"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     strokeWidth="2"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                   >
+                     <circle cx="12" cy="8" r="7" />
+                     <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                   </svg>
+                 </div>
+                 <motion.h3 className="text-4xl font-bold mb-2">
+                   {clientsCount}+
+                 </motion.h3>
+                 <p className="text-xl">Satisfied Clients</p>
+               </div>
+   
+               {/* Metric 2 */}
+               <div className="flex flex-col items-center">
+                 <div className="mb-4">
+                   <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     className="h-10 w-10 text-amber-600"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     strokeWidth="2"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                   >
+                     <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                   </svg>
+                 </div>
+                 <motion.h3 className="text-4xl font-bold mb-2">
+                   {projectsCount}+
+                 </motion.h3>
+                 <p className="text-xl">Active Project</p>
+               </div>
+   
+               {/* Metric 3 */}
+               <div className="flex flex-col items-center">
+                 <div className="mb-4">
+                   <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     className="h-10 w-10 text-amber-600"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     strokeWidth="2"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                   >
+                     <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                   </svg>
+                 </div>
+                 <motion.h3 className="text-4xl font-bold mb-2">
+                   {portfolioCount}+
+                 </motion.h3>
+                 <p className="text-xl">Product Portfolio</p>
+               </div>
+   
+               {/* Metric 4 */}
+               <div className="flex flex-col items-center">
+                 <div className="mb-4">
+                   <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     className="h-10 w-10 text-amber-600"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     strokeWidth="2"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                   >
+                     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                     <polyline points="16 7 22 7 22 13" />
+                   </svg>
+                 </div>
+                 <motion.h3 className="text-4xl font-bold mb-2">
+                   {growthCount}%
+                 </motion.h3>
+                 <p className="text-xl">Company YOY Growth</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
   );
 };
 

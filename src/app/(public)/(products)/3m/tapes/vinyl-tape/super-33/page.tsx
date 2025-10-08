@@ -31,9 +31,7 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/scotch_33.jpg",
-    "/3m/TAPES/VINYL_TAPE/SUPER_33/v_s_33_1.jpg",
-    "/3m/TAPES/VINYL_TAPE/SUPER_33/v_s_33_2.jpg",
+    "/new_pics/Super-33+.jpg"
   ];
 
   const sizeOption = ["33mm"];
@@ -77,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -187,6 +185,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Scotch® Super 33+ Vinyl Electrical Tape Product Description</h2>
+  <p>
+    Scotch® Super 33+ is a premium-grade, all-weather vinyl insulating tape engineered to deliver 
+    reliable performance in extreme temperatures ranging from -18°C to 105°C. It combines excellent 
+    elasticity, adhesion, and durability, making it a trusted choice for professional electrical 
+    applications worldwide.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Excellent resistance to UV, moisture, corrosion, and abrasion.</li>
+    <li>Maintains elasticity and adhesion in hot or cold conditions.</li>
+    <li>UL and CSA certified flame-retardant tape.</li>
+    <li>Ideal for splicing, jacketing, and protective insulation.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

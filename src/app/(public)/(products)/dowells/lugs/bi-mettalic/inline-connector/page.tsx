@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/bi-metallic/inline/img1.png"];
+  const productImages = ["/new_pics/Lugs/Bi-Metallic Connector (Friction Welded).png","/dowells/lugs/bi-metallic/inline/img1.png"];
 
   const packOptions = [
     { label: "CACF-16-16 / 16-16", value: "CACF-16-16" },
@@ -103,7 +103,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">

@@ -30,7 +30,7 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/sct_130.webp"
+    "/new_pics/Scotch-130C.jpg"
   ];
 
   const sizeOption = ["One size"];
@@ -74,7 +74,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">

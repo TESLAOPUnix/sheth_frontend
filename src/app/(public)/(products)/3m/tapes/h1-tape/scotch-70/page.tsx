@@ -31,7 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/img4.png"
+    "/new_pics/Scotch-70.jpg"
   ];
 
   const sizeOption = ["One size"];
@@ -75,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -185,6 +185,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Scotch® 70 Self-Fusing Silicone Rubber Tape Product Description</h2>
+  <p>
+    Scotch® 70 is a self-fusing silicone rubber tape designed to provide reliable insulation for 
+    high-temperature applications up to 180°C (356°F). It delivers excellent electrical and mechanical 
+    performance, making it ideal for use in demanding environments where heat, weather, and electrical 
+    stresses are present.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Excellent arc- and track-resistant properties.</li>
+    <li>Self-fusing, moisture- and weather-resistant.</li>
+    <li>Withstands UV, corona, and ozone exposure.</li>
+    <li>Ideal for covering high-voltage connections and bus bars.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

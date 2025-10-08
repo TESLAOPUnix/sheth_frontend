@@ -71,8 +71,10 @@ export default function Component() {
                 </h2>
               </CardContent>
             </Card>
+            
           ))}
         </div>
+        
       </div>
   );
 }

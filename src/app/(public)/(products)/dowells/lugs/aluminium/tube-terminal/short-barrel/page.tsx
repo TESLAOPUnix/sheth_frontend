@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/alu/short/al_6_1.jpg","/dowells/lugs/alu/short/al_6_2.jpg"];
+  const productImages = ["/new_pics/Lugs/Aluminium  Tube Terminal.png","/dowells/lugs/alu/short/al_6_1.jpg","/dowells/lugs/alu/short/al_6_2.jpg"];
 
   const packOptions = [
     { label: "2.5-3 / ALS-151", value: "ALS-151" },
@@ -123,7 +123,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -235,6 +235,27 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Short Barrel Aluminium Tube Terminals Product Description</h2>
+  <p>
+    Short Barrel Aluminium Tube Terminals are manufactured from EC Grade Aluminium with a 
+    natural finish. The barrel is designed with an internal chamber at the wire entry to ensure 
+    smooth insertion of the conductor, improving reliability and ease of installation.  
+  </p>
+  <p>
+    The short or standard-length barrel design is particularly recommended for installations 
+    where space is limited, without compromising electrical performance.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Manufactured from EC Grade Aluminium.</li>
+    <li>Natural finish for durability and conductivity.</li>
+    <li>Internal chamfer ensures smooth wire insertion.</li>
+    <li>Short/standard length barrel suitable for limited-space installations.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

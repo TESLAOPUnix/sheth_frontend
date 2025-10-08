@@ -29,7 +29,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/r_i_1.png","/r_i_2.png"];
+  const productImages = ["/new_pics/Lugs/Copper Ring Terminal (Insulated).png"];
   const packOptions = [
     { label: "0.75-4 / RSI-7501", value: "RSI-7501" },
     { label: "1-4 / RSI-7502", value: "RSI-7502" },
@@ -110,7 +110,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -208,6 +208,27 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Ring Terminals (Insulated)</h2>
+  <p>
+    Copper Ring Terminals (Insulated) are manufactured from high conductivity EC Grade Copper 
+    (Cu ≥ 99.9%) and finished with electro-tinning to resist corrosion and ensure long-lasting performance.  
+  </p>
+  <p>
+    The insulated sleeve provides additional support and flexibility, while also allowing an easy visual check 
+    of wire insertion to ensure proper installation and reliable electrical contact.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for superior corrosion resistance.</li>
+    <li>Insulated sleeve provides support and flexibility.</li>
+    <li>Allows easy visual confirmation of wire insertion.</li>
+    <li>Ensures reliable electrical contact and long service life.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

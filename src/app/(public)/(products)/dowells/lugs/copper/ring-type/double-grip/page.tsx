@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/r_dg_1.png","/r_dg_2"];
+  const productImages = ["/new_pics/Lugs/Copper Ring Terminal (Pre-Insulated).png"];
 
   const packOptions = [
     { label: "1.5-3 / PSD-7437", value: "PSD-7437" },
@@ -110,7 +110,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -219,6 +219,27 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Ring Terminals (Pre-Insulated) (Double Grip)</h2>
+  <p>
+    Copper Ring Terminals (Pre-Insulated, Double Grip) are manufactured from high conductivity EC Grade Copper 
+    (Cu ≥ 99.9%) and finished with electro-tinning for corrosion resistance and long-lasting performance.  
+  </p>
+  <p>
+    The double grip insulation design provides enhanced flexibility and support, while also allowing an easy 
+    visual check of wire insertion to ensure proper installation and reliable electrical contact.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for superior corrosion resistance.</li>
+    <li>Double grip insulation provides enhanced flexibility and support.</li>
+    <li>Allows easy visual confirmation of wire insertion.</li>
+    <li>Ensures reliable electrical contact and long service life.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

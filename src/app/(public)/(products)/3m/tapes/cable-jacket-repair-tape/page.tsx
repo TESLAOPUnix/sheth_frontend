@@ -31,7 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/CABLE_JACKET_REPAIR_TAPE/cjrt_1.jpg"
+    "/new_pics/Scotch-31.jpg",
   ];
 
   const sizeOption = ["1.52mm"];
@@ -75,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -185,6 +185,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Scotch® 31 Mining Tape Product Description</h2>
+  <p>
+    Scotch® 31 Mining Tape is a high-dielectric, flame-retardant tape designed specifically for mining 
+    and heavy industrial applications. It provides reliable insulation and mechanical protection in 
+    harsh and demanding environments, ensuring long-lasting performance where safety and durability 
+    are critical.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Excellent electrical insulation properties.</li>
+    <li>Flame-retardant and moisture-resistant.</li>
+    <li>Withstands tough mining conditions.</li>
+    <li>Flexible and easy to apply.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

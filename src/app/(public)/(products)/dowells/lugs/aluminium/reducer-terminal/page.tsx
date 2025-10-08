@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/alu/reducer/al_3_1.jpg","/dowells/lugs/alu/reducer/al_3_2.jpg"];
+  const productImages = ["/new_pics/Lugs/Reducer Terminal.jpg","/dowells/lugs/alu/reducer/al_3_1.jpg","/dowells/lugs/alu/reducer/al_3_2.jpg"];
 
   const packOptions = [
     { label: "2.5 / AWP-01", value: "AWP-01" },
@@ -116,7 +116,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -226,6 +226,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Aluminium Reducer Terminal Product Description</h2>
+  <p>
+    Reducer Terminals are manufactured from EC Grade Aluminium with a natural finish. 
+    They are designed with a short pin length, making them ideal for installations 
+    in limited-space applications. The barrel features an internal chamfer at the 
+    wire entry to ensure smooth and reliable conductor insertion.  
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Manufactured from EC Grade Aluminium.</li>
+    <li>Natural finish for durability and conductivity.</li>
+    <li>Short pin length design allows use in space-constrained installations.</li>
+    <li>Internal chamfer ensures smooth wire insertion.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

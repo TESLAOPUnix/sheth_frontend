@@ -221,7 +221,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
   {loading && <LoadingSpinner />}
 
   <Card className="overflow-hidden">
@@ -272,62 +272,6 @@ export default function Component() {
                 />
               </button>
             ))}
-          </div>
-
-          {/* Product description */}
-          <div className="prose max-w-none text-gray-700">
-            <div>
-            <h1 className="text-3xl font-bold mb-2">Cable Product</h1>
-            <p className="text-gray-600 text-base leading-relaxed">
-              When it comes to 3M Cable Jointing Kits, the name Sheth Trading
-              Corporation stands as a benchmark in Eastern India. For over three
-              decades, we have been the largest distributor, supplier, and stockist
-              of 3M cable jointing kits, trusted by contractors, EPC companies,
-              OEMs, and government utilities alike. Our unmatched availability,
-              expertise, and service have made us the go-to source for authentic 3M
-              kits across projects of all scales. You can trust SHETH TRADING
-              CORPORATION for best pricing compared to any other distributor. Our
-              range includes Kits for - 1.1KV,11KV(E/UE),22KV(E),33(E,UE)
-
-            </p>
-
-          </div>
-
-            <h2 className="text-xl font-semibold mt-4">Product Description</h2>
-            <p>
-              3M Heat Shrink Low, Medium and High voltage Terminations and
-              Straight Through Joints are available for tape/wire shielded,
-              armoured/unarmoured single core and three core HT polymeric cables
-              and Three and a half/Four core for LT polymeric cables. 3M Heat
-              Shrinkable terminations utilize a unique high dielectric constant
-              (High K) stress control tube and mastic for effective grading of
-              electrical stresses. The non tracking heat shrinkable insulating
-              outer tube is optimally designed for reliable environmental
-              protection.
-            </p>
-
-            <h3 className="font-semibold mt-4">Features:</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Available for 1-core and 3-core polymeric cables.</li>
-              <li>Provides excellent environmental protection and moisture sealing.</li>
-              <li>Wide conductor size ranges up to 1000 mm²</li>
-              <li>Suitable for crimped & shear bolt connectors</li>
-              <li>BIL of 350 KVp</li>
-              <li>Installation support and training</li>
-            </ul>
-
-            <h3 className="font-semibold mt-4">Advantages:</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Complete portfolio from 1.1 kV to 66 kV</li>
-              <li>
-                Application flexibility – wide range of cable sizes & constructions
-              </li>
-              <li>Covers inline and crossbond splicing applications</li>
-              <li>Strong technical support</li>
-            </ul>
-
-            <h3 className="font-semibold mt-4">Certifications:</h3>
-            <p>Type tested according to IEC 60840</p>
           </div>
         </div>
 
@@ -469,8 +413,62 @@ export default function Component() {
         </div>
       </div>
     </CardContent>
-  </Card>
-</div>
+  </Card> 
+   <div className="prose w-full text-gray-700">
+            <div>
+            <h1 className="text-3xl font-bold mb-2">HEAT SHRINK JOINTING KIT</h1>
+            <p className="text-gray-600 text-base leading-relaxed">
+              When it comes to 3M Cable Jointing Kits, the name Sheth Trading
+              Corporation stands as a benchmark in Eastern India. For over three
+              decades, we have been the largest distributor, supplier, and stockist
+              of 3M cable jointing kits, trusted by contractors, EPC companies,
+              OEMs, and government utilities alike. Our unmatched availability,
+              expertise, and service have made us the go-to source for authentic 3M
+              kits across projects of all scales. You can trust SHETH TRADING
+              CORPORATION for best pricing compared to any other distributor. Our
+              range includes Kits for - 1.1KV,11KV(E/UE),22KV(E),33(E,UE)
 
+            </p>
+
+          </div>
+
+            <h2 className="text-xl font-semibold mt-4">Product Description</h2>
+            <p>
+              3M Heat Shrink Low, Medium and High voltage Terminations and
+              Straight Through Joints are available for tape/wire shielded,
+              armoured/unarmoured single core and three core HT polymeric cables
+              and Three and a half/Four core for LT polymeric cables. 3M Heat
+              Shrinkable terminations utilize a unique high dielectric constant
+              (High K) stress control tube and mastic for effective grading of
+              electrical stresses. The non tracking heat shrinkable insulating
+              outer tube is optimally designed for reliable environmental
+              protection.
+            </p>
+
+            <h3 className="font-semibold mt-4">Features:</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Available for 1-core and 3-core polymeric cables.</li>
+              <li>Provides excellent environmental protection and moisture sealing.</li>
+              <li>Wide conductor size ranges up to 1000 mm²</li>
+              <li>Suitable for crimped & shear bolt connectors</li>
+              <li>BIL of 350 KVp</li>
+              <li>Installation support and training</li>
+            </ul>
+
+            <h3 className="font-semibold mt-4">Advantages:</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Complete portfolio from 1.1 kV to 66 kV</li>
+              <li>
+                Application flexibility – wide range of cable sizes & constructions
+              </li>
+              <li>Covers inline and crossbond splicing applications</li>
+              <li>Strong technical support</li>
+            </ul>
+
+            <h3 className="font-semibold mt-4">Certifications:</h3>
+            <p>Type tested according to IEC 60840</p>
+          </div>
+</div>
+  
   );
 }

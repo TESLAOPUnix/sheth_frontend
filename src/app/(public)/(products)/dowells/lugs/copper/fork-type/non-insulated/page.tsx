@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/f_ni.png"];
+  const productImages = ["/new_pics/Lugs/Copper Lug Fork Type Non Insulated.png","/f_ni.png"];
 
   const packOptions = [
     { label: "1-3 / RS-7249SPL", value: "RS-7249SPL" },
@@ -82,7 +82,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -191,6 +191,27 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Fork Terminals</h2>
+  <p>
+    Copper Fork Terminals are manufactured from high-conductivity EC Grade Copper (Cu ≥ 99.9%) 
+    and finished with electro-tinning for corrosion resistance and long-lasting performance.  
+  </p>
+  <p>
+    The fork tongue design allows for easy and fast installation, while providing an easy visual 
+    check of wire insertion to ensure proper electrical contact.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for superior corrosion resistance.</li>
+    <li>Fork tongue design enables quick and easy installation.</li>
+    <li>Provides easy visual confirmation of wire insertion.</li>
+    <li>Ensures reliable electrical contact and long service life.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

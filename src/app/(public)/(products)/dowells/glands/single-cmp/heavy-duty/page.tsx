@@ -91,7 +91,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -200,6 +200,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Single Compression Brass Cable Gland Heavy Duty (SIBG Type)</h2>
+  <p>
+    Single Compression Brass Cable Glands (Heavy Duty, SIBG Type) are manufactured from high-quality 
+    brass with a bright nickel-plated finish for superior corrosion resistance and long-lasting performance. 
+    Designed for heavy-duty applications, these glands provide secure and reliable termination for a wide 
+    range of cables.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-quality brass.</li>
+    <li>Bright nickel-plated finish for superior corrosion resistance.</li>
+    <li>Single compression design for secure cable termination.</li>
+    <li>Heavy-duty SIBG type suitable for industrial and commercial applications.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

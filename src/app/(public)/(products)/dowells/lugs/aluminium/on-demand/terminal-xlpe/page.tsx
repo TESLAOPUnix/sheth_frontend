@@ -29,7 +29,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/lugs/alu/t-xlpe/al_4_1.jpg","/dowells/lugs/alu/t-xlpe/al_4_2.jpg"];
+  const productImages = ["/new_pics/Lugs/Aluminium Terminal for Xlpe Conductor.png","/dowells/lugs/alu/t-xlpe/al_4_1.jpg","/dowells/lugs/alu/t-xlpe/al_4_2.jpg"];
 
   const packOptions = [
     { label: "25-8 / ALS-XL17", value: "ALS-XL17" },
@@ -91,7 +91,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -204,6 +204,30 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Aluminium Tube Terminals for XLPE Conductor Product Description</h2>
+  <p>
+    Aluminium Tube Terminals for XLPE conductors are manufactured from EC Grade Aluminium 
+    with a natural finish. The barrel is designed with an internal chamfer at the wire 
+    entry to ensure smooth conductor insertion, reducing installation effort and improving 
+    reliability.  
+  </p>
+  <p>
+    The long barrel design allows for an increased number of crimps, which enhances the 
+    mechanical strength of the connection. These terminals are specially engineered to 
+    provide optimal performance with compact XLPE conductors.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Manufactured from EC Grade Aluminium.</li>
+    <li>Natural finish for durability and conductivity.</li>
+    <li>Internal chamfer ensures smooth wire insertion.</li>
+    <li>Long barrel allows multiple crimps for higher connection strength.</li>
+    <li>Specially designed for compact XLPE conductors.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

@@ -32,8 +32,8 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
+    "/new_pics/Heat-Shrink-Sleeves-Wrap-Around.jpg",
     "/3m/HEAT_SHRINK_SLEEVES/wrap_around/img1.png",
-    "/3m/HEAT_SHRINK_SLEEVES/wrap_around/wps_1.jpg",
   ];
 
   const sizeOptions = [
@@ -85,7 +85,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-8 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -191,6 +191,40 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Heat Shrink Sleeves Wrap Around Product Description</h2>
+  <p>
+    3M’s reinforcement heat shrink splice closure system is designed to provide excellent split 
+    resistance along with strong environmental and mechanical protection for cable joints. 
+    Manufactured from polyolefin material with polyethylene layers, an aluminum barrier for 
+    moisture-vapour transmission, and a hot melt adhesive on the inner surface, these sleeves 
+    ensure long-lasting durability and sealing performance.
+  </p>
+  <p>
+    Supplied in wraparound form with stainless steel channels to make the sleeves cylindrical 
+    before shrinking, they are easy to install. When heat is applied, the inner adhesive layer 
+    melts and bonds to the cable surface, creating a reliable waterproof seal.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features & Benefits:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Quick and easy installation.</li>
+    <li>Maximum protection against mechanical stress.</li>
+    <li>Good bonding to standard cable jacket materials.</li>
+    <li>For outer jacketing on cables from 1.1kV to 33kV.</li>
+    <li>Excellent performance in harsh environmental conditions.</li>
+    <li>Hot melt adhesive forms a durable, moisture-resistant seal.</li>
+  </ul>
+
+  <h3 className="font-semibold mt-4">Applications:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Quick re-jacketing of cables in the field.</li>
+    <li>Repairing damaged outer jackets on cables.</li>
+    <li>Outer sealing jacket for cable joints from 1.1kV to 33kV.</li>
+    <li>Suitable for installations in confined spaces using standard heating equipment such as a torch.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

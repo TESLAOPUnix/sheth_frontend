@@ -94,7 +94,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -206,6 +206,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Aluminium In-Line Connector for XLPE Conductor Product Description</h2>
+  <p>
+    Aluminium In-Line Connectors for XLPE conductors are manufactured from seamless EC Grade Aluminium 
+    tubing with a natural finish. Specially designed for compact XLPE conductors, they ensure reliable 
+    performance by providing excellent conductivity, low resistance, and high ductility.  
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Manufactured from seamless EC Grade Aluminium tubing.</li>
+    <li>Natural finish for durability and conductivity.</li>
+    <li>Provides maximum electrical conductivity.</li>
+    <li>Low resistance with high ductility.</li>
+    <li>Specially designed for compact XLPE conductors.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/p_dg.png"];
+  const productImages = ["/new_pics/Lugs/Copper Pin Terminal (Pre-Insulated).png"];
 
   const packOptions = [
     { label: "1.5 / CP-26", value: "CP-26" },
@@ -80,7 +80,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -189,6 +189,29 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Pin Terminals (Pre-Insulated) (Double Grip)</h2>
+  <p>
+    Copper Pin Terminals (Pre-Insulated, Double Grip) are manufactured from high-conductivity EC Grade Copper 
+    (Cu ≥ 99.9%) and finished with electro-tinning for corrosion resistance and long-lasting performance.  
+  </p>
+  <p>
+    The pin-type tongue design allows for easy and effective termination, while the double grip insulation 
+    provides enhanced support and flexibility. An easy visual check of wire insertion ensures proper 
+    electrical contact.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for superior corrosion resistance.</li>
+    <li>Pin-type tongue design for easy and effective termination.</li>
+    <li>Double grip insulation provides enhanced support and flexibility.</li>
+    <li>Allows easy visual confirmation of wire insertion.</li>
+    <li>Ensures reliable electrical contact and long service life.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

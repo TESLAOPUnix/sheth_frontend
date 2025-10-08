@@ -31,7 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
   const [selectedImage, setSelectedImage] = useState(0);
 
-  const productImages = ["/3m/RED_INSULATION_SEALER/img1.png"];
+  const productImages = ["/new_pics/Red-Insulation-Sealer.jpg"];
 
   const sizeOptions = ["AEROSOL 1602-R 12 OZ"];
 
@@ -74,7 +74,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -181,6 +181,38 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">3M™ Electrical Insulating Sealer 1602-R Product Description</h2>
+  <p>
+    The 3M™ Electrical Insulating Sealer 1602-R is a premium, electrical-grade, fast-drying sealer and insulator 
+    designed to safeguard electrical systems from weather, moisture, corrosion, oil, alkalis, and acids. 
+    Packaged in a convenient pressurized spray can, it allows for quick and effective application, even in 
+    hard-to-reach areas.
+  </p>
+  <p>
+    This versatile sealer can be applied over insulation on wire and cable splices, or used as a touch-up 
+    insulator on motor windings and frames—ensuring long-lasting protection and reliability in demanding 
+    electrical environments.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Electrical-grade, fast-drying protective sealer.</li>
+    <li>Safeguards against moisture, corrosion, oil, alkalis, and acids.</li>
+    <li>Convenient 12-oz pressurized can for easy use.</li>
+    <li>Effective for touch-ups and general-purpose sealing.</li>
+    <li>Easily reaches inaccessible or compact areas.</li>
+    <li>RoHS 2011/65/EU compliant.</li>
+  </ul>
+
+  <h3 className="font-semibold mt-4">Applications:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Over insulation on wire and cable splices.</li>
+    <li>Touch-up insulation on motor windings and frames.</li>
+    <li>General-purpose electrical sealing and protection.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

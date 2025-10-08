@@ -31,7 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/sct_27.webp"
+    "/new_pics/Scotch-27.jpg"
   ];
 
   const sizeOption = ["0 , 177mm"];
@@ -75,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -185,6 +185,23 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">3M™ Scotch® 27 Glass Cloth Tape Product Description</h2>
+  <p>
+    Scotch® 27 is a 7-mil woven glass cloth electrical tape with a rubber thermosetting adhesive, 
+    designed for 600V dry applications requiring high mechanical strength and superior heat resistance. 
+    It delivers long-term reliability in demanding electrical and industrial environments.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Withstands up to 150°C (302°F) continuous use.</li>
+    <li>High tensile strength, non-shrinking glass cloth.</li>
+    <li>Flame-retardant and printable.</li>
+    <li>Ideal for motor leads, furnace wiring, and coil wrapping.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

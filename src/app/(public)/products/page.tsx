@@ -18,7 +18,7 @@ interface BrandCardProps {
 
 function BrandCard({ brand, onClick }: BrandCardProps) {
   return (
-    <div className="group relative w-full cursor-pointer" onClick={onClick}>
+    <div className="py-10 group relative w-full cursor-pointer" onClick={onClick}>
       <Card className="relative z-10 flex h-full flex-col overflow-hidden bg-white transition-shadow duration-500 hover:shadow-xl">
         <div className="flex-1 p-6">
           {/* Main Logo */}
@@ -94,9 +94,8 @@ export default function BrandCards() {
         <BrandCard brand="3M" onClick={() => handleRedirect("3M")} />
         <BrandCard brand="Dowells" onClick={() => handleRedirect("Dowells")} />
       </div>
-
+          <div className="bg-gray-100 mt-12"></div>
       <StepsGuide />
-    
     </div>
   );
 }

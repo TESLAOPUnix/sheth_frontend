@@ -31,8 +31,7 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/d_r_1.png",
-    "/d_r_2.png",
+    "/new_pics/Lugs/Copper Reducer Terminal.png"
   ];
 
   const packOptions = [
@@ -120,7 +119,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -229,6 +228,27 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Copper Reducer Terminals</h2>
+  <p>
+    Copper Reducer Terminals are manufactured from high-conductivity EC Grade Copper 
+    (Cu ≥ 99.9%) and finished with electro-tinning for corrosion resistance and long-lasting performance.  
+  </p>
+  <p>
+    The short pin length design allows for easy installation in limited-space applications, 
+    while the barrel features an internal chamfer at the wire entry to ensure smooth and reliable 
+    conductor insertion.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Made from high-conductivity EC Grade Copper (Cu ≥ 99.9%).</li>
+    <li>Electro-tinned finish for corrosion resistance.</li>
+    <li>Short pin length design suitable for space-constrained installations.</li>
+    <li>Internal chamfer ensures smooth wire insertion.</li>
+  </ul>
+</div>
+
     </div>
   );
 }

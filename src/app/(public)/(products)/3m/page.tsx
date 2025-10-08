@@ -1,43 +1,44 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import ProductCard from "../dowells/lugs/ProductCard";       // ✅ reuse
-import ProductFilters from "../dowells/lugs/ProductFilters";  // ✅ reuse
+import ProductCard from "../dowells/lugs/ProductCard";
+import ProductFilters from "../dowells/lugs/ProductFilters";
 import { threeMProducts } from "@/data/threem";
+import { X } from "lucide-react";
 
 export default function ThreeMPage() {
-    // ✅ single-select states
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-    const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
-  
-    // Categories list
-    const categories = Array.from(new Set(threeMProducts.map((p) => p.category)));
-  
-    // Subcategories list (dependent on selected category)
-    const subCategories = useMemo(() => {
-      if (!selectedCategory) {
-        return Array.from(new Set(threeMProducts.map((p) => p.subcategory)));
-      }
-      return Array.from(
-        new Set(
-          threeMProducts
-            .filter((p) => p.category === selectedCategory)
-            .map((p) => p.subcategory)
-        )
-      );
-    }, [selectedCategory]);
-  
-    // Filtered products
-    const filteredProducts = useMemo(() => {
-      return threeMProducts.filter((p) => {
-        const categoryMatch = !selectedCategory || p.category === selectedCategory;
-        const subCategoryMatch = !selectedSubCategory || p.subcategory === selectedSubCategory;
-        return categoryMatch && subCategoryMatch;
-      });
-    }, [selectedCategory, selectedSubCategory]);
-  
-    return (
-          <div className="w-full max-w-8xl mx-auto px-4 py-8 space-y-10">
+  // ✅ Filter states
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
+  const [showFilterModal, setShowFilterModal] = useState(false);
+
+  // ✅ Category + Subcategory lists
+  const categories = Array.from(new Set(threeMProducts.map((p) => p.category)));
+
+  const subCategories = useMemo(() => {
+    if (!selectedCategory) {
+      return Array.from(new Set(threeMProducts.map((p) => p.subcategory)));
+    }
+    return Array.from(
+      new Set(
+        threeMProducts
+          .filter((p) => p.category === selectedCategory)
+          .map((p) => p.subcategory)
+      )
+    );
+  }, [selectedCategory]);
+
+  // ✅ Filtered products
+  const filteredProducts = useMemo(() => {
+    return threeMProducts.filter((p) => {
+      const categoryMatch = !selectedCategory || p.category === selectedCategory;
+      const subCategoryMatch = !selectedSubCategory || p.subcategory === selectedSubCategory;
+      return categoryMatch && subCategoryMatch;
+    });
+  }, [selectedCategory, selectedSubCategory]);
+
+  return (
+    <div className="w-full max-w-8xl mx-auto px-4 py-8 space-y-10 relative">
       {/* ---------- Description Section ---------- */}
       <div className="bg-white shadow-md rounded-2xl p-6 space-y-4">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -88,10 +89,11 @@ export default function ThreeMPage() {
           </li>
         </ul>
       </div>
-        {/* Filters */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 bg-gray-50">
-        {/* Filters */}
-        <div className="md:col-span-1">
+
+      {/* ---------- Filters + Products Section ---------- */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 bg-gray-50">
+        {/* Filters (desktop) */}
+        <div className="hidden md:block md:col-span-1">
           <ProductFilters
             categories={categories}
             subCategories={subCategories}
@@ -115,6 +117,65 @@ export default function ThreeMPage() {
           )}
         </div>
       </div>
+
+      {/* ---------- Floating Filter Button (Mobile) ---------- */}
+      <button
+        onClick={() => setShowFilterModal(true)}
+        className="fixed bottom-7 left-6 z-50 bg-[#5C1E1E] text-white px-5 py-3 rounded-full shadow-lg md:hidden"
+      >
+        Filter
+      </button>
+
+      {/* ---------- Filter Modal (Mobile) ---------- */}
+      {showFilterModal && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-end md:hidden">
+          <div className="bg-white w-full max-h-[85vh] rounded-t-2xl p-5 overflow-y-auto animate-slide-up">
+            {/* Header */}
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-semibold text-gray-800">Filters</h2>
+              <button
+                onClick={() => setShowFilterModal(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Filters Content */}
+            <ProductFilters
+              categories={categories}
+              subCategories={subCategories}
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+              selectedSubCategory={selectedSubCategory}
+              setSelectedSubCategory={setSelectedSubCategory}
+            />
+
+            {/* Apply Button */}
+            <button
+              onClick={() => setShowFilterModal(false)}
+              className="mt-4 w-full bg-[#5C1E1E] text-white py-3 rounded-lg font-medium"
+            >
+              Apply Filters
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* ---------- Animation ---------- */}
+      <style jsx>{`
+        @keyframes slide-up {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        .animate-slide-up {
+          animation: slide-up 0.3s ease-out;
+        }
+      `}</style>
     </div>
-    );
+  );
 }

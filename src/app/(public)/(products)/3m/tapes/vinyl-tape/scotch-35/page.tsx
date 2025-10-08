@@ -31,7 +31,7 @@ export default function Component() {
   const { setIsVisible } = useVisibility();
 
   const productImages = [
-    "/3m/TAPES/VINYL_TAPE/img6.png"
+    "/new_pics/Scotch-35.jpg",
   ];
 
   const sizeOption = ["35mm"];
@@ -75,7 +75,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
       <Card className="overflow-hidden">
@@ -185,6 +185,24 @@ export default function Component() {
           </div>
         </CardContent>
       </Card>
+      <div className="prose w-full text-gray-700">
+  <h2 className="text-xl font-semibold">Scotch® 35 Vinyl Colour Coding Tape Product Description</h2>
+  <p>
+    Scotch® 35 is a premium-grade vinyl electrical tape available in multiple bright colours, 
+    designed for phase identification, marking, and general insulation. It offers excellent durability 
+    with resistance to abrasion, moisture, and varying weather conditions, while maintaining reliable 
+    performance in demanding electrical environments.
+  </p>
+
+  <h3 className="font-semibold mt-4">Features:</h3>
+  <ul className="list-disc pl-5 space-y-1">
+    <li>Flame-retardant PVC backing.</li>
+    <li>Abrasion, moisture, and weather resistant.</li>
+    <li>Performs in temperatures up to 105°C (220°F).</li>
+    <li>Available in multiple bright colours for coding.</li>
+  </ul>
+</div>
+
     </div>
   );
 }
