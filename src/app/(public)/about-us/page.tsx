@@ -35,7 +35,7 @@ export default function Page() {
 
       {/* About Us Section */}
      <section className="w-full py-[100px] bg-gray-50">
-  <div className="container mx-auto max-w-[76rem] px-4 md:px-6">
+  <div className="container mx-auto max-w-[92rem] px-4 md:px-10">
     {/* About Company Header */}
     <div className="mb-8 text-right mx-auto w-auto">
       <h3 className="text-gray-500 uppercase font-extrabold tracking-wider text-sm md:text-lg text-center">
@@ -44,22 +44,20 @@ export default function Page() {
     </div>
 
     {/* Main Content Area */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-      {/* Left Column - Images */}
-      <div className="space-y-4">
-        <div className="relative w-full h-[350px] md:h-[400px]">
-          <Image
-            src="/about.png"
-            alt="Sheth Trading Corporation - Electrical Solutions"
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-[0.7fr_1.3fr] gap-14 items-start">
+      {/* Left Column - Image */}
+      <div className="relative w-full h-[350px] md:h-[420px] md:translate-x-[-50px]">
+        <Image
+          src="/about.png"
+          alt="Sheth Trading Corporation - Electrical Solutions"
+          fill
+          className="object-contain mt-40"
+          sizes="(max-width: 768px) 100vw, 35vw"
+        />
       </div>
 
       {/* Right Column - Text Content */}
-      <div className="space-y-6">
+      <div className="space-y-6 leading-relaxed max-w-[56rem]">
         <div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             Welcome to Sheth Trading Corporation
@@ -134,13 +132,14 @@ export default function Page() {
               long-term partnerships—ensuring reliability and growth for every
               customer we serve.
             </p>
-            <br/>
+            <br />
           </div>
         </div>
       </div>
     </div>
-        </div>
-      </section>
+  </div>
+</section>
+
 
       <div className="">
           {/* Stats Section */}
