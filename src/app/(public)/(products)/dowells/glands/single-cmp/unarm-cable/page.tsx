@@ -31,7 +31,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/gland/single/unarm/img1.png"];
+  const productImages = ["/Glands and Crimping Tools/Single Compression Unnarmoured Cable.png"];
 
   const packOptions = [
     { label: '3/8" / DGP10001', value: "DGP10001" },

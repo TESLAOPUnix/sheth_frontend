@@ -18,8 +18,14 @@ export default function Page() {
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden">
         <Navigation />
-        {/* Carousel with fade transition */}
-        <Carousel />
+        <div className="relative w-full h-[500px] overflow-hidden">
+  <img
+    src="/Banners/Website Banner 3.png" // Replace with your image file
+    alt="About Us"
+    className="w-full h-[500px] object-contain"
+  />
+  <div className="absolute inset-0 bg-black/20" />
+</div>
 
         <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
           <div className="max-w-3xl">
@@ -110,7 +116,7 @@ export default function Page() {
               <h3 className="text-gray-800 text-xl font-medium mb-5">
                 Dowells Pricelist PDF
               </h3>
-              <a download href="/dow_price/Dowells_pricelist.pdf">
+              <a download href="/DOWELL'S PRICE LIST 2025.pdf">
                 <button className="bg-gradient-to-r from-[#5a1c0e] to-[#7a2b16] text-white text-sm font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 uppercase">
                   Download Pricelist
                 </button>

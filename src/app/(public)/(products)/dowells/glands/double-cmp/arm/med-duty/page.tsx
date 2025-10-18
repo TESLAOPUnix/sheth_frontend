@@ -30,7 +30,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/gland/dc/arm/img1.png"];
+  const productImages = ["/Glands and Crimping Tools/Single Compression Aluminium Gland A2.png"];
 
   const packOptions = [
     { label: "07.0-14.0 / DGP10036", value: "DGP10036" },

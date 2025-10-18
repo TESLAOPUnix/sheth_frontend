@@ -3,12 +3,10 @@ import React, { useEffect, useState } from "react";
 
 export default function Carousel() {
   const images = [
-    "c1.png",
-    "c2.png",
-    "c3.png",
-    "c4.png",
-    "c5.png",
-    "c6.png",
+    "Home Page Banner Carousel 1.png",
+   "Home Page Banner Carousel 2.png",
+   "Home Page Banner Carousel 3.png",
+   "Home Page Banner Carousel 4.png",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -23,22 +21,19 @@ export default function Carousel() {
     return () => clearInterval(intervalId);
   }, [images.length]);
   return (
-    <>
-      {images.map((image, index) => (
-       <div
-       key={image}
-       className={`absolute left-1/2 -translate-x-1/2 top-0 h-[600px] w-[5000px] bg-contain bg-center bg-no-repeat transition-all duration-[1500ms] ease-[cubic-bezier(0.4, 0, 0.2, 1)] ${
-         index === currentImageIndex ? "opacity-100 visible" : "opacity-0 invisible"
-       }`}
-       style={{
-         backgroundImage: `url('/carousel/${image}')`,
-       }}
-     >
-       <div className="absolute inset-0 bg-black/50" />
-     </div>
-     
-       
-      ))}
-    </>
+  <div className="relative w-full h-[650px] overflow-hidden">
+  {images.map((image, index) => (
+    <img
+      key={image}
+      src={`/Banners/${image}`}
+      alt=""
+      className={`absolute top-0 left-0 w-full h-[650px] object-fill transition-all duration-[1500ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        index === currentImageIndex ? "opacity-100 visible" : "opacity-0 invisible"
+      }`}
+    />
+  ))}
+  <div className="absolute inset-0 bg-black/20" />
+</div>
+
   );
 }

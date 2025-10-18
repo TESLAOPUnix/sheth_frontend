@@ -31,7 +31,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/gland/single/heavy/img1.png"];
+  const productImages = ["/Glands and Crimping Tools/Single Compression Heavy Duty.png"];
 
   const packOptions = [
     { label: "0.9-12 / 1616", value: "1616" },

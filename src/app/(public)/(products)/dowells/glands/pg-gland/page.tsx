@@ -31,7 +31,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/gland/pg/img1.png"];
+  const productImages = ["/Glands and Crimping Tools/PG Gland.png"];
 
   const packOptions = [
     { label: "3.5-6 / PG-7", value: "PG-7" },

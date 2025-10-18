@@ -29,13 +29,12 @@ export default function ProductsLayout({
   return (
     <div className="bg-gray-100">
       <Header />
-
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <Navigation />
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/terms.jpg')` }}
+          style={{ backgroundImage: `url('/Banners/Website Banner 3.png')` }}
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>

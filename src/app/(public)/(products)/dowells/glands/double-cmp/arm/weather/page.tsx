@@ -31,7 +31,7 @@ export default function Component() {
   const [loading, setLoading] = useState(false);
   const {setIsVisible} = useVisibility();
 
-  const productImages = ["/dowells/gland/dc/arm/img2.png"];
+  const productImages = ["/Glands and Crimping Tools/Double compression Armoured Weather.png"];
 
   const packOptions = [
     { label: "6.0-12.0 / DBW-01SS", value: "DBW-01SS" },

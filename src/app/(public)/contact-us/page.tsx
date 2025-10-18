@@ -20,8 +20,14 @@ export default function Page() {
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden ">
         <Navigation />
-        {/* Carousel with fade transition */}
-        <Carousel />
+         <div className="relative w-full h-[500px] overflow-hidden">
+  <img
+    src="/Banners/Website Banner 2.png" // Replace with your image file
+    alt="About Us"
+    className="w-full h-[500px] object-cover"
+  />
+  <div className="absolute inset-0 bg-black/20" />
+</div>
 
         <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
           <div className="max-w-3xl ">

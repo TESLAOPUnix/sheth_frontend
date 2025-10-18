@@ -7,7 +7,7 @@ import Carousel from "./carousel";
 export default function Hero() {
 
   return (
-    <section className="relative h-[600px] overflow-hidden  bg-gray-50">
+    <section className="relative h-[650px] overflow-hidden  bg-gray-50">
       <Navigation />
       {/* Carousel with fade transition */}
       <Carousel />
