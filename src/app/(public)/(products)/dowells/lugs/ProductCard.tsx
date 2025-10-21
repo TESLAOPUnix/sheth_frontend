@@ -29,7 +29,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
       <CardContent className="flex-1 flex flex-col p-4">

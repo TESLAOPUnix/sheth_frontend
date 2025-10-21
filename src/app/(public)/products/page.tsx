@@ -71,10 +71,10 @@ export default function BrandCards() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[500px] overflow-hidden ">
+      <section className="relative h-[600px] overflow-hidden ">
         <Navigation />
         <div
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/Banners/Website Banner 1.png')`,
           }}

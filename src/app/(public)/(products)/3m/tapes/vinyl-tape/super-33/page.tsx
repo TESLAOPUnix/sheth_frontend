@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+         <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Scotch® Super 33+ Vinyl Electrical Tape Product Description</h2>
   <p>
     Scotch® Super 33+ is a premium-grade, all-weather vinyl insulating tape engineered to deliver 
@@ -203,6 +202,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+     
     </div>
   );
 }

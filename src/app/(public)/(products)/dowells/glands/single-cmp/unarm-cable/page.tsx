@@ -205,8 +205,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+         <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Single Compression Brass Cable Gland (For Un-Armoured Cable)</h2>
   <p>
     Single Compression Brass Cable Glands for un-armoured cables are manufactured from high-quality 
@@ -222,6 +221,8 @@ export default function Component() {
     <li>Ideal for un-armoured cable installations in industrial and commercial settings.</li>
   </ul>
 </div>
+      </Card>
+     
     </div>
   );
 }

@@ -212,8 +212,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+          <div className="prose w-full text-gray-700">
             <h2 className="text-xl font-semibold"> Heat Shrink Sleeves Bus Bar Product Description</h2>
             <p>
              Our Heat Shrink Tubing for Busbars is designed to provide reliable insulation and protection for indoor and outdoor applications up to 52kV. Suitable for both round and rectangular busbars, this high-performance tubing ensures safety, durability, and operational efficiency in critical electrical environments.
@@ -239,6 +238,8 @@ By preventing bird and animal-related faults as well as flashovers in reduced cl
               <li>Busbars in switchgear cabinets and panels</li>
             </ul>
           </div>
+      </Card>
+    
     </div>
   );
 }

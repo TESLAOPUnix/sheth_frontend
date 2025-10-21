@@ -205,8 +205,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Aluminium In-Line Connector for XLPE Conductor Product Description</h2>
   <p>
     Aluminium In-Line Connectors for XLPE conductors are manufactured from seamless EC Grade Aluminium 
@@ -224,6 +223,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+      
     </div>
   );
 }

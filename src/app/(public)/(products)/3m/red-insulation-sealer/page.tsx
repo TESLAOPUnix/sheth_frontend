@@ -180,8 +180,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">3M™ Electrical Insulating Sealer 1602-R Product Description</h2>
   <p>
     The 3M™ Electrical Insulating Sealer 1602-R is a premium, electrical-grade, fast-drying sealer and insulator 
@@ -212,6 +211,8 @@ export default function Component() {
     <li>General-purpose electrical sealing and protection.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

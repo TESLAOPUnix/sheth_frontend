@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Scotch® 70 Self-Fusing Silicone Rubber Tape Product Description</h2>
   <p>
     Scotch® 70 is a self-fusing silicone rubber tape designed to provide reliable insulation for 
@@ -202,6 +201,8 @@ export default function Component() {
     <li>Ideal for covering high-voltage connections and bus bars.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

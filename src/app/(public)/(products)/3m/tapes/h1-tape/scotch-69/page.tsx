@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">3M™ Scotch® 69 Glass Cloth Electrical Tape Product Description</h2>
   <p>
     Scotch® 69 is a high-temperature glass cloth electrical tape with a silicone adhesive, rated for 
@@ -202,6 +201,8 @@ export default function Component() {
     <li>Suitable for coils, transformers, and splicing in hot spots.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

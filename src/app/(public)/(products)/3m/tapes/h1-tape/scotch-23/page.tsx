@@ -193,8 +193,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Scotch® 23 Rubber Splicing Tape Product Description</h2>
   <p>
     Scotch® 23 is a self-fusing, high-insulation splicing tape designed for splicing and terminating 
@@ -212,6 +211,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+      
     </div>
   );
 }

@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+       <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Scotch® 35 Vinyl Colour Coding Tape Product Description</h2>
   <p>
     Scotch® 35 is a premium-grade vinyl electrical tape available in multiple bright colours, 
@@ -202,6 +201,8 @@ export default function Component() {
     <li>Available in multiple bright colours for coding.</li>
   </ul>
 </div>
+      </Card>
+     
 
     </div>
   );

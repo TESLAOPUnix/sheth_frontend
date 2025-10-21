@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">3M™ All Purpose Duct Tape DT8 Product Description</h2>
   <p>
     3M™ DT8 is an 8-mil duct tape with a polyethylene backing and natural rubber adhesive. 
@@ -203,6 +202,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+      
     </div>
   );
 }

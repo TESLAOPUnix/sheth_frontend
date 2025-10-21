@@ -196,8 +196,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+         <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Copper Pin Terminals (Insulated)</h2>
   <p>
     Copper Pin Terminals (Insulated) are manufactured from high-conductivity EC Grade Copper 
@@ -220,6 +219,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+     
     </div>
   );
 }

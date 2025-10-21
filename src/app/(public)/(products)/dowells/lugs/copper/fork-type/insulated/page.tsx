@@ -191,8 +191,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+          <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Copper Fork Terminals (Insulated)</h2>
   <p>
     Copper Fork Terminals (Insulated) are manufactured from high-conductivity EC Grade Copper 
@@ -214,6 +213,8 @@ export default function Component() {
     <li>Ensures reliable electrical contact and long service life.</li>
   </ul>
 </div>
+      </Card>
+    
 
     </div>
   );

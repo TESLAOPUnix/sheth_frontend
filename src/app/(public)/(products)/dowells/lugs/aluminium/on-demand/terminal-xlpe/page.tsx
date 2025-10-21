@@ -203,8 +203,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Aluminium Tube Terminals for XLPE Conductor Product Description</h2>
   <p>
     Aluminium Tube Terminals for XLPE conductors are manufactured from EC Grade Aluminium 
@@ -228,6 +227,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+      
     </div>
   );
 }

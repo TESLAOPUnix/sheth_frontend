@@ -218,8 +218,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Copper Tube Terminals (Medium Duty)</h2>
   <p>
     Copper Tube Terminals (Medium Duty) are manufactured from high-conductivity EC Grade Copper 
@@ -241,6 +240,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+      
     </div>
   );
 }

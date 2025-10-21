@@ -15,16 +15,16 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] overflow-hidden">
+      <section className="relative h-[600px] overflow-hidden">
         <Navigation />
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/terms.jpg')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        <div className="relative w-full h-[600px] overflow-hidden">
+  <img
+    src="/Banners/Website Banner 3.png" // Replace with your image file
+    alt="About Us"
+    className="w-full h-[600px] object-cover"
+  />
+  <div className="absolute inset-0 bg-black/20" />
+</div>
 
         <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
           <div className="max-w-3xl">

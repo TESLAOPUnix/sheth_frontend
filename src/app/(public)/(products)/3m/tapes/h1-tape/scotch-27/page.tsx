@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">3M™ Scotch® 27 Glass Cloth Tape Product Description</h2>
   <p>
     Scotch® 27 is a 7-mil woven glass cloth electrical tape with a rubber thermosetting adhesive, 
@@ -201,6 +200,8 @@ export default function Component() {
     <li>Ideal for motor leads, furnace wiring, and coil wrapping.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

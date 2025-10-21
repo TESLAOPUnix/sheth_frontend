@@ -210,8 +210,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Aluminium Inline Connector Product Description</h2>
   <p>
     Inline Connectors are manufactured from seamless EC Grade Aluminium tubing with a natural finish. 
@@ -227,6 +226,8 @@ export default function Component() {
     <li>Low resistance with high ductility for reliable performance.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

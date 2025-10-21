@@ -211,8 +211,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Double Compression Brass Cable Gland (For Armoured Cable)</h2>
   <p>
     Double Compression Brass Cable Glands are manufactured from high-quality brass with a bright 
@@ -228,6 +227,8 @@ export default function Component() {
     <li>Ideal for use with armoured cables in industrial and commercial installations.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

@@ -190,8 +190,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Heat Shrink Sleeves Wrap Around Product Description</h2>
   <p>
     3M’s reinforcement heat shrink splice closure system is designed to provide excellent split 
@@ -224,6 +223,8 @@ export default function Component() {
     <li>Suitable for installations in confined spaces using standard heating equipment such as a torch.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

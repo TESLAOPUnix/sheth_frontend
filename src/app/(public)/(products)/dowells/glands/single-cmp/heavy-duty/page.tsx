@@ -199,8 +199,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Single Compression Brass Cable Gland Heavy Duty (SIBG Type)</h2>
   <p>
     Single Compression Brass Cable Glands (Heavy Duty, SIBG Type) are manufactured from high-quality 
@@ -217,6 +216,8 @@ export default function Component() {
     <li>Heavy-duty SIBG type suitable for industrial and commercial applications.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

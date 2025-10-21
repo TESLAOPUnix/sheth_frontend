@@ -413,8 +413,7 @@ export default function Component() {
         </div>
       </div>
     </CardContent>
-  </Card> 
-   <div className="prose w-full text-gray-700">
+    <div className="prose w-full text-gray-700">
             <div>
             <h1 className="text-3xl font-bold mb-2">HEAT SHRINK JOINTING KIT</h1>
             <p className="text-gray-600 text-base leading-relaxed">
@@ -468,6 +467,8 @@ export default function Component() {
             <h3 className="font-semibold mt-4">Certifications:</h3>
             <p>Type tested according to IEC 60840</p>
           </div>
+  </Card> 
+  
 </div>
   
   );

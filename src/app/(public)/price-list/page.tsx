@@ -16,13 +16,13 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[500px] overflow-hidden">
+      <section className="relative h-[650px] overflow-hidden">
         <Navigation />
-        <div className="relative w-full h-[500px] overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-hidden">
   <img
-    src="/Banners/Website Banner 3.png" // Replace with your image file
+    src="/Banners/Website Banner 2.png" // Replace with your image file
     alt="About Us"
-    className="w-full h-[500px] object-contain"
+    className="w-full h-[600px] object-cover"
   />
   <div className="absolute inset-0 bg-black/20" />
 </div>

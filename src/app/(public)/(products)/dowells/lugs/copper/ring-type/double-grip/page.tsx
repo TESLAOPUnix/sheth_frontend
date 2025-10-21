@@ -218,8 +218,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+              <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Copper Ring Terminals (Pre-Insulated) (Double Grip)</h2>
   <p>
     Copper Ring Terminals (Pre-Insulated, Double Grip) are manufactured from high conductivity EC Grade Copper 
@@ -239,6 +238,8 @@ export default function Component() {
     <li>Ensures reliable electrical contact and long service life.</li>
   </ul>
 </div>
+
+      </Card>
 
     </div>
   );

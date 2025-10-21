@@ -203,8 +203,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+         <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">DC Type Medium Duty Brass Cable Glands (For Armoured Cable)</h2>
   <p>
     DC Type Medium Duty Brass Cable Glands are manufactured from high-quality brass with a bright 
@@ -220,6 +219,8 @@ export default function Component() {
     <li>Provides secure and reliable cable termination.</li>
   </ul>
 </div>
+      </Card>
+     
 
     </div>
   );

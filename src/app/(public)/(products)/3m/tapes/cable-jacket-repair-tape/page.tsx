@@ -184,8 +184,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Scotch® 31 Mining Tape Product Description</h2>
   <p>
     Scotch® 31 Mining Tape is a high-dielectric, flame-retardant tape designed specifically for mining 
@@ -202,6 +201,8 @@ export default function Component() {
     <li>Flexible and easy to apply.</li>
   </ul>
 </div>
+      </Card>
+      
 
     </div>
   );

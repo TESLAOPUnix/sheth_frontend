@@ -225,8 +225,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <div className="prose w-full text-gray-700">
+        <div className="prose w-full text-gray-700">
   <h2 className="text-xl font-semibold">Aluminium Reducer Terminal Product Description</h2>
   <p>
     Reducer Terminals are manufactured from EC Grade Aluminium with a natural finish. 
@@ -244,6 +243,8 @@ export default function Component() {
   </ul>
 </div>
 
+      </Card>
+      
     </div>
   );
 }
