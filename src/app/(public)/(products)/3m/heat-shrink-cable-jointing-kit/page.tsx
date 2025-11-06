@@ -228,7 +228,7 @@ export default function Component() {
     <CardContent className="p-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left side - Image + Thumbnails + Description */}
-        <div className="p-6 space-y-8">
+        <div className="p-10 space-y-8">
           {/* Main product image */}
           <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-lg overflow-hidden bg-white shadow">
             <Image
@@ -413,7 +413,7 @@ export default function Component() {
         </div>
       </div>
     </CardContent>
-    <div className="prose w-full text-gray-700">
+    <div className="prose p-10 w-full text-gray-700">
             <div>
             <h1 className="text-3xl font-bold mb-2">HEAT SHRINK JOINTING KIT</h1>
             <p className="text-gray-600 text-base leading-relaxed">

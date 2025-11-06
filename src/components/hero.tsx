@@ -1,35 +1,48 @@
+"use client";
 
 import Navigation from "./nav";
 import { Button } from "./ui/button";
 import Carousel from "./carousel";
 
-
 export default function Hero() {
-
   return (
-    <section className="relative h-[650px] overflow-hidden  bg-gray-50">
-      <Navigation />
-      {/* Carousel with fade transition */}
-      <Carousel />
+    <section
+      className="
+        relative 
+        w-full 
+        min-h-[220px] 
+        sm:min-h-[350px] 
+        md:min-h-[500px] 
+        lg:min-h-[650px] 
+        overflow-hidden 
+        bg-gray-50
+        flex 
+        flex-col
+      "
+    >
+      {/* Top Navigation */}
+      <div className="z-20 w-full absolute top-0 left-0">
+        <Navigation />
+      </div>
 
-      <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
-        <div className="max-w-3xl">
-          <h2 className="mb-4 text-lg font-medium text-white">
-            WELCOME TO SHETH TRADING CORPORATION
-          </h2>
-          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-            YOUR TRUSTED PARTNER FOR 3M AND DOWELL&apos;S
-          </h1>
-        </div>
+      {/* Carousel */}
+      <div className="relative flex-1">
+        <Carousel />
+      </div>
+
+      {/* Optional CTA Section below Carousel for mobile (if needed later) */}
+      {/* 
+      <div className="block sm:hidden text-center py-6 bg-white shadow-sm">
         <a href="/products">
           <Button
             variant="default"
-            className="bg-[#5C1E1E] hover:bg-[#4A1818] text-[1.1rem] mt-8 font-medium p-[1rem]"
+            className="bg-[#5C1E1E] hover:bg-[#4A1818] text-[1rem] font-medium px-6 py-3 rounded-lg"
           >
-            <span>Our Products</span>
+            Our Products
           </Button>
         </a>
-      </div>
+      </div> 
+      */}
     </section>
   );
 }

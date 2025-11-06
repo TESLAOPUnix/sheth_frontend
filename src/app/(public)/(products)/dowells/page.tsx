@@ -54,7 +54,7 @@ export default function Component() {
   ];
 
   return (
-         <div className="w-full max-w-8xl mx-auto px-4 py-8 space-y-10">
+         <div className="w-full max-w-8xl mx-auto px-4 space-y-10">
       {/* ---------- Description Section ---------- */}
       <div className="bg-white shadow-md rounded-2xl p-6 space-y-4">
        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">

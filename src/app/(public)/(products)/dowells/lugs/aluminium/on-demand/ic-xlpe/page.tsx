@@ -101,7 +101,7 @@ export default function Component() {
         <CardContent className="p-0">
           <div className="flex flex-col lg:flex-row">
             {/* Left side - Images */}
-            <div className="w-full lg:w-1/2 p-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+            <div className="w-full lg:w-1/2 p-10 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="sticky top-0 bg-background pt-4">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mb-4">
                   <Image
@@ -205,7 +205,7 @@ export default function Component() {
             </div>
           </div>
         </CardContent>
-        <div className="prose w-full text-gray-700">
+        <div className="prose p-10 w-full text-gray-700">
   <h2 className="text-xl font-semibold">Aluminium In-Line Connector for XLPE Conductor Product Description</h2>
   <p>
     Aluminium In-Line Connectors for XLPE conductors are manufactured from seamless EC Grade Aluminium 

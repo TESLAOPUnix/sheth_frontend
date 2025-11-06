@@ -16,33 +16,33 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[650px] overflow-hidden">
+      <section className="relative overflow-hidden">
         <Navigation />
-        <div className="relative w-full h-[600px] overflow-hidden">
-  <img
-    src="/Banners/Website Banner 2.png" // Replace with your image file
-    alt="About Us"
-    className="w-full h-[600px] object-cover"
-  />
-  <div className="absolute inset-0 bg-black/20" />
-</div>
-
-        <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem]">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-              Pricelist & Brochure
-            </h1>
-            
+        <div className="relative w-full aspect-[2.73/1] sm:h-[400px] md:h-[500px] min-h-[240px]">
+            {/* Background Image */}
+            <Image
+              src="/Banners/banner 2.png"
+              alt="Banner"
+              fill
+              className="object-cover"
+              priority
+            />
+        
+            {/* Optional dark overlay for readability */}
+            <div className="absolute inset-0 bg-black/20 sm:bg-black/10"></div>
+        
+            {/* Overlay content */}
+            <div className="absolute inset-0 flex items-center px-4 sm:px-10">
+              <h1
+                className="
+                  text-3xl font-bold text-white drop-shadow-md 
+                  sm:text-4xl md:text-5xl lg:text-6xl
+                "
+              >
+                Pricelist & Brochure
+              </h1>
+            </div>
           </div>
-          <a href="/products">
-            <Button
-              variant="default"
-              className="bg-[#5C1E1E] hover:bg-[#4A1818] text-[1.1rem] mt-8 font-medium p-[1rem]"
-            >
-              <span>Our Products</span>
-            </Button>
-          </a>
-        </div>
       </section>
 
       <section className="w-full bg-[#5C1E1E] py-12 px-4 flex-grow">

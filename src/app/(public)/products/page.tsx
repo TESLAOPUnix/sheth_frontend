@@ -71,25 +71,38 @@ export default function BrandCards() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden ">
-        <Navigation />
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/Banners/Website Banner 1.png')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
+      {/* Hero Section */}
+<section className="relative overflow-hidden">
+  <Navigation />
 
-        <div className="container relative mx-auto px-4 py-20 max-w-[76rem] mt-[4rem] ">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-              Products
-            </h1>
-          </div>
-        </div>
-      </section>
+  {/* Hero container */}
+  <div className="relative w-full aspect-[2.73/1] sm:h-[400px] md:h-[500px] min-h-[240px]">
+    {/* Background Image */}
+    <Image
+      src="/Banners/test banner 2.png"
+      alt="Banner"
+      fill
+      className="object-cover"
+      priority
+    />
+
+    {/* Optional dark overlay for readability */}
+    <div className="absolute inset-0 bg-black/20 sm:bg-black/10"></div>
+
+    {/* Overlay content */}
+    <div className="absolute inset-0 flex items-center px-4 sm:px-10">
+      <h1
+        className="
+          text-3xl font-bold text-white drop-shadow-md 
+          sm:text-4xl md:text-5xl lg:text-6xl
+        "
+      >
+        Products
+      </h1>
+    </div>
+  </div>
+</section>
+
       <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row my-[3rem] px-[1rem]  bg-gray-50">
         <BrandCard brand="3M" onClick={() => handleRedirect("3M")} />
         <BrandCard brand="Dowells" onClick={() => handleRedirect("Dowells")} />

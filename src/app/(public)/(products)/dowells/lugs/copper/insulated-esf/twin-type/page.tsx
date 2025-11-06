@@ -96,7 +96,7 @@ export default function Component() {
         <CardContent className="p-0">
           <div className="flex flex-col lg:flex-row">
             {/* Left side - Images */}
-            <div className="w-full lg:w-1/2 p-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+            <div className="w-full lg:w-1/2 p-10 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
               <div className="sticky top-0 bg-background pt-4">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mb-4">
                   <Image
