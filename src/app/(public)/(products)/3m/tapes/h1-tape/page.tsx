@@ -63,7 +63,7 @@ export default function Component() {
     <div className="flex flex-col justify-center w-full mx-auto min-h-screen bg-background relative">
       {/* Hero Section */}
 
-      <section className="relative h-[400px] overflow-hidden mb-[2rem]">
+      <section className="relative h-[400px] overflow-visible mb-[2rem]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -99,7 +99,7 @@ export default function Component() {
           {products.map((product, index) => (
             <Card
               key={index}
-              className="flex flex-col md:flex-row overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+              className="flex flex-col md:flex-row overflow-visible cursor-pointer hover:shadow-lg transition-shadow"
               onClick={() => handleCardClick(product.slug)}
             >
               {/* <div className="w-full md:w-1/2 h-48 md:h-auto">

@@ -20,20 +20,20 @@ export default function AboutCompany() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
           {/* Images column */}
           <div className="space-y-8">
-    <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
+    <div className="relative h-[400px] w-full overflow-visible rounded-lg shadow-sm">
       <Image
         src="/3m_logo.webp"
         alt="Primary Company Image"
         fill
-        className="object-contain"
+        className="object-contain "
       />
     </div>
-    <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
+    <div className="relative h-[300px] w-full overflow-visible rounded-lg shadow-sm">
       <Image
         src="/dowell.png"
         alt="Secondary Company Image"
         fill
-        className="object-contain"
+        className="object-contain "
       />
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function AboutCompany() {
           <div className="space-y-8 p-[1.5rem] text-[1rem]  sm:text-[1.2rem]">
             {/* Main description */}
             <p className="text-gray-600 leading-relaxed text-start">
-             Founded in 1968 by Anil Parekh, Sheth Trading Corporation brings over 45 years of expertise in the industrial sector. Sheth Trading Corporation has grown to become a trusted name in India’s electrical and energy sector, specializing in high-voltage cable management solutions. With a legacy built on reliability, service excellence, and strong industry partnerships, we are proud to be an authorized distributor of globally renowned brands 3M and Dowells.
+             Founded in 1968 by Anil Parekh, Sheth Trading Corporation brings more than 50 years of expertise in the industrial sector. Sheth Trading Corporation has grown to become a trusted name in India’s electrical and energy sector, specializing in high-voltage cable management solutions. With a legacy built on reliability, service excellence, and strong industry partnerships, we are proud to be an authorized distributor of globally renowned brands 3M and Dowells.
 
             </p>
 

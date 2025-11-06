@@ -10,7 +10,7 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-visible">
         <Navigation />
 
         {/* Banner Container */}

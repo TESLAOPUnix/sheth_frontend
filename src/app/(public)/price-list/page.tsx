@@ -16,7 +16,7 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-visible">
         <Navigation />
         <div className="relative w-full aspect-[2.73/1] sm:h-[400px] md:h-[500px] min-h-[240px]">
             {/* Background Image */}

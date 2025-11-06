@@ -41,7 +41,7 @@ export default function Carousel() {
 
   return (
     <div
-      className="relative w-full min-h-[220px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[650px] overflow-hidden"
+      className="relative w-full min-h-[220px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[650px] "
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >

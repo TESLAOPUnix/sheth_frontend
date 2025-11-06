@@ -107,14 +107,14 @@ export default function CertificatesSection() {
           </button>
 
           {/* Carousel */}
-          <div className="overflow-hidden">
+          <div className="overflow-visible">
             <div
               className={cn("flex transition-transform duration-300 ease-in-out", isAnimating && "pointer-events-none")}
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {certificates.map((certificate) => (
                 <div key={certificate.id} className="w-full flex-shrink-0 px-4">
-                  <div className="overflow-hidden rounded-lg bg-white p-6 shadow-lg">
+                  <div className="overflow-visible rounded-lg bg-white p-6 shadow-lg">
                     <h4 className="title">{certificate.title}</h4>
                     <div className="relative h-[300px] w-full">
                       <Image

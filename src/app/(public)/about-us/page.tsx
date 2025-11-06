@@ -12,7 +12,7 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-visible">
         <Navigation />
 
         {/* Banner */}
@@ -54,15 +54,29 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-[0.7fr_1.3fr] gap-10 md:gap-14 items-start">
             {/* Image Section */}
-            <div className="relative w-full h-[280px] sm:h-[350px] md:h-[420px]">
-              <Image
-                src="/about.png"
-                alt="Sheth Trading Corporation - Electrical Solutions"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 35vw"
-              />
-            </div>
+<div className="flex flex-row md:flex-col w-full h-auto gap-3 md:gap-0">
+  {/* 3M Image */}
+  <div className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] md:mt-10">
+    <Image
+      src="/3m/HEAT_SHRINK_JOINTING_KIT/img4.jpg"
+      alt="3M Heat Shrink Jointing Kit"
+      fill
+      className="object-contain rounded-lg shadow-md"
+      sizes="(max-width: 768px) 50vw, 35vw"
+    />
+  </div>
+
+  {/* Dowells Image */}
+  <div className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] md:mt-24">
+    <Image
+      src="/dowell.png"
+      alt="Dowells Electrical Solutions"
+      fill
+      className="object-contain rounded-lg shadow-md"
+      sizes="(max-width: 768px) 50vw, 35vw"
+    />
+  </div>
+</div>
 
             {/* Text Section */}
             <div className="space-y-6 leading-relaxed max-w-[56rem] text-gray-700 text-[0.95rem] sm:text-base">
@@ -209,7 +223,7 @@ export default function Page() {
 
       {/* Info Boxes */}
       <div className="py-12 sm:py-16 bg-gray-100">
-        <div className="w-full max-w-7xl mx-auto shadow-lg rounded-xl overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto shadow-lg rounded-xl overflow-visible">
           <div className="flex flex-col md:flex-row">
             {[
               {

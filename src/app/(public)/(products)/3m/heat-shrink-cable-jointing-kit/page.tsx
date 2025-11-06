@@ -221,16 +221,16 @@ export default function Component() {
   };
 
   return (
-    <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
+    <div className="container w-full mx-auto px-4 py-4 mt-[3rem] bg-gray-300">
   {loading && <LoadingSpinner />}
 
-  <Card className="overflow-hidden">
+  <Card className="overflow-visible">
     <CardContent className="p-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left side - Image + Thumbnails + Description */}
         <div className="p-10 space-y-8">
           {/* Main product image */}
-          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-lg overflow-hidden bg-white shadow">
+          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-lg overflow-visible bg-white shadow">
             <Image
               src={productImages[selectedImage]}
               alt={`Product Image ${selectedImage + 1}`}
@@ -258,7 +258,7 @@ export default function Component() {
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
-                className={`relative w-20 h-20 rounded-md overflow-hidden border ${
+                className={`relative w-20 h-20 rounded-md overflow-visible border ${
                   selectedImage === index
                     ? "ring-2 ring-primary"
                     : "hover:border-gray-400"

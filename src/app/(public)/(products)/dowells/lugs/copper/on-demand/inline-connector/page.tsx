@@ -102,7 +102,7 @@ export default function Component() {
     <div className="container w-full mx-auto px-4 py-4 mt-[3rem]">
       {loading && <LoadingSpinner />}
 
-      <Card className="overflow-hidden">
+      <Card className="overflow-visible">
         <CardContent className="p-0">
           <div className="flex flex-col lg:flex-row">
             {/* Left side - Images */}
@@ -123,7 +123,7 @@ export default function Component() {
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
-                    className={`flex-shrink-0 w-20 h-20 relative rounded-md overflow-hidden ${
+                    className={`flex-shrink-0 w-20 h-20 relative rounded-md overflow-visible ${
                       selectedImage === index ? "ring-2 ring-primary" : ""
                     }`}
                   >

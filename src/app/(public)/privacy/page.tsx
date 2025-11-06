@@ -15,9 +15,9 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section className="relative h-[600px] overflow-visible">
         <Navigation />
-        <div className="relative w-full h-[600px] overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-visible">
   <img
     src="/Banners/Website Banner 4.png" // Replace with your image file
     alt="About Us"

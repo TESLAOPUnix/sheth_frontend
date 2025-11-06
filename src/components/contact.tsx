@@ -116,7 +116,7 @@ export default function ContactSection() {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-8 ">
       <div className="p-[1rem] bg-gray-50">
-        <div className="w-full mb-[4rem]  max-w-7xl mx-auto shadow-lg rounded-xl overflow-hidden">
+        <div className="w-full mb-[4rem]  max-w-7xl mx-auto shadow-lg rounded-xl overflow-visible">
           <div className="flex flex-col md:flex-row">
             {/* Hours Section */}
             <div className="flex items-center justify-center bg-gray-900 text-white p-6 md:p-8 flex-1">
@@ -171,7 +171,7 @@ export default function ContactSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Map */}
-        <div className="lg:col-span-1 rounded-md overflow-hidden h-full">
+        <div className="lg:col-span-1 rounded-md overflow-visible h-full">
           <div className="h-[400px] bg-gray-200 rounded-md relative">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.574975745773!2d88.35208735909036!3d22.574430510297205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277afeb317383%3A0x958583b1cdbfc4f6!2sSheth%20Trading%20Corporation!5e0!3m2!1sen!2sin!4v1740851333959!5m2!1sen!2sin"

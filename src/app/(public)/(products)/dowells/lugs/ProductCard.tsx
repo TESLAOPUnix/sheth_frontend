@@ -23,7 +23,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Card
       onClick={handleClick}
-      className="flex flex-col overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+      className="flex flex-col overflow-visible hover:shadow-lg transition-shadow cursor-pointer"
     >
       <div className="h-40 w-full">
         <img

@@ -28,55 +28,54 @@ export default function ProductsLayout({
       : [{ name: "Products", path: "/products" }, ...pathSegments];
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <main className="bg-gray-50">
       <Header />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-visible">
         <Navigation />
 
-        <div className="relative w-full min-h-[200px] sm:min-h-[300px] md:min-h-[450px]">
+        {/* Hero Banner */}
+        <div className="relative w-full aspect-[2.73/1] sm:h-[400px] md:h-[500px] min-h-[240px]">
+          {/* Background Image */}
           <Image
             src="/Banners/test banner 2.png"
             alt="Products Banner"
             fill
             priority
-            className="object-cover object-center bg-[#eeebeb]"
-            sizes="(max-width: 640px) 100vw,
-                   (max-width: 1024px) 100vw,
-                   1200px"
+            className="object-cover"
           />
 
-          <div className="container relative mx-auto px-4 py-10 sm:py-16 md:py-20 max-w-[76rem] mt-[3rem] sm:mt-[4rem]">
-            <div className="max-w-2xl sm:max-w-3xl">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray drop-shadow-md">
-                Products
-              </h1>
+          {/* Overlay for readability */}
+          <div className="absolute inset-0 bg-black/20 sm:bg-black/10"></div>
 
-              {breadcrumbs.length > 0 && (
-                <nav className="flex flex-wrap items-center text-gray text-xs sm:text-sm mt-3 sm:mt-4 gap-x-1">
-                  {breadcrumbs.map((crumb, index) => (
-                    <div key={crumb.path} className="flex items-center">
-                      {index > 0 && (
-                        <span className="mx-1 sm:mx-2 text-gray-400">›</span>
-                      )}
-                      <Link
-                        href={crumb.path}
-                        className="text-gray font-medium hover:text-white transition-colors"
-                      >
-                        {crumb.name.toUpperCase()}
-                      </Link>
-                    </div>
-                  ))}
-                </nav>
-              )}
-            </div>
+          {/* Overlay content */}
+          <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-10">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md mb-3">
+              Products
+            </h1>
+
+            {breadcrumbs.length > 0 && (
+              <nav className="flex flex-wrap items-center text-gray-400  text-xs sm:text-sm gap-x-1">
+                {breadcrumbs.map((crumb, index) => (
+                  <div key={crumb.path} className="flex items-center">
+                    {index > 0 && (
+                      <span className="mx-1 sm:mx-2 text-gray-400">›</span>
+                    )}
+                    <Link
+                      href={crumb.path}
+                      className="hover:text-white transition-colors"
+                    >
+                      {crumb.name.toUpperCase()}
+                    </Link>
+                  </div>
+                ))}
+              </nav>
+            )}
           </div>
         </div>
       </section>
 
       {/* Page Content */}
-      <main className="flex-1 px-3 sm:px-6 md:px-10 my-8 sm:my-12">{children}</main>
-    </div>
+     <main className="flex-1 px-3 sm:px-6 md:px-10 my-8 sm:my-12">{children}</main> 
+    </main>
   );
 }

@@ -61,7 +61,7 @@ const OurClientsSection = () => {
         </div>
         
         {/* Carousel with Animation */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-visible">
           <motion.div
             key={activeSlide}
             initial={{ opacity: 0, x: 50 }}

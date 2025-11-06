@@ -15,9 +15,9 @@ export default function Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden">
+      <section className="relative h-[600px] overflow-visible">
         <Navigation />
-        <div className="relative w-full h-[600px] overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-visible">
   <img
     src="/Banners/Website Banner 3.png" // Replace with your image file
     alt="About Us"
@@ -37,7 +37,7 @@ export default function Page() {
 
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="bg-white shadow rounded-lg overflow-hidden">
+          <div className="bg-white shadow rounded-lg overflow-visible">
             <div className="px-6 py-8 border-b border-gray-200 bg-gray-50">
               <h1 className="text-3xl font-bold text-center text-gray-900">
                 Company Policy

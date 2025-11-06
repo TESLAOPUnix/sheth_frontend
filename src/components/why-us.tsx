@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
           {/* Image and Experience Circle */}
           <div className="relative">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
+            <div className="relative h-[300px] w-full overflow-visible rounded-lg">
               <Image
                 src="/why.jpg"
                 alt="Industrial Equipment"
@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
                 <div className="mb-2 text-xl font-semibold text-gray-900">
                   {feature.title}
                 </div>
-                <div className="h-3 w-full overflow-hidden rounded-full bg-[#FFF1F1]">
+                <div className="h-3 w-full overflow-visible rounded-full bg-[#FFF1F1]">
                   <motion.div
                     className="h-full rounded-full bg-[#993300]"
                     initial={{ width: "0%" }}

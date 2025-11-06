@@ -19,7 +19,7 @@ interface BrandCardProps {
 function BrandCard({ brand, onClick }: BrandCardProps) {
   return (
     <div className="py-10 group relative w-full cursor-pointer" onClick={onClick}>
-      <Card className="relative z-10 flex h-full flex-col overflow-hidden bg-white transition-shadow duration-500 hover:shadow-xl">
+      <Card className="relative z-10 flex h-full flex-col overflow-visible bg-white transition-shadow duration-500 hover:shadow-xl">
         <div className="flex-1 p-6">
           {/* Main Logo */}
           <div className="relative mx-auto aspect-video w-full max-w-[240px]">
@@ -34,7 +34,7 @@ function BrandCard({ brand, onClick }: BrandCardProps) {
 
         {/* Bottom Section */}
         <div className="flex items-center gap-3 border-t p-4">
-          <div className="h-10 w-10 overflow-hidden rounded bg-[#993300] p-2">
+          <div className="h-10 w-10 overflow-visible rounded bg-[#993300] p-2">
             <Image
               src={brand === "3M" ? "/3m.jpg" : "/dowell.png"}
               alt={`${brand} Icon`}
@@ -72,7 +72,7 @@ export default function BrandCards() {
 
       {/* Hero Section */}
       {/* Hero Section */}
-<section className="relative overflow-hidden">
+<section className="relative overflow-visible">
   <Navigation />
 
   {/* Hero container */}

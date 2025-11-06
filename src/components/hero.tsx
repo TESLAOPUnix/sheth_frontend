@@ -14,7 +14,7 @@ export default function Hero() {
         sm:min-h-[350px] 
         md:min-h-[500px] 
         lg:min-h-[650px] 
-        overflow-hidden 
+        overflow-visible 
         bg-gray-50
         flex 
         flex-col
