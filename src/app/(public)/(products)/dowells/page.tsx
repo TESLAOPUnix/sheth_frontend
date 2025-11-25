@@ -10,12 +10,12 @@ import Cart from "@/components/cart";
 const products = [
   {
     name: "Lugs",
-    image: "/lugs.png",
+    image: "/new_pics/Lugs/Aluminium Tube Terminal - Long Barrel.png",
     slug: "lugs",
   },
   {
     name: "Glands",
-    image: "/dowells/gland/pg/img1.png",
+    image: "/Glands and Crimping Tools/Double compression Armoured Weather.png",
     slug: "glands",
   },
   {

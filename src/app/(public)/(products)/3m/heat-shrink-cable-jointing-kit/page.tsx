@@ -52,7 +52,8 @@ export default function Component() {
   const {setIsVisible} = useVisibility();
 
   const productImages = [
-    "/3m/HEAT_SHRINK_JOINTING_KIT/img1.png",
+    "/3m/HEAT_SHRINK_JOINTING_KIT/Indoor_Heat_Shrinking_Kit.png",
+    "/3m/HEAT_SHRINK_JOINTING_KIT/Outdoor Heat Shrinking Kit.png",
     "/3m/HEAT_SHRINK_JOINTING_KIT/img2.png",
     "/3m/HEAT_SHRINK_JOINTING_KIT/img3.png",
     "/3m/HEAT_SHRINK_JOINTING_KIT/img4.jpg",
@@ -221,7 +222,7 @@ export default function Component() {
   };
 
   return (
-    <div className="container w-full mx-auto px-4 py-4 mt-[3rem] bg-gray-300">
+    <div className="container w-full mx-auto mt-[3rem] bg-gray-300">
   {loading && <LoadingSpinner />}
 
   <Card className="overflow-visible">

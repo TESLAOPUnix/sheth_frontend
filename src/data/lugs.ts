@@ -25,7 +25,7 @@ export const lugsProducts: Product[] = [
   {
     id: 2,
     name: "Aluminium Lug  On Demand IC XLPE",
-    image: "/dowells/lugs/alu/ic-xlpe/al_1_2.jpg",
+    image: "/new_pics/Lugs/Aluminium Lug On Demand IC XLPE.jpg",
     description: "Manufactured from seamless tubing. Provides maximum conductivity, low resistance and ductility. Specially designed for compact XLPE conductor",
     category: "Aluminium",
     subcategory: "On Demand",
